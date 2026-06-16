@@ -14,14 +14,14 @@ npm run dev
 http://localhost:4177
 ```
 
-## 线上部署
+## GitHub Pages 线上部署
 
-本服务是 Node Web Service，不建议用 GitHub Pages 直接托管，因为页面需要通过 `/api/run` 调用随仓库发布的 `haizei-worldcup-2026-skill`。
+当前仓库支持 GitHub Pages 静态部署。页面在本地 Node 服务中会实时调用 `/api/run`；发布到 GitHub Pages 后会自动切换为读取 `data/snapshot.json`，该快照由 GitHub Actions 在部署时和定时任务中通过 vendored `haizei-worldcup-2026-skill` 生成。
 
-仓库已内置 Render Blueprint：
+Pages 构建命令：
 
-```text
-render.yaml
+```bash
+npm run pages:build
 ```
 
 目标域名：
@@ -30,11 +30,15 @@ render.yaml
 worldcup2026.jiananzhu.cloud
 ```
 
-Render 服务创建后，把域名 DNS 指向 Render 提供的 CNAME 目标即可。服务健康检查地址：
+DNSPod 里需要添加：
 
 ```text
-/api/health
+主机记录：worldcup2026
+记录类型：CNAME
+记录值：MScZJN.github.io
 ```
+
+> GitHub Pages 是静态托管，不能在浏览器访问时实时执行 Node 服务；实时 API 版本仍可用 `npm start` 本地运行，或用 `render.yaml` 部署到 Node 平台。
 
 ## OBS 横屏直播间源
 

@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build:static": "node scripts/build-static-data.mjs",
+    "pages:build": "npm run build:static && node scripts/prepare-pages.mjs",
     "dev": "node server.mjs",
     "start": "node server.mjs"
   },

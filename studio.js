@@ -4,6 +4,7 @@ const forceMock = params.get('mock') === '1';
 const transparent = params.get('transparent') === '1';
 const refreshMs = Number(params.get('refresh') || 45000);
 const initialLang = params.get('lang') || localStorage.getItem('studio-lang') || 'ar';
+const staticMode = params.get('static') === '1' || location.hostname === 'worldcup2026.jiananzhu.cloud' || location.hostname.endsWith('.github.io');
 
 if (transparent) document.body.classList.add('transparent');
 
@@ -238,7 +239,30 @@ function statusLabel(match) {
   return t().pending;
 }
 
+let staticSnapshotPromise = null;
+
+async function getStaticSnapshot() {
+  staticSnapshotPromise ||= fetch('./data/snapshot.json', { cache: 'no-store' }).then((response) => {
+    if (!response.ok) throw new Error(`static snapshot ${response.status}`);
+    return response.json();
+  });
+  return staticSnapshotPromise;
+}
+
+async function getStaticJson(url) {
+  const snapshot = await getStaticSnapshot();
+  const target = new URL(url, location.origin);
+  if (target.pathname === '/api/meta') return snapshot.meta;
+  if (target.pathname === '/api/odds') return snapshot.odds;
+  if (target.pathname === '/api/run') {
+    const key = [target.searchParams.get('tool'), ...target.searchParams.getAll('arg')].filter(Boolean).join(':');
+    return snapshot.run?.[key] || { ok: false, error: `Static snapshot missing ${key}` };
+  }
+  return { ok: false, error: `Static snapshot missing ${target.pathname}` };
+}
+
 async function getJson(url) {
+  if (staticMode) return getStaticJson(url);
   const response = await fetch(url, { cache: 'no-store' });
   if (!response.ok) throw new Error(`${url} ${response.status}`);
   return response.json();

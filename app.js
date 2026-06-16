@@ -1,4 +1,6 @@
 const app = document.querySelector('#app');
+const params = new URLSearchParams(location.search);
+const staticMode = params.get('static') === '1' || location.hostname === 'worldcup2026.jiananzhu.cloud' || location.hostname.endsWith('.github.io');
 
 const state = {
   active: 'schedule',
@@ -64,7 +66,49 @@ function normalizeData(response, fallback) {
   return response.data ?? fallback;
 }
 
+let staticSnapshotPromise = null;
+
+async function getStaticSnapshot() {
+  staticSnapshotPromise ||= fetch('./data/snapshot.json', { cache: 'no-store' }).then((response) => {
+    if (!response.ok) throw new Error(`static snapshot ${response.status}`);
+    return response.json();
+  });
+  return staticSnapshotPromise;
+}
+
+function localStandingsFromSnapshot(snapshot) {
+  const groups = {};
+  for (const team of snapshot.meta.teams) {
+    groups[team.group] ||= { groupName: `${team.group}组`, list: [] };
+    groups[team.group].list.push({ teamName: team.teamName, points: team.qualifiedTop32 ? 3 : 0 });
+  }
+  return { updateTime: snapshot.generatedAt, groups: Object.values(groups) };
+}
+
+async function getStaticJson(url) {
+  const snapshot = await getStaticSnapshot();
+  const target = new URL(url, location.origin);
+  if (target.pathname === '/api/meta') return snapshot.meta;
+  if (target.pathname === '/api/odds') return snapshot.odds;
+  if (target.pathname !== '/api/run') return { ok: false, error: `Static snapshot missing ${target.pathname}` };
+
+  const tool = target.searchParams.get('tool');
+  const args = target.searchParams.getAll('arg');
+  const key = [tool, ...args].filter(Boolean).join(':');
+  if (snapshot.run?.[key]) return snapshot.run[key];
+  if (tool === 'rankings' && args[0] === 'standings') {
+    return snapshot.run?.['rankings:standings']?.data ? snapshot.run['rankings:standings'] : { ok: true, data: localStandingsFromSnapshot(snapshot) };
+  }
+  if (tool === 'rankings' && args[0] === 'players') return snapshot.run?.['rankings:players:进球:10'] || { ok: false, error: 'Static player ranking unavailable' };
+  if (tool === 'team' && args[0] === 'lookup') {
+    const team = snapshot.meta.teams.find((item) => item.teamName === args[1]);
+    return team ? { ok: true, data: team } : { ok: false, error: 'Static team lookup unavailable' };
+  }
+  return { ok: false, error: `Static snapshot missing ${key}` };
+}
+
 async function getJson(url) {
+  if (staticMode) return getStaticJson(url);
   const res = await fetch(url);
   return res.json();
 }
