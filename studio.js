@@ -3,6 +3,7 @@ const params = new URLSearchParams(location.search);
 const forceMock = params.get('mock') === '1';
 const transparent = params.get('transparent') === '1';
 const refreshMs = Number(params.get('refresh') || 45000);
+const refreshOffsetMs = Number(params.get('refreshOffset') || 600);
 const initialLang = params.get('lang') || localStorage.getItem('studio-lang') || 'ar';
 const staticMode = params.get('static') === '1' || location.hostname === 'worldcup2026.jiananzhu.cloud' || location.hostname.endsWith('.github.io');
 
@@ -29,6 +30,7 @@ const i18n = {
     skill: 'Skill Live',
     liveSync: 'live data',
     mock: 'static fallback',
+    refreshSync: '45s sync',
     selected: 'Selected match',
     allMatches: 'Match schedule',
     controlHint: 'Click a fixture on the left. Use 1/2/3 to switch the discussion angle.',
@@ -83,6 +85,7 @@ const i18n = {
     skill: 'Skill Live',
     liveSync: 'بيانات مباشرة',
     mock: 'بيانات ثابتة',
+    refreshSync: 'تحديث 45ث',
     selected: 'المباراة المختارة',
     allMatches: 'جدول المباريات',
     controlHint: 'اختر مباراة من اليسار. استخدم 1/2/3 لتغيير زاوية النقاش.',
@@ -289,9 +292,20 @@ function matchMinute(match) {
 }
 
 let staticSnapshotPromise = null;
+let staticSnapshotBucket = null;
+
+function refreshBucket() {
+  return Math.floor(Date.now() / refreshMs);
+}
 
 async function getStaticSnapshot() {
-  staticSnapshotPromise ||= fetch('./data/snapshot.json', { cache: 'no-store' }).then((response) => {
+  const bucket = refreshBucket();
+  if (bucket !== staticSnapshotBucket) {
+    staticSnapshotBucket = bucket;
+    staticSnapshotPromise = null;
+  }
+
+  staticSnapshotPromise ||= fetch(`./data/snapshot.json?sync=${bucket}`, { cache: 'reload' }).then((response) => {
     if (!response.ok) throw new Error(`static snapshot ${response.status}`);
     return response.json();
   });
@@ -491,7 +505,7 @@ function render() {
           <div>
             <h1>${copy.brand}</h1>
             <strong>${copy.subtitle}</strong>
-            <p>${icon('signal')} ${copy.skill} · ${state.error ? copy.mock : copy.liveSync} · ${timeLabel(state.updatedAt)}</p>
+            <p>${icon('signal')} ${copy.skill} · ${state.error ? copy.mock : copy.liveSync} · ${copy.refreshSync} · ${timeLabel(state.updatedAt)}</p>
           </div>
         </div>
         <div class="top-score">
@@ -657,4 +671,17 @@ window.addEventListener('keydown', (event) => {
 });
 
 load();
-setInterval(load, refreshMs);
+scheduleAlignedRefresh();
+
+function nextAlignedDelay() {
+  const now = Date.now();
+  const nextBoundary = (Math.floor(now / refreshMs) + 1) * refreshMs;
+  return Math.max(1000, nextBoundary - now + refreshOffsetMs);
+}
+
+function scheduleAlignedRefresh() {
+  window.setTimeout(async () => {
+    await load();
+    scheduleAlignedRefresh();
+  }, nextAlignedDelay());
+}

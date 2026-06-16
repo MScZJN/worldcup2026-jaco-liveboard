@@ -3,6 +3,7 @@ const params = new URLSearchParams(location.search);
 const forceMock = params.get('mock') === '1';
 const transparent = params.get('transparent') === '1';
 const refreshMs = Number(params.get('refresh') || 45000);
+const refreshOffsetMs = Number(params.get('refreshOffset') || 600);
 const staticMode = params.get('static') === '1' || location.hostname === 'worldcup2026.jiananzhu.cloud' || location.hostname.endsWith('.github.io');
 
 if (transparent) document.body.classList.add('transparent');
@@ -91,9 +92,20 @@ function icon(name) {
 }
 
 let staticSnapshotPromise = null;
+let staticSnapshotBucket = null;
+
+function refreshBucket() {
+  return Math.floor(Date.now() / refreshMs);
+}
 
 async function getStaticSnapshot() {
-  staticSnapshotPromise ||= fetch('./data/snapshot.json', { cache: 'no-store' }).then((response) => {
+  const bucket = refreshBucket();
+  if (bucket !== staticSnapshotBucket) {
+    staticSnapshotBucket = bucket;
+    staticSnapshotPromise = null;
+  }
+
+  staticSnapshotPromise ||= fetch(`./data/snapshot.json?sync=${bucket}`, { cache: 'reload' }).then((response) => {
     if (!response.ok) throw new Error(`static snapshot ${response.status}`);
     return response.json();
   });
@@ -290,4 +302,17 @@ setInterval(() => {
   state.cue += 1;
   render();
 }, 8000);
-setInterval(load, refreshMs);
+scheduleAlignedRefresh();
+
+function nextAlignedDelay() {
+  const now = Date.now();
+  const nextBoundary = (Math.floor(now / refreshMs) + 1) * refreshMs;
+  return Math.max(1000, nextBoundary - now + refreshOffsetMs);
+}
+
+function scheduleAlignedRefresh() {
+  window.setTimeout(async () => {
+    await load();
+    scheduleAlignedRefresh();
+  }, nextAlignedDelay());
+}
