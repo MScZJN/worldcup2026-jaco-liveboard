@@ -14,7 +14,7 @@ const state = {
   matches: [],
   odds: [],
   standings: null,
-  activeIndex: 0,
+  selectedMatchId: params.get('match'),
   cue: 0,
   updatedAt: new Date(),
   error: ''
@@ -27,40 +27,50 @@ const i18n = {
     brand: 'Jaco Live',
     subtitle: 'Official text broadcast',
     skill: 'Skill Live',
-    liveSync: 'real-time sync',
-    mock: 'demo fallback',
-    next: 'Next',
-    hostSlot: 'Host position',
-    interaction: 'Live interaction',
-    schedule: "Today's matches",
+    liveSync: 'live data',
+    mock: 'static fallback',
+    selected: 'Selected match',
+    allMatches: 'Match schedule',
+    controlHint: 'Click a fixture on the left. Use 1/2/3 to switch the discussion angle.',
+    scheduleMeta: 'Full fixture control',
+    discussionFocus: 'Discussion focus',
+    hostBoard: 'Host board',
+    interaction: 'Audience interaction',
     qualification: 'Qualification · Group',
-    talking: 'Presenter rundown',
     home: 'Home',
     away: 'Away',
     live: 'Live',
     finished: 'Full time',
     pending: 'Not started',
     heat: 'Heat',
-    matchFlow: 'Match flow',
-    oddsWatch: 'Odds watch',
-    audienceQuestion: 'Audience question',
-    flowCopy: (home, away) => `${home} press high; ${away} look for space on counters`,
-    questionCopy: (home, away) => `Do you back ${home} to extend the lead, or ${away} to answer?`,
-    tickerQuestion: (home) => `Should ${home} keep attacking or slow the tempo?`,
-    goal: 'GOAL',
     report: 'Report',
     preview: 'Kickoff preview',
     odds: 'Win/Draw/Lose',
-    cues: ['Talking points', 'Odds', 'Qualification'],
+    cues: ['Highlights', 'Prediction/Odds', 'Qualification'],
+    phases: {
+      finished: 'Post-match review',
+      live: 'Live tracking',
+      upcoming: 'Pre-match prediction'
+    },
+    phaseCopy: {
+      finished: 'Lead the discussion with the final result, decisive highlights, turning points, and what the result changes in the group.',
+      live: 'Anchor the talk on the current score, latest highlights, momentum swings, and what to watch over the next few minutes.',
+      upcoming: 'Before kickoff, focus on prediction, tactical matchup, odds movement, likely first goal, and audience voting.'
+    },
+    phaseLabel: {
+      finished: 'Result room',
+      live: 'Live room',
+      upcoming: 'Prediction room'
+    },
     chats: [
-      ['JACO-1024', 'Will Brazil keep pushing forward?'],
-      ['Fan Riyadh', 'Morocco counterattacks are quick; the wing is the key.'],
-      ['Data Desk', 'Could goal difference decide the third-place race?'],
-      ['Viewer Noura', 'Who is more watchable in Haiti vs Scotland?']
+      ['JACO-1024', 'Which highlight should we replay first?'],
+      ['Fan Riyadh', 'The left side matchup feels decisive tonight.'],
+      ['Data Desk', 'Goal difference may become the group story.'],
+      ['Viewer Noura', 'Ask the room for score predictions before kickoff.']
     ],
     tickerLabels: {
-      schedule: "Today's matches",
-      goal: 'Goal alert',
+      schedule: "Today's schedule",
+      highlight: 'Highlight',
       odds: 'Odds',
       question: 'Audience question'
     }
@@ -71,40 +81,50 @@ const i18n = {
     brand: 'Jaco Live',
     subtitle: 'البث النصي الرسمي',
     skill: 'Skill Live',
-    liveSync: 'مزامنة مباشرة',
-    mock: 'وضع تجريبي',
-    next: 'التالي',
-    hostSlot: 'موضع المعلق',
-    interaction: 'التفاعل المباشر',
-    schedule: 'مباريات اليوم',
+    liveSync: 'بيانات مباشرة',
+    mock: 'بيانات ثابتة',
+    selected: 'المباراة المختارة',
+    allMatches: 'جدول المباريات',
+    controlHint: 'اختر مباراة من اليسار. استخدم 1/2/3 لتغيير زاوية النقاش.',
+    scheduleMeta: 'تحكم كامل بالجدول',
+    discussionFocus: 'محور النقاش',
+    hostBoard: 'لوحة المعلق',
+    interaction: 'تفاعل الجمهور',
     qualification: 'فرص التأهل · المجموعة',
-    talking: 'محاور المعلق',
     home: 'صاحب الأرض',
     away: 'الضيف',
     live: 'مباشر',
     finished: 'انتهت',
     pending: 'لم تبدأ',
     heat: 'الاهتمام',
-    matchFlow: 'إيقاع المباراة',
-    oddsWatch: 'قراءة الاحتمالات',
-    audienceQuestion: 'سؤال للجمهور',
-    flowCopy: (home, away) => `${home} يضغط عالياً، و${away} يبحث عن المساحات في المرتدات`,
-    questionCopy: (home, away) => `هل تتوقع أن يوسع ${home} الفارق أم يعود ${away}؟`,
-    tickerQuestion: (home) => `هل على ${home} مواصلة الهجوم أم تهدئة الإيقاع؟`,
-    goal: 'هدف',
     report: 'تقرير',
     preview: 'قبل البداية',
     odds: 'فوز / تعادل / خسارة',
-    cues: ['نقاط الحديث', 'الاحتمالات', 'التأهل'],
+    cues: ['اللقطات', 'التوقعات/الاحتمالات', 'التأهل'],
+    phases: {
+      finished: 'مراجعة ما بعد المباراة',
+      live: 'متابعة مباشرة',
+      upcoming: 'توقعات قبل البداية'
+    },
+    phaseCopy: {
+      finished: 'ابدأ النقاش بالنتيجة النهائية، أبرز اللقطات، نقاط التحول، وتأثير النتيجة على المجموعة.',
+      live: 'اجعل الحديث حول النتيجة الحالية، آخر اللقطات، تغير الإيقاع، وما يجب مراقبته في الدقائق القادمة.',
+      upcoming: 'قبل البداية ركز على التوقعات، المواجهة التكتيكية، حركة الاحتمالات، الهدف الأول، وتصويت الجمهور.'
+    },
+    phaseLabel: {
+      finished: 'غرفة النتيجة',
+      live: 'غرفة المباشر',
+      upcoming: 'غرفة التوقعات'
+    },
     chats: [
-      ['JACO-1024', 'هل سيواصل البرازيل الضغط للأمام؟'],
-      ['مشجع الرياض', 'مرتدات المغرب سريعة، والطرف سيكون مفتاحاً.'],
-      ['منصة البيانات', 'هل يؤثر فارق الأهداف على ترتيب الثالث؟'],
-      ['نورة', 'من الأجدر بالمتابعة في هايتي ضد اسكتلندا؟']
+      ['JACO-1024', 'أي لقطة نعيدها أولاً؟'],
+      ['مشجع الرياض', 'مواجهة الجهة اليسرى تبدو حاسمة الليلة.'],
+      ['منصة البيانات', 'فارق الأهداف قد يصبح قصة المجموعة.'],
+      ['نورة', 'اسأل الجمهور عن توقع النتيجة قبل البداية.']
     ],
     tickerLabels: {
-      schedule: 'مباريات اليوم',
-      goal: 'تنبيه هدف',
+      schedule: 'جدول اليوم',
+      highlight: 'لقطة',
       odds: 'الاحتمالات',
       question: 'سؤال الجمهور'
     }
@@ -116,7 +136,7 @@ const teamNames = {
   摩洛哥: { en: 'Morocco', ar: 'المغرب' },
   海地: { en: 'Haiti', ar: 'هايتي' },
   苏格兰: { en: 'Scotland', ar: 'اسكتلندا' },
-  美国: { en: 'United States', ar: 'الولايات المتحدة' },
+  美国: { en: 'USA', ar: 'أمريكا' },
   巴拉圭: { en: 'Paraguay', ar: 'باراغواي' },
   澳大利亚: { en: 'Australia', ar: 'أستراليا' },
   土耳其: { en: 'Türkiye', ar: 'تركيا' },
@@ -132,60 +152,10 @@ const teamNames = {
 };
 
 const mockMatches = [
-  {
-    matchId: 'studio-live-brazil-morocco',
-    date: '2026-06-14',
-    time: '06:00',
-    stage: 'C组第1轮',
-    group: 'C',
-    homeTeam: '巴西',
-    awayTeam: '摩洛哥',
-    scoreLine: '2-1',
-    homeScore: 2,
-    awayScore: 1,
-    status: '进行中',
-    statusId: '1',
-    hot: 88
-  },
-  {
-    matchId: 'studio-next-haiti-scotland',
-    date: '2026-06-14',
-    time: '09:00',
-    stage: 'C组第1轮',
-    group: 'C',
-    homeTeam: '海地',
-    awayTeam: '苏格兰',
-    scoreLine: '-',
-    status: '未开赛',
-    statusId: '0',
-    hot: 29
-  },
-  {
-    matchId: 'studio-next-usa-paraguay',
-    date: '2026-06-14',
-    time: '09:00',
-    stage: 'D组第1轮',
-    group: 'D',
-    homeTeam: '美国',
-    awayTeam: '巴拉圭',
-    scoreLine: '4-1',
-    status: '已结束',
-    statusId: '2',
-    hot: 51
-  },
-  {
-    matchId: 'studio-next-australia-turkey',
-    date: '2026-06-14',
-    time: '12:00',
-    stage: 'D组第1轮',
-    group: 'D',
-    homeTeam: '澳大利亚',
-    awayTeam: '土耳其',
-    scoreLine: '-',
-    status: '未开赛',
-    statusId: '0',
-    hot: 33
-  }
+  { matchId: 'studio-live-brazil-morocco', date: '2026-06-14', time: '06:00', stage: 'C组第1轮', group: 'C', homeTeam: '巴西', awayTeam: '摩洛哥', scoreLine: '2-1', homeScore: 2, awayScore: 1, status: '进行中', statusId: '1', hot: 88 },
+  { matchId: 'studio-next-haiti-scotland', date: '2026-06-14', time: '09:00', stage: 'C组第1轮', group: 'C', homeTeam: '海地', awayTeam: '苏格兰', scoreLine: '-', status: '未开赛', statusId: '0', hot: 29 },
+  { matchId: 'studio-finished-usa-paraguay', date: '2026-06-13', time: '09:00', stage: 'D组第1轮', group: 'D', homeTeam: '美国', awayTeam: '巴拉圭', scoreLine: '4-1', status: '已结束', statusId: '2', hot: 51 },
+  { matchId: 'studio-next-australia-turkey', date: '2026-06-14', time: '12:00', stage: 'D组第1轮', group: 'D', homeTeam: '澳大利亚', awayTeam: '土耳其', scoreLine: '-', status: '未开赛', statusId: '0', hot: 33 }
 ];
 
 const mockOdds = [
@@ -199,17 +169,76 @@ const mockOdds = [
   }
 ];
 
+const phaseContent = {
+  en: {
+    finished: {
+      label: 'Result discussion',
+      cards: [
+        ['Highlights', 'Goals, cards, saves, substitutions, and the one moment worth replaying first.'],
+        ['Result debate', 'Was the score fair, or did one side leave too much on the field?'],
+        ['Group impact', 'Who gained leverage, who is under pressure, and what fixture matters next?']
+      ],
+      prompts: ['Which moment decided the match?', 'Did the winner control the game or survive it?', 'What does this result change in the group?']
+    },
+    live: {
+      label: 'Live result board',
+      cards: [
+        ['Current state', 'Score, clock, latest event, and the next five-minute question.'],
+        ['Momentum', 'Pressure, counters, field tilt, and the player changing the match.'],
+        ['Highlight watch', 'Goals, saves, VAR, cards, and set pieces that deserve instant replay.']
+      ],
+      prompts: ['Protect the result or keep attacking?', 'Where can the comeback come from?', 'Who is driving the match right now?']
+    },
+    upcoming: {
+      label: 'Prediction studio',
+      cards: [
+        ['Win path', 'How each team can win: possession, transitions, set pieces, or late pressure.'],
+        ['Odds reading', 'Use win/draw/lose and handicap movement as a discussion anchor, not betting advice.'],
+        ['Audience vote', 'Ask for score predictions, first scorer, and upset probability.']
+      ],
+      prompts: ['What score do viewers predict?', 'Who scores first?', 'Favorite control game or upset window?']
+    }
+  },
+  ar: {
+    finished: {
+      label: 'نقاش النتيجة',
+      cards: [
+        ['أبرز اللقطات', 'الأهداف والبطاقات والتصديات والتبديلات واللحظة التي تستحق الإعادة أولاً.'],
+        ['جدل النتيجة', 'هل كانت النتيجة عادلة أم أن فريقاً أهدر الكثير؟'],
+        ['أثر المجموعة', 'من حصل على أفضلية، ومن أصبح تحت الضغط، وما المباراة التالية الأهم؟']
+      ],
+      prompts: ['ما اللحظة التي حسمت المباراة؟', 'هل سيطر الفائز أم نجا من الضغط؟', 'ماذا تغير هذه النتيجة في المجموعة؟']
+    },
+    live: {
+      label: 'لوحة المتابعة المباشرة',
+      cards: [
+        ['الحالة الآن', 'النتيجة والوقت وآخر حدث وسؤال الدقائق الخمس القادمة.'],
+        ['الإيقاع', 'الضغط والمرتدات ومناطق السيطرة واللاعب الذي يغير المباراة.'],
+        ['لقطات بارزة', 'أهداف وتصديات وVAR وبطاقات وكرات ثابتة تستحق الإعادة فوراً.']
+      ],
+      prompts: ['يحافظ على النتيجة أم يواصل الهجوم؟', 'من أين تأتي العودة؟', 'من يقود المباراة الآن؟']
+    },
+    upcoming: {
+      label: 'استوديو التوقعات',
+      cards: [
+        ['طريق الفوز', 'كيف يفوز كل فريق: الاستحواذ، التحولات، الكرات الثابتة، أو ضغط النهاية.'],
+        ['قراءة الاحتمالات', 'استخدم الفوز/التعادل/الخسارة وحركة الخط كمدخل للنقاش وليس كنصيحة مراهنة.'],
+        ['تصويت الجمهور', 'اسأل عن النتيجة المتوقعة وصاحب الهدف الأول واحتمال المفاجأة.']
+      ],
+      prompts: ['ما توقع الجمهور للنتيجة؟', 'من يسجل أولاً؟', 'سيطرة المرشح أم فرصة مفاجأة؟']
+    }
+  }
+};
+
 function icon(name) {
   const common = 'width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"';
   const paths = {
     signal: '<path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16a5 5 0 0 1 7 0"/><path d="M12 20h.01"/>',
-    clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
     ball: '<circle cx="12" cy="12" r="9"/><path d="m12 7 4 3-1.5 5h-5L8 10l4-3Z"/>',
     calendar: '<rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',
     chart: '<path d="M4 19V5"/><path d="M8 19v-7"/><path d="M12 19V9"/><path d="M16 19v-4"/><path d="M20 19V7"/>',
     chat: '<path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/>',
-    spark: '<path d="M13 2 4 14h7l-1 8 10-13h-7l1-7Z"/>',
-    globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/>'
+    spark: '<path d="M13 2 4 14h7l-1 8 10-13h-7l1-7Z"/>'
   };
   return `<svg ${common}>${paths[name] || paths.spark}</svg>`;
 }
@@ -219,7 +248,20 @@ function t() {
 }
 
 function localTeam(name) {
-  return teamNames[name]?.[state.lang] || name;
+  return teamNames[name]?.[state.lang] || name || '';
+}
+
+function matchPhase(match) {
+  if (match.statusId === '1' || /进行中|直播|live/i.test(match.status || '')) return 'live';
+  if (match.statusId === '2' || /已结束|完场|结束|full/i.test(match.status || '') || /\d+\s*-\s*\d+/.test(match.scoreLine || '')) return 'finished';
+  return 'upcoming';
+}
+
+function statusLabel(match) {
+  const phase = matchPhase(match);
+  if (phase === 'live') return t().live;
+  if (phase === 'finished') return t().finished;
+  return t().pending;
 }
 
 function groupLabel(match) {
@@ -229,14 +271,21 @@ function groupLabel(match) {
 
 function stageLabel(match) {
   const round = String(match.stage || '').match(/第(\d)轮/)?.[1] || '1';
-  if (state.lang === 'ar') return `${groupLabel(match)} · الجولة ${round}`;
-  return `${groupLabel(match)} · Round ${round}`;
+  return state.lang === 'ar' ? `${groupLabel(match)} · الجولة ${round}` : `${groupLabel(match)} · Round ${round}`;
 }
 
-function statusLabel(match) {
-  if (match.statusId === '1' || /进行中/.test(match.status || '')) return t().live;
-  if (match.statusId === '2' || /已结束/.test(match.status || '')) return t().finished;
-  return t().pending;
+function score(match) {
+  const found = String(match.scoreLine || '').match(/(\d+)\s*-\s*(\d+)/);
+  if (found) return [found[1], found[2]];
+  if (match.homeScore !== null && match.homeScore !== undefined) return [match.homeScore, match.awayScore ?? 0];
+  return ['0', '0'];
+}
+
+function matchMinute(match) {
+  const phase = matchPhase(match);
+  if (phase === 'live') return "74'";
+  if (phase === 'finished') return 'FT';
+  return match.time || '--:--';
 }
 
 let staticSnapshotPromise = null;
@@ -276,6 +325,7 @@ async function load() {
     if (forceMock) {
       state.matches = mockMatches;
       state.odds = mockOdds;
+      state.selectedMatchId ||= defaultFocusMatch().matchId;
       state.updatedAt = new Date();
       state.error = '';
       render();
@@ -293,50 +343,51 @@ async function load() {
     const oddsMatches = odds.value?.data?.matches || [];
     state.odds = oddsMatches.length ? oddsMatches : mockOdds;
     state.standings = standings.value?.ok ? standings.value.data : state.standings;
+    if (!state.selectedMatchId || !state.matches.some((match) => match.matchId === state.selectedMatchId)) {
+      state.selectedMatchId = defaultFocusMatch().matchId;
+    }
     state.updatedAt = new Date();
     state.error = '';
   } catch (error) {
     state.error = error.message;
     state.matches = state.matches.length ? state.matches : mockMatches;
     state.odds = state.odds.length ? state.odds : mockOdds;
+    state.selectedMatchId ||= defaultFocusMatch().matchId;
   }
   render();
 }
 
+function defaultFocusMatch() {
+  return state.matches.find((match) => matchPhase(match) === 'live') ||
+    state.matches.find((match) => matchPhase(match) === 'upcoming') ||
+    state.matches[0] ||
+    mockMatches[0];
+}
+
 function focusMatch() {
-  const live = state.matches.find((match) => match.statusId === '1' || /进行中/.test(match.status || ''));
-  return live || state.matches[state.activeIndex % Math.max(state.matches.length, 1)] || mockMatches[0];
+  return state.matches.find((match) => match.matchId === state.selectedMatchId) || defaultFocusMatch();
 }
 
 function nextMatches(focus) {
   return state.matches.filter((match) => match.matchId !== focus.matchId).slice(0, 4);
 }
 
-function score(match) {
-  const found = String(match.scoreLine || '').match(/(\d+)\s*-\s*(\d+)/);
-  if (found) return [found[1], found[2]];
-  if (match.homeScore !== null && match.homeScore !== undefined) return [match.homeScore, match.awayScore ?? 0];
-  return ['0', '0'];
-}
-
-function matchMinute(match) {
-  if (/进行中/.test(match.status || '')) return "74'";
-  if (/已结束/.test(match.status || '')) return 'FT';
-  return match.time || '--:--';
-}
-
 function eventText(match) {
-  if (/进行中/.test(match.status || '')) {
-    return state.lang === 'ar' ? `هدف موريسيو 74'` : `GOAL Mauricio 74'`;
-  }
-  if (/已结束/.test(match.status || '')) {
-    return `${t().report} ${localTeam(match.homeTeam)} ${match.scoreLine} ${localTeam(match.awayTeam)}`;
-  }
+  const phase = matchPhase(match);
+  if (phase === 'live') return state.lang === 'ar' ? `هدف موريسيو 74'` : `GOAL Mauricio 74'`;
+  if (phase === 'finished') return `${t().report} ${localTeam(match.homeTeam)} ${match.scoreLine} ${localTeam(match.awayTeam)}`;
   return `${t().preview} ${match.time || '--:--'} ${localTeam(match.homeTeam)} vs ${localTeam(match.awayTeam)}`;
 }
 
 function oddsText(match) {
-  const related = state.odds.find((item) => [item.homeTeam, item.awayTeam].some((name) => name && (match.homeTeam.includes(name) || match.awayTeam.includes(name) || name.includes(match.homeTeam) || name.includes(match.awayTeam)))) || state.odds[0] || mockOdds[0];
+  const related = state.odds.find((item) =>
+    [item.homeTeam, item.awayTeam].some((name) => name && (
+      match.homeTeam.includes(name) ||
+      match.awayTeam.includes(name) ||
+      name.includes(match.homeTeam) ||
+      name.includes(match.awayTeam)
+    ))
+  ) || state.odds[0] || mockOdds[0];
   const had = related.pools?.find((pool) => pool.poolCode === 'had') || related.pools?.[0];
   if (!had) return `${t().odds} -- / -- / --`;
   return `${t().odds} ${had.homeWin || '-'} / ${had.draw || '-'} / ${had.awayWin || '-'}`;
@@ -350,13 +401,61 @@ function groupStanding(match) {
   return teams.map((team, index) => ({ teamName: team, points: index === 0 ? 3 : 0, goals: index === 0 ? '2/1' : '0/0' }));
 }
 
+function qualificationText(match) {
+  const lead = groupStanding(match)[0];
+  if (!lead) return state.lang === 'ar' ? 'المجموعة مفتوحة' : 'Group remains open';
+  return state.lang === 'ar'
+    ? `${localTeam(lead.teamName)} في المقدمة بـ ${lead.points ?? 0} نقاط`
+    : `${localTeam(lead.teamName)} leads on ${lead.points ?? 0} pts`;
+}
+
+function predictionText(match) {
+  const home = localTeam(match.homeTeam);
+  const away = localTeam(match.awayTeam);
+  return state.lang === 'ar'
+    ? `${home} يبدأ كمرشح، و${away} يبحث عن التحولات`
+    : `${home} control the ball; ${away} hunt transitions`;
+}
+
+function phaseModel(match) {
+  const phase = matchPhase(match);
+  const content = phaseContent[state.lang][phase];
+  const [homeScore, awayScore] = score(match);
+  const scoreLine = phase === 'upcoming' ? `${match.time || '--:--'}` : `${homeScore} - ${awayScore}`;
+  const metrics = phase === 'finished'
+    ? [
+        [state.lang === 'ar' ? 'النتيجة' : 'Result', scoreLine],
+        [state.lang === 'ar' ? 'اللقطة الحاسمة' : 'Decisive clip', eventText(match)],
+        [state.lang === 'ar' ? 'أثر المجموعة' : 'Group impact', qualificationText(match)]
+      ]
+    : phase === 'live'
+      ? [
+          [state.lang === 'ar' ? 'النتيجة الآن' : 'Now', scoreLine],
+          [state.lang === 'ar' ? 'آخر حدث' : 'Latest highlight', eventText(match)],
+          [state.lang === 'ar' ? 'قراءة الاحتمالات' : 'Odds read', oddsText(match)]
+        ]
+      : [
+          [state.lang === 'ar' ? 'موعد البداية' : 'Kickoff', match.time || '--:--'],
+          [state.lang === 'ar' ? 'التوقع الرئيسي' : 'Main prediction', predictionText(match)],
+          [state.lang === 'ar' ? 'قراءة الاحتمالات' : 'Odds read', oddsText(match)]
+        ];
+
+  return {
+    phase,
+    content,
+    headline: t().phases[phase],
+    summary: t().phaseCopy[phase],
+    metrics
+  };
+}
+
 function tickerText(focus, next) {
   const schedule = [focus, ...next].slice(0, 5).map((match) => `${match.time || matchMinute(match)} ${localTeam(match.homeTeam)} vs ${localTeam(match.awayTeam)}`).join('  ·  ');
   return [
     `${t().tickerLabels.schedule} ${schedule}`,
-    `${t().tickerLabels.goal} ${eventText(focus)}`,
+    `${t().tickerLabels.highlight} ${eventText(focus)}`,
     `${t().tickerLabels.odds} ${oddsText(focus)}`,
-    `${t().tickerLabels.question} ${t().tickerQuestion(localTeam(focus.homeTeam))}`
+    `${t().tickerLabels.question} ${phaseModel(focus).content.prompts[state.cue % 3]}`
   ].join('     ');
 }
 
@@ -380,7 +479,9 @@ function render() {
   const next = nextMatches(focus);
   const [homeScore, awayScore] = score(focus);
   const standings = groupStanding(focus);
+  const phase = phaseModel(focus);
   const activeCue = copy.cues[state.cue % copy.cues.length];
+  const activePrompt = phase.content.prompts[state.cue % phase.content.prompts.length];
 
   root.innerHTML = `
     <section class="studio-scene">
@@ -397,10 +498,10 @@ function render() {
           <b>${localTeam(focus.homeTeam)}</b>
           <strong>${homeScore} - ${awayScore}</strong>
           <b>${localTeam(focus.awayTeam)}</b>
-          <span>${matchMinute(focus)} · ${stageLabel(focus)}</span>
+          <span>${matchMinute(focus)} · ${phase.headline}</span>
         </div>
         <div class="next-mini">
-          <span>${copy.next} ${next[0]?.time || '09:00'} ${localTeam(next[0]?.homeTeam || '海地')} vs ${localTeam(next[0]?.awayTeam || '苏格兰')}</span>
+          <span>${copy.controlHint}</span>
           <div class="language-switch" aria-label="Language switch">
             <button data-lang="en" class="${state.lang === 'en' ? 'active' : ''}">EN</button>
             <button data-lang="ar" class="${state.lang === 'ar' ? 'active' : ''}">العربية</button>
@@ -408,12 +509,33 @@ function render() {
         </div>
       </header>
 
-      <section class="main-board">
+      <aside class="match-rail">
+        <header>
+          <h2>${icon('calendar')} ${copy.allMatches}</h2>
+          <span>${copy.scheduleMeta} · ${state.matches.length}</span>
+        </header>
+        <div class="match-list" role="listbox" aria-label="${copy.allMatches}">
+          ${state.matches.map((match) => {
+            const [h, a] = score(match);
+            const itemPhase = matchPhase(match);
+            return `
+              <button class="match-item ${match.matchId === focus.matchId ? 'active' : ''} phase-${itemPhase}" data-match-id="${match.matchId}" role="option" aria-selected="${match.matchId === focus.matchId}">
+                <span class="match-time">${match.time || matchMinute(match)}</span>
+                <strong>${localTeam(match.homeTeam)} <em>vs</em> ${localTeam(match.awayTeam)}</strong>
+                <small>${stageLabel(match)}</small>
+                <b>${itemPhase === 'upcoming' ? statusLabel(match) : `${h}-${a}`}</b>
+              </button>
+            `;
+          }).join('')}
+        </div>
+      </aside>
+
+      <section class="analysis-board phase-${phase.phase}">
         <article class="hero-card">
           <div class="hero-meta">
-            <span>${statusLabel(focus)}</span>
+            <span>${copy.selected}</span>
             <span>${stageLabel(focus)}</span>
-            <span>${copy.heat} ${focus.hot ?? 88}</span>
+            <span>${phase.content.label}</span>
           </div>
           <div class="scoreboard">
             <div class="team-card home"><small>${copy.home}</small><b>${localTeam(focus.homeTeam)}</b></div>
@@ -423,27 +545,29 @@ function render() {
           <div class="goal-alert">${icon('ball')} <b>${eventText(focus)}</b><span>${oddsText(focus)}</span></div>
         </article>
 
-        <article class="talking-points">
-          <h2>${copy.talking}</h2>
-          <div class="point-grid">
-            <div><span>${copy.matchFlow}</span><b>${copy.flowCopy(localTeam(focus.homeTeam), localTeam(focus.awayTeam))}</b></div>
-            <div><span>${copy.oddsWatch}</span><b>${oddsText(focus)}</b></div>
-            <div><span>${copy.audienceQuestion}</span><b>${copy.questionCopy(localTeam(focus.homeTeam), localTeam(focus.awayTeam))}</b></div>
+        <article class="phase-panel">
+          <div>
+            <h2>${phase.headline}</h2>
+            <p>${phase.summary}</p>
+          </div>
+          <div class="metric-strip">
+            ${phase.metrics.map(([label, value]) => `<div><span>${label}</span><b>${value}</b></div>`).join('')}
           </div>
         </article>
 
-        <article class="schedule-card">
-          <h2>${icon('calendar')} ${copy.schedule}</h2>
-          ${[focus, ...next].slice(0, 5).map((match) => `
-            <div class="schedule-row">
-              <span>${match.time || matchMinute(match)}</span>
-              <b>${localTeam(match.homeTeam)} <em>vs</em> ${localTeam(match.awayTeam)}</b>
-              <i>${statusLabel(match)}</i>
-            </div>
-          `).join('')}
+        <article class="talking-points">
+          <h2>${copy.discussionFocus}</h2>
+          <div class="point-grid">
+            ${phase.content.cards.map(([label, text], index) => `
+              <button data-cue="${index}" class="${index === state.cue % 3 ? 'active' : ''}">
+                <span>${label}</span>
+                <b>${text}</b>
+              </button>
+            `).join('')}
+          </div>
         </article>
 
-        <article class="standing-card">
+        <article class="standing-card compact">
           <h2>${icon('chart')} ${copy.qualification} ${focus.group || 'C'}</h2>
           ${standings.map((team, index) => `
             <div class="standing-row">
@@ -457,10 +581,11 @@ function render() {
       </section>
 
       <aside class="side-rail">
-        <section class="host-box">
-          <div class="camera-frame">
-            <div class="camera-grid"></div>
-            <span>${copy.hostSlot}</span>
+        <section class="agenda-box">
+          <h2>${copy.hostBoard}</h2>
+          <div class="active-prompt">
+            <span>${activeCue}</span>
+            <strong>${activePrompt}</strong>
           </div>
           <div class="cue-buttons">
             ${copy.cues.map((cue, index) => `<button data-cue="${index}" class="${cue === activeCue ? 'active' : ''}">${cue}</button>`).join('')}
@@ -487,6 +612,16 @@ function render() {
 }
 
 function bind() {
+  document.querySelectorAll('[data-match-id]').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.selectedMatchId = button.dataset.matchId;
+      state.cue = 0;
+      const url = new URL(location.href);
+      url.searchParams.set('match', state.selectedMatchId);
+      history.replaceState(null, '', url);
+      render();
+    });
+  });
   document.querySelectorAll('[data-cue]').forEach((button) => {
     button.addEventListener('click', () => {
       state.cue = Number(button.dataset.cue);
@@ -507,15 +642,19 @@ window.addEventListener('keydown', (event) => {
     state.cue = Number(event.key) - 1;
     render();
   }
-  if (event.key.toLowerCase() === 'l') {
-    setLanguage(state.lang === 'ar' ? 'en' : 'ar');
+  if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+    const current = state.matches.findIndex((match) => match.matchId === focusMatch().matchId);
+    const delta = event.key === 'ArrowDown' ? 1 : -1;
+    const nextIndex = (current + delta + state.matches.length) % state.matches.length;
+    state.selectedMatchId = state.matches[nextIndex]?.matchId || state.selectedMatchId;
+    state.cue = 0;
+    const url = new URL(location.href);
+    url.searchParams.set('match', state.selectedMatchId);
+    history.replaceState(null, '', url);
+    render();
   }
+  if (event.key.toLowerCase() === 'l') setLanguage(state.lang === 'ar' ? 'en' : 'ar');
 });
 
 load();
-setInterval(() => {
-  state.activeIndex += 1;
-  state.cue += 1;
-  render();
-}, 9000);
 setInterval(load, refreshMs);
