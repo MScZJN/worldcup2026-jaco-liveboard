@@ -329,6 +329,30 @@ function icon(name) {
   return `<svg ${common}>${paths[name] || paths.spark}</svg>`;
 }
 
+function worldCupTrophyIcon() {
+  return `
+    <svg class="trophy-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="studioTrophyGold" x1="16" y1="10" x2="49" y2="55" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#fff2a6"/>
+          <stop offset="0.42" stop-color="#f7c957"/>
+          <stop offset="1" stop-color="#b97816"/>
+        </linearGradient>
+        <linearGradient id="studioTrophyGreen" x1="24" y1="42" x2="44" y2="62" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#37f3a4"/>
+          <stop offset="1" stop-color="#0b9b63"/>
+        </linearGradient>
+      </defs>
+      <path d="M32 7c7 0 13 4.8 13 12.4 0 6.3-3.8 10.5-8.2 14 3.8 1.6 6.4 5.2 6.4 9.4 0 4.9-3.6 9.1-8.6 10.1v3.5h11.1v4.4H18.3v-4.4h11.1v-3.5c-5-1-8.6-5.2-8.6-10.1 0-4.2 2.6-7.8 6.4-9.4-4.4-3.5-8.2-7.7-8.2-14C19 11.8 25 7 32 7Z" fill="url(#studioTrophyGold)"/>
+      <path d="M25.2 20.4c-.8-4.8 1.8-8.3 6.8-9.2 5 .9 7.6 4.4 6.8 9.2-.8 5.1-4.2 7.6-6.8 10-2.6-2.4-6-4.9-6.8-10Z" fill="#ffe999" opacity=".88"/>
+      <path d="M22.5 37.5c4.4 2.4 8.6 2.2 12.4-.8 3.1-2.5 5-6.2 6.2-10.4 2.1 8.5-1.2 18.4-9.1 22.8-4.9-2.6-8.2-6.6-9.5-11.6Z" fill="#6b3f14" opacity=".24"/>
+      <path d="M28.2 48.2h7.6l2.8 8.2H25.4l2.8-8.2Z" fill="url(#studioTrophyGreen)"/>
+      <path d="M20.2 18.1c-3.2 2-5 5.3-4.4 8.5.4 2.2 1.7 4.1 3.7 5.4M43.8 18.1c3.2 2 5 5.3 4.4 8.5-.4 2.2-1.7 4.1-3.7 5.4" fill="none" stroke="#ffe796" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M21 58.6h22" stroke="#ffe69b" stroke-width="2.5" stroke-linecap="round" opacity=".8"/>
+    </svg>
+  `;
+}
+
 function t() {
   return i18n[state.lang];
 }
@@ -630,7 +654,7 @@ function render() {
     <section class="studio-scene">
       <header class="top-strip">
         <div class="brand">
-          <span class="jaco-mark">J</span>
+          <span class="jaco-mark" role="img" aria-label="World Cup trophy">${worldCupTrophyIcon()}</span>
           <div>
             <h1>${copy.brand}</h1>
             <strong>${copy.subtitle}</strong>
