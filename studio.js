@@ -316,6 +316,25 @@ function statusLabel(match) {
   return t().pending;
 }
 
+function setFilter(filter) {
+  state.filter = ['all', 'finished', 'live', 'upcoming'].includes(filter) ? filter : 'all';
+  const url = new URL(location.href);
+  url.searchParams.set('filter', state.filter);
+  if (!filteredMatches().some((match) => match.matchId === state.selectedMatchId)) {
+    state.selectedMatchId = defaultFocusMatch().matchId;
+    url.searchParams.set('match', state.selectedMatchId);
+  }
+  state.cue = 0;
+  history.replaceState(null, '', url);
+  render();
+}
+
+function syncActiveMatchView() {
+  const active = document.querySelector('.match-item.active');
+  if (!active) return;
+  active.scrollIntoView({ block: 'nearest' });
+}
+
 function groupLabel(match) {
   const group = match.group || 'C';
   return state.lang === 'ar' ? `المجموعة ${group}` : `Group ${group}`;
@@ -580,6 +599,8 @@ function render() {
   const [homeScore, awayScore] = score(focus);
   const standings = groupStanding(focus);
   const phase = phaseModel(focus);
+  const isUpcoming = phase.phase === 'upcoming';
+  const displayScore = isUpcoming ? 'VS' : `${homeScore} - ${awayScore}`;
   const activeCue = copy.cues[state.cue % copy.cues.length];
   const activePrompt = phase.content.prompts[state.cue % phase.content.prompts.length];
 
@@ -596,7 +617,7 @@ function render() {
         </div>
         <div class="top-score">
           <b>${localTeam(focus.homeTeam)}</b>
-          <strong>${homeScore} - ${awayScore}</strong>
+          <strong class="${isUpcoming ? 'is-vs' : ''}">${displayScore}</strong>
           <b>${localTeam(focus.awayTeam)}</b>
           <span>${focusTime.date} ${matchMinute(focus)} ${copy.utc3} · ${phase.headline}</span>
         </div>
@@ -632,7 +653,7 @@ function render() {
                 <span class="match-time">${itemTime.time || matchMinute(match)}</span>
                 <strong>${localTeam(match.homeTeam)} <em>vs</em> ${localTeam(match.awayTeam)}</strong>
                 <small>${itemTime.date} · ${stageLabel(match)}</small>
-                <b>${itemPhase === 'upcoming' ? statusLabel(match) : `${h}-${a}`}</b>
+                <b class="match-status">${itemPhase === 'upcoming' ? statusLabel(match) : `${h}-${a}`}</b>
               </button>
             `;
           }).join('') : `<div class="empty-state">${copy.noMatches}</div>`}
@@ -648,7 +669,7 @@ function render() {
           </div>
           <div class="scoreboard">
             <div class="team-card home"><small>${copy.home}</small><b>${localTeam(focus.homeTeam)}</b></div>
-            <strong class="score">${homeScore}<em>-</em>${awayScore}</strong>
+            <strong class="score ${isUpcoming ? 'is-vs' : ''}">${isUpcoming ? 'VS' : `${homeScore}<em>-</em>${awayScore}`}</strong>
             <div class="team-card away"><small>${copy.away}</small><b>${localTeam(focus.awayTeam)}</b></div>
           </div>
           <div class="goal-alert">${icon('ball')} <b>${eventText(focus)}</b><span>${oddsText(focus)}</span></div>
@@ -718,21 +739,13 @@ function render() {
     </section>
   `;
   bind();
+  requestAnimationFrame(syncActiveMatchView);
 }
 
 function bind() {
   document.querySelectorAll('[data-filter]').forEach((button) => {
     button.addEventListener('click', () => {
-      state.filter = button.dataset.filter || 'all';
-      const url = new URL(location.href);
-      url.searchParams.set('filter', state.filter);
-      if (!filteredMatches().some((match) => match.matchId === state.selectedMatchId)) {
-        state.selectedMatchId = defaultFocusMatch().matchId;
-        url.searchParams.set('match', state.selectedMatchId);
-      }
-      state.cue = 0;
-      history.replaceState(null, '', url);
-      render();
+      setFilter(button.dataset.filter || 'all');
     });
   });
   document.querySelectorAll('[data-match-id]').forEach((button) => {
@@ -780,6 +793,9 @@ window.addEventListener('keydown', (event) => {
     render();
   }
   if (event.key.toLowerCase() === 'l') setLanguage(state.lang === 'ar' ? 'en' : 'ar');
+  const filterKeys = { a: 'all', f: 'finished', v: 'live', u: 'upcoming' };
+  const filter = filterKeys[event.key.toLowerCase()];
+  if (filter) setFilter(filter);
 });
 
 load();
