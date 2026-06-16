@@ -34,7 +34,7 @@ const scriptMap = {
 const allowedArgs = {
   teams: ['list', 'group', 'find', 'info', 'hosts', 'pot'],
   schedule: ['all', 'today', 'tomorrow', 'date', 'group', 'team', 'stage', 'dates', 'stats'],
-  match: ['info', 'analysis', 'lineup', 'live', 'stats', 'odds', 'detail'],
+  match: ['info', 'analysis', 'lineup', 'live', 'stats', 'detail'],
   team: ['lookup', 'info', 'schedule', 'lineup', 'history', 'stats'],
   player: ['info', 'news', 'stats', 'schedule', 'detail'],
   rankings: ['standings', 'fifa', 'players', 'team-rank', 'categories', 'knockout']
@@ -156,94 +156,6 @@ function sampleMatches() {
   ];
 }
 
-async function fetchSporttery(query) {
-  const pool = query.get('pool');
-  const team = query.get('team') || '';
-  const date = query.get('date') || '';
-  const wcOnly = query.get('wc') !== '0';
-  const url = new URL('https://webapi.sporttery.cn/gateway/uniform/football/getMatchCalculatorV1.qry');
-  url.searchParams.set('channel', 'mchannel');
-  if (pool && pool !== 'summary') url.searchParams.set('poolCode', pool);
-
-  const response = await fetch(url, {
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148',
-      'Referer': 'https://m.sporttery.cn/',
-      'Accept': 'application/json'
-    }
-  });
-  if (!response.ok) throw new Error(`sporttery HTTP ${response.status}`);
-  const json = await response.json();
-  if (json.success !== true) throw new Error(json.errorMessage || json.errorCode || 'sporttery API error');
-  const raw = json.value?.matchInfoList || json.value?.matchList || [];
-  return raw.map(normalizeSportteryMatch)
-    .filter((match) => !wcOnly || /世界杯/.test(match.league))
-    .filter((match) => !team || match.homeTeam.includes(team) || match.awayTeam.includes(team))
-    .filter((match) => !date || match.date === date);
-}
-
-function normalizeSportteryMatch(match) {
-  const pools = [];
-  const poolList = match.poolList || [];
-  for (const poolInfo of poolList) {
-    const code = String(poolInfo.poolCode || '').toLowerCase();
-    const odds = match[code];
-    if (!odds) continue;
-    if (code === 'had' || code === 'hhad') {
-      pools.push({
-        poolCode: code,
-        name: code === 'had' ? '胜平负' : '让球胜平负',
-        homeWin: odds.h,
-        draw: odds.d,
-        awayWin: odds.a,
-        goalLine: odds.goalLine || '',
-        homeTrend: odds.hf || '',
-        drawTrend: odds.df || '',
-        awayTrend: odds.af || ''
-      });
-    }
-    if (code === 'ttg') {
-      pools.push({ poolCode: code, name: '总进球', goals: { 0: odds.s0, 1: odds.s1, 2: odds.s2, 3: odds.s3, 4: odds.s4, 5: odds.s5, 6: odds.s6, '7+': odds.s7 } });
-    }
-    if (code === 'crs') {
-      pools.push({ poolCode: code, name: '比分', scores: { '1:0': odds.s01s00, '2:1': odds.s02s01, '0:0': odds.s00s00, '1:1': odds.s01s01, '0:1': odds.s00s01 } });
-    }
-    if (code === 'hafu') {
-      pools.push({ poolCode: code, name: '半全场', options: { '胜胜': odds.hh, '平胜': odds.dh, '平平': odds.dd, '负负': odds.aa } });
-    }
-  }
-  return {
-    matchId: match.matchId,
-    matchNum: match.matchNumStr || match.matchNum,
-    league: match.leagueName || match.leagueAbbName || '',
-    homeTeam: match.homeTeamAbbName || match.homeTeamAllName || match.homeTeam,
-    awayTeam: match.awayTeamAbbName || match.awayTeamAllName || match.awayTeam,
-    date: match.businessDate || match.matchDate || '',
-    time: match.matchTime || '',
-    status: match.matchStatus || match.status,
-    pools
-  };
-}
-
-function sampleOdds() {
-  return [
-    {
-      matchId: 2040167,
-      matchNum: '周六006',
-      league: '世界杯',
-      homeTeam: '巴西',
-      awayTeam: '摩洛哥',
-      date: '2026-06-14',
-      time: '06:00:00',
-      pools: [
-        { poolCode: 'had', name: '胜平负', homeWin: '1.49', draw: '3.60', awayWin: '5.55' },
-        { poolCode: 'hhad', name: '让球胜平负', goalLine: '-1', homeWin: '2.72', draw: '3.11', awayWin: '2.27' },
-        { poolCode: 'ttg', name: '总进球', goals: { 0: '13.00', 1: '5.00', 2: '3.35', 3: '3.45', 4: '5.40', 5: '9.50', 6: '18.00', '7+': '25.00' } }
-      ]
-    }
-  ];
-}
-
 async function routeApi(req, res) {
   const url = new URL(req.url, 'http://localhost');
   if (url.pathname === '/api/health') {
@@ -266,8 +178,7 @@ async function routeApi(req, res) {
       totalGroups: teams.totalGroups,
       hosts: teams.hostCountries,
       teams: flattenTeams(teams),
-      sampleMatches: sampleMatches(),
-      sampleOdds: sampleOdds()
+      sampleMatches: sampleMatches()
     });
     return;
   }
@@ -276,20 +187,6 @@ async function routeApi(req, res) {
     const tool = url.searchParams.get('tool');
     const args = url.searchParams.getAll('arg').filter(Boolean);
     sendJson(res, 200, await runSkill(tool, args));
-    return;
-  }
-
-  if (url.pathname === '/api/odds') {
-    try {
-      const matches = await fetchSporttery(url.searchParams);
-      if (!matches.length) {
-        sendJson(res, 200, { ok: true, data: { matches: sampleOdds(), fallback: true, reason: '当前没有可展示的世界杯竞彩场次' } });
-        return;
-      }
-      sendJson(res, 200, { ok: true, data: { matches, fallback: false } });
-    } catch (error) {
-      sendJson(res, 200, { ok: false, error: error.message, data: { matches: sampleOdds(), fallback: true } });
-    }
     return;
   }
 

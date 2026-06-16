@@ -13,7 +13,6 @@ const state = {
   lang: initialLang === 'en' ? 'en' : 'ar',
   meta: null,
   matches: [],
-  odds: [],
   standings: null,
   selectedMatchId: params.get('match'),
   filter: params.get('filter') || 'all',
@@ -50,8 +49,7 @@ const i18n = {
     heat: 'Heat',
     report: 'Report',
     preview: 'Kickoff preview',
-    odds: 'Win/Draw/Lose',
-    cues: ['Highlights', 'Prediction/Odds', 'Qualification'],
+    cues: ['Highlights', 'Prediction', 'Qualification'],
     filters: {
       all: 'All',
       finished: 'Finished',
@@ -66,7 +64,7 @@ const i18n = {
     phaseCopy: {
       finished: 'Lead the discussion with the final result, decisive highlights, turning points, and what the result changes in the group.',
       live: 'Anchor the talk on the current score, latest highlights, momentum swings, and what to watch over the next few minutes.',
-      upcoming: 'Before kickoff, focus on prediction, tactical matchup, odds movement, likely first goal, and audience voting.'
+      upcoming: 'Before kickoff, focus on prediction, tactical matchup, likely first goal, momentum paths, and audience voting.'
     },
     phaseLabel: {
       finished: 'Result room',
@@ -82,7 +80,6 @@ const i18n = {
     tickerLabels: {
       schedule: "Today's schedule",
       highlight: 'Highlight',
-      odds: 'Odds',
       question: 'Audience question'
     }
   },
@@ -113,8 +110,7 @@ const i18n = {
     heat: 'الاهتمام',
     report: 'تقرير',
     preview: 'قبل البداية',
-    odds: 'فوز / تعادل / خسارة',
-    cues: ['اللقطات', 'التوقعات/الاحتمالات', 'التأهل'],
+    cues: ['اللقطات', 'التوقعات', 'التأهل'],
     filters: {
       all: 'الكل',
       finished: 'انتهت',
@@ -129,7 +125,7 @@ const i18n = {
     phaseCopy: {
       finished: 'ابدأ النقاش بالنتيجة النهائية، أبرز اللقطات، نقاط التحول، وتأثير النتيجة على المجموعة.',
       live: 'اجعل الحديث حول النتيجة الحالية، آخر اللقطات، تغير الإيقاع، وما يجب مراقبته في الدقائق القادمة.',
-      upcoming: 'قبل البداية ركز على التوقعات، المواجهة التكتيكية، حركة الاحتمالات، الهدف الأول، وتصويت الجمهور.'
+      upcoming: 'قبل البداية ركز على التوقعات، المواجهة التكتيكية، الهدف الأول، مسارات الإيقاع، وتصويت الجمهور.'
     },
     phaseLabel: {
       finished: 'غرفة النتيجة',
@@ -145,7 +141,6 @@ const i18n = {
     tickerLabels: {
       schedule: 'جدول اليوم',
       highlight: 'لقطة',
-      odds: 'الاحتمالات',
       question: 'سؤال الجمهور'
     }
   }
@@ -260,17 +255,6 @@ const mockMatches = [
   { matchId: 'studio-next-australia-turkey', date: '2026-06-14', time: '12:00', stage: 'D组第1轮', group: 'D', homeTeam: '澳大利亚', awayTeam: '土耳其', scoreLine: '-', status: '未开赛', statusId: '0', hot: 33 }
 ];
 
-const mockOdds = [
-  {
-    homeTeam: '巴西',
-    awayTeam: '摩洛哥',
-    pools: [
-      { poolCode: 'had', name: '胜平负', homeWin: '1.49', draw: '3.60', awayWin: '5.55' },
-      { poolCode: 'hhad', name: '让球', goalLine: '-1', homeWin: '2.72', draw: '3.11', awayWin: '2.27' }
-    ]
-  }
-];
-
 const phaseContent = {
   en: {
     finished: {
@@ -295,7 +279,7 @@ const phaseContent = {
       label: 'Prediction studio',
       cards: [
         ['Win path', 'How each team can win: possession, transitions, set pieces, or late pressure.'],
-        ['Odds reading', 'Use win/draw/lose and handicap movement as a discussion anchor, not betting advice.'],
+        ['Tactical read', 'Shape, press height, set pieces, and transition windows to watch before kickoff.'],
         ['Audience vote', 'Ask for score predictions, first scorer, and upset probability.']
       ],
       prompts: ['What score do viewers predict?', 'Who scores first?', 'Favorite control game or upset window?']
@@ -324,7 +308,7 @@ const phaseContent = {
       label: 'استوديو التوقعات',
       cards: [
         ['طريق الفوز', 'كيف يفوز كل فريق: الاستحواذ، التحولات، الكرات الثابتة، أو ضغط النهاية.'],
-        ['قراءة الاحتمالات', 'استخدم الفوز/التعادل/الخسارة وحركة الخط كمدخل للنقاش وليس كنصيحة مراهنة.'],
+        ['قراءة تكتيكية', 'الشكل والضغط والكرات الثابتة ومساحات التحول قبل البداية.'],
         ['تصويت الجمهور', 'اسأل عن النتيجة المتوقعة وصاحب الهدف الأول واحتمال المفاجأة.']
       ],
       prompts: ['ما توقع الجمهور للنتيجة؟', 'من يسجل أولاً؟', 'سيطرة المرشح أم فرصة مفاجأة؟']
@@ -459,7 +443,6 @@ async function getStaticJson(url) {
   const snapshot = await getStaticSnapshot();
   const target = new URL(url, location.origin);
   if (target.pathname === '/api/meta') return snapshot.meta;
-  if (target.pathname === '/api/odds') return snapshot.odds;
   if (target.pathname === '/api/run') {
     const key = [target.searchParams.get('tool'), ...target.searchParams.getAll('arg')].filter(Boolean).join(':');
     return snapshot.run?.[key] || { ok: false, error: `Static snapshot missing ${key}` };
@@ -481,7 +464,6 @@ async function load() {
 
     if (forceMock) {
       state.matches = mockMatches;
-      state.odds = mockOdds;
       state.selectedMatchId ||= defaultFocusMatch().matchId;
       state.updatedAt = new Date();
       state.error = '';
@@ -489,9 +471,8 @@ async function load() {
       return;
     }
 
-    const [schedule, odds, standings] = await Promise.allSettled([
+    const [schedule, standings] = await Promise.allSettled([
       getJson('/api/run?tool=schedule&arg=all'),
-      getJson('/api/odds?wc=1&pool=summary'),
       getJson('/api/run?tool=rankings&arg=standings')
     ]);
 
@@ -499,8 +480,6 @@ async function load() {
     state.matches = (Array.isArray(liveSchedule) && liveSchedule.length ? liveSchedule : mockMatches)
       .slice()
       .sort((a, b) => Number(a.startTimeStamp || 0) - Number(b.startTimeStamp || 0));
-    const oddsMatches = odds.value?.data?.matches || [];
-    state.odds = oddsMatches.length ? oddsMatches : mockOdds;
     state.standings = standings.value?.ok ? standings.value.data : state.standings;
     if (!state.selectedMatchId || !state.matches.some((match) => match.matchId === state.selectedMatchId)) {
       state.selectedMatchId = defaultFocusMatch().matchId;
@@ -510,7 +489,6 @@ async function load() {
   } catch (error) {
     state.error = error.message;
     state.matches = state.matches.length ? state.matches : mockMatches;
-    state.odds = state.odds.length ? state.odds : mockOdds;
     state.selectedMatchId ||= defaultFocusMatch().matchId;
   }
   render();
@@ -554,20 +532,6 @@ function eventText(match) {
   return `${t().preview} ${displayDateTime(match).time || '--:--'} ${teamFlag(match.homeTeam)} ${localTeam(match.homeTeam)} vs ${teamFlag(match.awayTeam)} ${localTeam(match.awayTeam)}`;
 }
 
-function oddsText(match) {
-  const related = state.odds.find((item) =>
-    [item.homeTeam, item.awayTeam].some((name) => name && (
-      match.homeTeam.includes(name) ||
-      match.awayTeam.includes(name) ||
-      name.includes(match.homeTeam) ||
-      name.includes(match.awayTeam)
-    ))
-  ) || state.odds[0] || mockOdds[0];
-  const had = related.pools?.find((pool) => pool.poolCode === 'had') || related.pools?.[0];
-  if (!had) return `${t().odds} -- / -- / --`;
-  return `${t().odds} ${had.homeWin || '-'} / ${had.draw || '-'} / ${had.awayWin || '-'}`;
-}
-
 function groupStanding(match) {
   const groups = state.standings?.groups || [];
   const group = groups.find((item) => (item.groupName || item.name || '').includes(match.group || '')) || groups[0];
@@ -607,12 +571,12 @@ function phaseModel(match) {
       ? [
           [state.lang === 'ar' ? 'النتيجة الآن' : 'Now', scoreLine],
           [state.lang === 'ar' ? 'آخر حدث' : 'Latest highlight', eventText(match)],
-          [state.lang === 'ar' ? 'قراءة الاحتمالات' : 'Odds read', oddsText(match)]
+          [state.lang === 'ar' ? 'سؤال الجمهور' : 'Audience angle', content.prompts[state.cue % content.prompts.length]]
         ]
       : [
           [state.lang === 'ar' ? 'موعد البداية' : 'Kickoff', `${displayDateTime(match).time || '--:--'} ${t().utc3}`],
           [state.lang === 'ar' ? 'التوقع الرئيسي' : 'Main prediction', predictionText(match)],
-          [state.lang === 'ar' ? 'قراءة الاحتمالات' : 'Odds read', oddsText(match)]
+          [state.lang === 'ar' ? 'قراءة تكتيكية' : 'Tactical read', content.cards[1][1]]
         ];
 
   return {
@@ -629,7 +593,6 @@ function tickerText(focus, next) {
   return [
     `${t().tickerLabels.schedule} ${schedule}`,
     `${t().tickerLabels.highlight} ${eventText(focus)}`,
-    `${t().tickerLabels.odds} ${oddsText(focus)}`,
     `${t().tickerLabels.question} ${phaseModel(focus).content.prompts[state.cue % 3]}`
   ].join('     ');
 }
@@ -731,7 +694,7 @@ function render() {
             <strong class="score ${isUpcoming ? 'is-vs' : ''}">${isUpcoming ? 'VS' : `${homeScore}<em>-</em>${awayScore}`}</strong>
             <div class="team-card away"><small>${copy.away}</small><b>${teamHtml(focus.awayTeam, 'away-name')}</b></div>
           </div>
-          <div class="goal-alert">${icon('ball')} <b>${eventText(focus)}</b><span>${oddsText(focus)}</span></div>
+          <div class="goal-alert">${icon('ball')} <b>${eventText(focus)}</b><span>${phase.content.label}</span></div>
         </article>
 
         <article class="phase-panel">

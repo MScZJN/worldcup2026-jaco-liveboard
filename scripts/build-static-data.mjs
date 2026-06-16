@@ -49,25 +49,6 @@ function sampleMatches() {
   ];
 }
 
-function sampleOdds() {
-  return [
-    {
-      matchId: 2040167,
-      matchNum: '周六006',
-      league: '世界杯',
-      homeTeam: '巴西',
-      awayTeam: '摩洛哥',
-      date: '2026-06-14',
-      time: '06:00:00',
-      pools: [
-        { poolCode: 'had', name: '胜平负', homeWin: '1.49', draw: '3.60', awayWin: '5.55' },
-        { poolCode: 'hhad', name: '让球胜平负', goalLine: '-1', homeWin: '2.72', draw: '3.11', awayWin: '2.27' },
-        { poolCode: 'ttg', name: '总进球', goals: { 0: '13.00', 1: '5.00', 2: '3.35', 3: '3.45', 4: '5.40', 5: '9.50', 6: '18.00', '7+': '25.00' } }
-      ]
-    }
-  ];
-}
-
 function flattenTeams(data) {
   return Object.entries(data.groups).flatMap(([group, teams]) =>
     teams.map((team) => ({ group, ...team }))
@@ -139,8 +120,7 @@ const snapshot = {
     totalGroups: teams.totalGroups,
     hosts: teams.hostCountries,
     teams: flattenTeams(teams),
-    sampleMatches: sampleMatches(),
-    sampleOdds: sampleOdds()
+    sampleMatches: sampleMatches()
   },
   run: {
     'schedule:today': today.ok && Array.isArray(today.data) && today.data.length ? today : { ok: true, data: sampleMatches(), fallback: true },
@@ -150,10 +130,6 @@ const snapshot = {
     'schedule:stats': scheduleStats.ok ? scheduleStats : { ok: true, data: { total: sampleMatches().length, finished: 1, pending: 2, live: 0 } },
     'rankings:standings': standings.ok ? standings : { ok: true, data: null, fallback: true },
     'rankings:players:进球:10': players.ok ? players : { ok: true, data: null, fallback: true }
-  },
-  odds: {
-    ok: true,
-    data: { matches: sampleOdds(), fallback: true, reason: 'GitHub Pages static snapshot' }
   }
 };
 

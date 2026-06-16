@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:35.766Z",
+  "generatedAt": "2026-06-16T08:52:53.770Z",
   "meta": {
     "ok": true,
     "static": true,
@@ -437,48 +437,6 @@
         "status": "已结束",
         "hot": 48,
         "scoreLine": "4-1"
-      }
-    ],
-    "sampleOdds": [
-      {
-        "matchId": 2040167,
-        "matchNum": "周六006",
-        "league": "世界杯",
-        "homeTeam": "巴西",
-        "awayTeam": "摩洛哥",
-        "date": "2026-06-14",
-        "time": "06:00:00",
-        "pools": [
-          {
-            "poolCode": "had",
-            "name": "胜平负",
-            "homeWin": "1.49",
-            "draw": "3.60",
-            "awayWin": "5.55"
-          },
-          {
-            "poolCode": "hhad",
-            "name": "让球胜平负",
-            "goalLine": "-1",
-            "homeWin": "2.72",
-            "draw": "3.11",
-            "awayWin": "2.27"
-          },
-          {
-            "poolCode": "ttg",
-            "name": "总进球",
-            "goals": {
-              "0": "13.00",
-              "1": "5.00",
-              "2": "3.35",
-              "3": "3.45",
-              "4": "5.40",
-              "5": "9.50",
-              "6": "18.00",
-              "7+": "25.00"
-            }
-          }
-        ]
       }
     ]
   },
@@ -2528,55 +2486,6 @@
         ]
       },
       "raw": "{\n  \"tabName\": \"进球\",\n  \"tabId\": 10,\n  \"statsName\": \"射⼿榜\",\n  \"availableTabs\": [\n    \"进球\",\n    \"助攻\",\n    \"点球\",\n    \"射⻔\",\n    \"射正\",\n    \"过人\",\n    \"过人成功\",\n    \"任意球\",\n    \"击中门框\",\n    \"快攻\",\n    \"快攻射门\",\n    \"快攻进球\",\n    \"丢失球权\",\n    \"解围\",\n    \"有效阻挡\",\n    \"拦截\",\n    \"抢断\",\n    \"1对1拼抢\",\n    \"1对1拼抢成功\",\n    \"拳击球\",\n    \"守门员出击\",\n    \"守门员出击成功\",\n    \"高空出击\",\n    \"传球\",\n    \"传球成功\",\n    \"关键传球\",\n    \"传中球\",\n    \"传中球成功\",\n    \"长传\",\n    \"成功长传\",\n    \"传球被断\",\n    \"红牌\",\n    \"⻩牌\",\n    \"犯规\",\n    \"被侵犯\",\n    \"越位\"\n  ],\n  \"note\": \"API 当前仅返回射手榜数据，其它分类待赛事进行后丰富\",\n  \"players\": [\n    {\n      \"rank\": 1,\n      \"playerId\": \"0fbe81fa31e1d66370e0863653a85b1b\",\n      \"playerName\": \"弗拉林·巴洛贡\",\n      \"team\": \"美国\",\n      \"position\": \"前锋\",\n      \"score\": \"2\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"https://cdn.sportnanoapi.com/football/player/8770da6921202e88b0bbcf94f1c53dba.png\",\n      \"link\": \"/al/player?id=0fbe81fa31e1d66370e0863653a85b1b&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 2,\n      \"playerId\": \"3c8afa2516810bc26f1848d80b4ae36e\",\n      \"playerName\": \"亚辛·阿亚里\",\n      \"team\": \"瑞典\",\n      \"position\": \"中场\",\n      \"score\": \"2\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"https://cdn.sportnanoapi.com/football/player/7aaa1e950802bc23036a8bbe71f6a745.png\",\n      \"link\": \"/al/player?id=3c8afa2516810bc26f1848d80b4ae36e&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 3,\n      \"playerId\": \"eb8cb80d24cd98c4eca4937f87cac4ce\",\n      \"playerName\": \"以利亚·贾斯特\",\n      \"team\": \"新西兰\",\n      \"position\": \"前锋\",\n      \"score\": \"2\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"https://cdn.sportnanoapi.com/football/player/653dfe275584ad95dd346e4de389bcd0.png\",\n      \"link\": \"/al/player?id=eb8cb80d24cd98c4eca4937f87cac4ce&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 4,\n      \"playerId\": \"4262f62d5769aaf16ecc96d12bdf6b57\",\n      \"playerName\": \"凯·哈弗茨\",\n      \"team\": \"德国\",\n      \"position\": \"前锋\",\n      \"score\": \"2\",\n      \"penaltyValue\": \"1\",\n      \"logo\": \"http://t11.baidu.com/it/u=4282157703,4136946534&fm=58&app=10&f=PNG?w=461&h=461&s=6B608243AE32149C60A464B90300D016\",\n      \"link\": \"/al/player?id=4262f62d5769aaf16ecc96d12bdf6b57&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 5,\n      \"playerId\": \"07149329ef87ee46cf11be23d9a64381\",\n      \"playerName\": \"德尼茨·翁达夫\",\n      \"team\": \"德国\",\n      \"position\": \"前锋\",\n      \"score\": \"1\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"http://t12.baidu.com/it/u=4210770946,347227032&fm=58&app=10&f=PNG?w=245&h=245&s=4B608247CC32049C1CB6F5F303009011\",\n      \"link\": \"/al/player?id=07149329ef87ee46cf11be23d9a64381&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 6,\n      \"playerId\": \"4d923d501d6b810138e929e1535d926c\",\n      \"playerName\": \"亚历山大·伊萨克\",\n      \"team\": \"瑞典\",\n      \"position\": \"前锋\",\n      \"score\": \"1\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"https://cdn.sportnanoapi.com/football/player/22ad3876a52536da32eb31c9de316e3a.png\",\n      \"link\": \"/al/player?id=4d923d501d6b810138e929e1535d926c&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 7,\n      \"playerId\": \"a77e068393f2adcf68f057f4c981db56\",\n      \"playerName\": \"纳撒尼尔·布朗\",\n      \"team\": \"德国\",\n      \"position\": \"后卫\",\n      \"score\": \"1\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"http://t11.baidu.com/it/u=3270534321,2452881804&fm=58&app=10&f=PNG?w=172&h=172&s=2D548A4E8E620515A750713903005012\",\n      \"link\": \"/al/player?id=a77e068393f2adcf68f057f4c981db56&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 8,\n      \"playerId\": \"e4d5364d943dc63e71c20ddddea25cf3\",\n      \"playerName\": \"黄仁范\",\n      \"team\": \"韩国\",\n      \"position\": \"中场\",\n      \"score\": \"1\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"http://t11.baidu.com/it/u=2437058790,3567714112&fm=58&app=10&f=PNG?w=246&h=246&s=29408A4E8633159CA29420B903001012\",\n      \"link\": \"/al/player?id=e4d5364d943dc63e71c20ddddea25cf3&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 9,\n      \"playerId\": \"eb13507017177b57ac808b6b82d5ac76\",\n      \"playerName\": \"维克托·哲凯赖什\",\n      \"team\": \"瑞典\",\n      \"position\": \"前锋\",\n      \"score\": \"1\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"https://cdn.sportnanoapi.com/football/player/518ef8929fa54625a4bb2f7c327b1c0d.png\",\n      \"link\": \"/al/player?id=eb13507017177b57ac808b6b82d5ac76&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 10,\n      \"playerId\": \"11c2ffb04c6c06d21b5773ac4c402e9b\",\n      \"playerName\": \"拉明·雷扎伊安\",\n      \"team\": \"伊朗\",\n      \"position\": \"后卫\",\n      \"score\": \"1\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"http://t10.baidu.com/it/u=4277118650,967868446&fm=58&app=10&f=PNG?w=176&h=176&s=4742B34684322D96309C00B903001012\",\n      \"link\": \"/al/player?id=11c2ffb04c6c06d21b5773ac4c402e9b&tab=%E5%8A%A8%E6%80%81\"\n    }\n  ]\n}\n"
-    }
-  },
-  "odds": {
-    "ok": true,
-    "data": {
-      "matches": [
-        {
-          "matchId": 2040167,
-          "matchNum": "周六006",
-          "league": "世界杯",
-          "homeTeam": "巴西",
-          "awayTeam": "摩洛哥",
-          "date": "2026-06-14",
-          "time": "06:00:00",
-          "pools": [
-            {
-              "poolCode": "had",
-              "name": "胜平负",
-              "homeWin": "1.49",
-              "draw": "3.60",
-              "awayWin": "5.55"
-            },
-            {
-              "poolCode": "hhad",
-              "name": "让球胜平负",
-              "goalLine": "-1",
-              "homeWin": "2.72",
-              "draw": "3.11",
-              "awayWin": "2.27"
-            },
-            {
-              "poolCode": "ttg",
-              "name": "总进球",
-              "goals": {
-                "0": "13.00",
-                "1": "5.00",
-                "2": "3.35",
-                "3": "3.45",
-                "4": "5.40",
-                "5": "9.50",
-                "6": "18.00",
-                "7+": "25.00"
-              }
-            }
-          ]
-        }
-      ],
-      "fallback": true,
-      "reason": "GitHub Pages static snapshot"
     }
   }
 }

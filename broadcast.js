@@ -11,7 +11,6 @@ if (transparent) document.body.classList.add('transparent');
 const state = {
   meta: null,
   matches: [],
-  odds: [],
   standings: null,
   activeIndex: 0,
   updatedAt: new Date(),
@@ -19,7 +18,7 @@ const state = {
   cue: 0
 };
 
-const cueChips = ['讲看点', '聊赔率', '看出线'];
+const cueChips = ['讲看点', '聊预测', '看出线'];
 const mockMatches = [
   {
     matchId: 'sample-live-brazil-morocco',
@@ -68,18 +67,6 @@ const mockMatches = [
   }
 ];
 
-const mockOdds = [
-  {
-    homeTeam: '巴西',
-    awayTeam: '摩洛哥',
-    time: '06:00:00',
-    pools: [
-      { poolCode: 'had', name: '胜平负', homeWin: '1.49', draw: '3.60', awayWin: '5.55' },
-      { poolCode: 'hhad', name: '让球胜平负', goalLine: '-1', homeWin: '2.72', draw: '3.11', awayWin: '2.27' }
-    ]
-  }
-];
-
 function icon(name) {
   const common = 'width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"';
   const paths = {
@@ -116,7 +103,6 @@ async function getStaticJson(url) {
   const snapshot = await getStaticSnapshot();
   const target = new URL(url, location.origin);
   if (target.pathname === '/api/meta') return snapshot.meta;
-  if (target.pathname === '/api/odds') return snapshot.odds;
   if (target.pathname === '/api/run') {
     const key = [target.searchParams.get('tool'), ...target.searchParams.getAll('arg')].filter(Boolean).join(':');
     return snapshot.run?.[key] || { ok: false, error: `Static snapshot missing ${key}` };
@@ -138,30 +124,25 @@ async function load() {
 
     if (forceMock) {
       state.matches = mockMatches;
-      state.odds = mockOdds;
       state.updatedAt = new Date();
       state.error = '';
       render();
       return;
     }
 
-    const [schedule, odds, standings] = await Promise.allSettled([
+    const [schedule, standings] = await Promise.allSettled([
       getJson('/api/run?tool=schedule&arg=today'),
-      getJson('/api/odds?wc=1&pool=summary'),
       getJson('/api/run?tool=rankings&arg=standings')
     ]);
 
     const scheduleData = schedule.value?.ok ? schedule.value.data : [];
     state.matches = Array.isArray(scheduleData) && scheduleData.length ? scheduleData : mockMatches;
-    const oddsData = odds.value?.data?.matches || [];
-    state.odds = oddsData.length ? oddsData : mockOdds;
     state.standings = standings.value?.ok ? standings.value.data : state.standings;
     state.updatedAt = new Date();
     state.error = '';
   } catch (error) {
     state.error = error.message;
     state.matches = state.matches.length ? state.matches : mockMatches;
-    state.odds = state.odds.length ? state.odds : mockOdds;
   }
   render();
 }
@@ -195,13 +176,6 @@ function eventText(focus) {
   if (/进行中/.test(focus.status || '')) return `GOAL ${focus.awayTeam === '摩洛哥' ? '毛里西奥' : focus.awayTeam} 74'`;
   if (/已结束/.test(focus.status || '')) return `战报 ${focus.homeTeam} ${focus.scoreLine} ${focus.awayTeam}`;
   return `开赛预告 ${focus.time || '--:--'} ${focus.homeTeam} vs ${focus.awayTeam}`;
-}
-
-function oddsText(focus) {
-  const related = state.odds.find((match) => [match.homeTeam, match.awayTeam].some((name) => name && (name.includes(focus.homeTeam) || name.includes(focus.awayTeam) || focus.homeTeam.includes(name) || focus.awayTeam.includes(name)))) || state.odds[0] || mockOdds[0];
-  const had = related.pools?.find((pool) => pool.poolCode === 'had') || related.pools?.[0];
-  if (!had) return '胜平负 -- / -- / --';
-  return `${had.name || '胜平负'} ${had.homeWin || '-'} / ${had.draw || '-'} / ${had.awayWin || '-'}`;
 }
 
 function tableCue(focus) {
@@ -255,7 +229,7 @@ function render() {
           <span class="score-num away">${score.away}</span>
           <strong class="team away">${focus.awayTeam}</strong>
         </div>
-        <div class="event-strip"><b>${eventText(focus)}</b><span>${oddsText(focus)}</span></div>
+        <div class="event-strip"><b>${eventText(focus)}</b><span>${tableCue(focus)}</span></div>
       </div>
 
       <aside class="next-panel">

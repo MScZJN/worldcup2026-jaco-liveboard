@@ -13,7 +13,6 @@ const state = {
   schedule: [],
   standings: null,
   rankings: null,
-  odds: [],
   teamDetail: null,
   playerDetail: null,
   matchAnalysis: null,
@@ -28,17 +27,15 @@ const capabilities = [
   { id: 'report', label: '战报', icon: 'flag' },
   { id: 'standings', label: '积分榜', icon: 'table' },
   { id: 'teams', label: '球队', icon: 'shield' },
-  { id: 'players', label: '球员', icon: 'user' },
-  { id: 'odds', label: '竞彩', icon: 'ticket' }
+  { id: 'players', label: '球员', icon: 'user' }
 ];
 
 const workflows = [
   ['赛程查询', 'today / tomorrow / date / group / team / stage / dates / stats'],
-  ['比赛详情', 'analysis / lineup / live / stats / odds'],
+  ['比赛详情', 'analysis / lineup / live / stats'],
   ['球队数据', 'info / schedule / lineup / history / stats'],
   ['球员数据', 'info / news / stats / schedule'],
-  ['排名数据', 'standings / fifa / players / knockout'],
-  ['竞彩赔率', 'had / hhad / crs / ttg / hafu / history']
+  ['排名数据', 'standings / fifa / players / knockout']
 ];
 
 function icon(name) {
@@ -50,7 +47,6 @@ function icon(name) {
     table: '<path d="M3 5h18v14H3z"/><path d="M3 10h18M8 5v14M16 5v14"/>',
     shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>',
     user: '<path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/>',
-    ticket: '<path d="M2 9a3 3 0 0 0 0 6v3h20v-3a3 3 0 0 0 0-6V6H2v3Z"/><path d="M13 6v12"/>',
     refresh: '<path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/><path d="M3 12A9 9 0 0 1 18.5 5.8L21 8"/><path d="M21 3v5h-5"/>',
     chevron: '<path d="m9 18 6-6-6-6"/>',
     wifi: '<path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16a5 5 0 0 1 7 0"/><path d="M12 20h.01"/>'
@@ -89,7 +85,6 @@ async function getStaticJson(url) {
   const snapshot = await getStaticSnapshot();
   const target = new URL(url, location.origin);
   if (target.pathname === '/api/meta') return snapshot.meta;
-  if (target.pathname === '/api/odds') return snapshot.odds;
   if (target.pathname !== '/api/run') return { ok: false, error: `Static snapshot missing ${target.pathname}` };
 
   const tool = target.searchParams.get('tool');
@@ -138,10 +133,9 @@ async function init() {
   state.meta = metaResponse?.ok ? metaResponse : null;
   if (!state.meta) throw new Error('无法读取世界杯 Skill 元数据');
   state.schedule = state.meta.sampleMatches;
-  state.odds = state.meta.sampleOdds;
   state.selectedMatch = state.schedule[0];
   render();
-  await Promise.allSettled([loadSchedule('today'), loadStandings(), loadOdds()]);
+  await Promise.allSettled([loadSchedule('today'), loadStandings()]);
   render();
 }
 
@@ -165,14 +159,6 @@ async function loadRankings(type = '进球') {
   await withLoading('刷新球员榜', async () => {
     const response = await runSkill('rankings', 'players', type, '10');
     state.rankings = normalizeData(response, samplePlayerRankings());
-  });
-}
-
-async function loadOdds() {
-  await withLoading('读取竞彩', async () => {
-    const response = await getJson('/api/odds?wc=1&pool=summary');
-    const data = normalizeData(response, { matches: state.meta.sampleOdds });
-    state.odds = data.matches?.length ? data.matches : state.meta.sampleOdds;
   });
 }
 
@@ -251,7 +237,6 @@ function setTab(id) {
     else if (!state.playerDetail) loadPlayer();
   }
   if ((id === 'preview' || id === 'report') && !state.matchAnalysis) loadMatchDeep();
-  if (id === 'odds' && !state.odds.length) loadOdds();
   render();
 }
 
@@ -283,7 +268,6 @@ function header() {
 
 function hero() {
   const match = state.selectedMatch || state.schedule[0];
-  const odds = state.odds[0]?.pools?.find((pool) => pool.poolCode === 'had');
   return `
     <section class="match-console">
       <div class="match-main">
@@ -295,9 +279,9 @@ function hero() {
         </div>
         <div class="time-line"><span>${match.time || '06:00'}</span><span>${match.date || '2026-06-14'}</span><span>热度 ${match.hot ?? 51}</span></div>
       </div>
-      <div class="odds-chip">
-        <span>胜平负</span>
-        <b>${odds ? `${odds.homeWin} / ${odds.draw} / ${odds.awayWin}` : '1.49 / 3.60 / 5.55'}</b>
+      <div class="focus-chip">
+        <span>互动焦点</span>
+        <b>${match.status === '已结束' ? '高光复盘' : match.status === '进行中' ? '实时讨论' : '赛前预测'}</b>
       </div>
     </section>
   `;
@@ -322,8 +306,7 @@ function panel() {
     report: reportPanel,
     standings: standingsPanel,
     teams: teamsPanel,
-    players: playersPanel,
-    odds: oddsPanel
+    players: playersPanel
   };
   return map[state.active]();
 }
@@ -355,20 +338,20 @@ function matchCard(match, index) {
 }
 
 function previewPanel() {
-  const prediction = state.matchAnalysis?.prediction || { homeWinRate: '40%', awayWinRate: '32%', sampleSize: '相似赔率样本' };
+  const prediction = state.matchAnalysis?.prediction || { homeWinRate: '40%', awayWinRate: '32%', sampleSize: '相似战术样本' };
   const intelligence = state.matchAnalysis?.intelligence || [
     { title: '有利情报', homeTeamPoints: ['巴西进攻端个人能力突出'], awayTeamPoints: ['摩洛哥反击速度快'] },
-    { title: '不利情报', homeTeamPoints: ['让球压力较高'], awayTeamPoints: ['控球稳定性待验证'] }
+    { title: '不利情报', homeTeamPoints: ['热门方需要承担控球压力'], awayTeamPoints: ['控球稳定性待验证'] }
   ];
   return `
     <div class="panel-head">
-      <div><h2>赛前前瞻</h2><p>analysis + odds + intelligence</p></div>
+      <div><h2>赛前前瞻</h2><p>analysis + lineup + intelligence</p></div>
       <button class="mini-btn" data-action="match-deep">刷新</button>
     </div>
     <div class="metric-grid">
       <div><span>主胜预测</span><strong>${prediction.homeWinRate || '40%'}</strong></div>
       <div><span>客胜预测</span><strong>${prediction.awayWinRate || '32%'}</strong></div>
-      <div><span>样本</span><strong>${prediction.sampleSize || '相似赔率'}</strong></div>
+      <div><span>样本</span><strong>${prediction.sampleSize || '相似战术'}</strong></div>
     </div>
     <div class="intel-list">
       ${intelligence.slice(0, 2).map((item) => `
@@ -488,33 +471,6 @@ function playersPanel() {
   `;
 }
 
-function oddsPanel() {
-  return `
-    <div class="panel-head">
-      <div><h2>竞彩赔率</h2><p>had / hhad / crs / ttg / hafu</p></div>
-      <button class="mini-btn" data-action="odds">刷新</button>
-    </div>
-    <div class="odds-list">
-      ${state.odds.map((match) => `
-        <article>
-          <header><span>${match.matchNum || '世界杯'}</span><b>${match.homeTeam} vs ${match.awayTeam}</b><em>${match.time || ''}</em></header>
-          ${(match.pools || []).slice(0, 4).map((pool) => oddsLine(pool)).join('')}
-        </article>
-      `).join('')}
-    </div>
-  `;
-}
-
-function oddsLine(pool) {
-  if (pool.poolCode === 'ttg') {
-    return `<div class="odds-line"><span>${pool.name}</span><b>${Object.entries(pool.goals || {}).slice(2, 5).map(([k, v]) => `${k}:${v}`).join('  ')}</b></div>`;
-  }
-  if (pool.poolCode === 'crs') {
-    return `<div class="odds-line"><span>${pool.name}</span><b>${Object.entries(pool.scores || {}).slice(0, 3).map(([k, v]) => `${k}:${v}`).join('  ')}</b></div>`;
-  }
-  return `<div class="odds-line"><span>${pool.name}${pool.goalLine ? `(${pool.goalLine})` : ''}</span><b>${pool.homeWin || '-'} / ${pool.draw || '-'} / ${pool.awayWin || '-'}</b></div>`;
-}
-
 function capabilityMatrix() {
   return `
     <section class="matrix">
@@ -540,13 +496,12 @@ function bind() {
     setTab('preview');
   }));
   document.querySelectorAll('[data-team]').forEach((btn) => btn.addEventListener('click', () => loadTeam(btn.dataset.team)));
-  document.querySelector('[data-refresh]')?.addEventListener('click', () => Promise.allSettled([loadSchedule('today'), loadStandings(), loadOdds()]));
+  document.querySelector('[data-refresh]')?.addEventListener('click', () => Promise.allSettled([loadSchedule('today'), loadStandings()]));
   document.querySelector('[data-action="schedule-tomorrow"]')?.addEventListener('click', () => loadSchedule('tomorrow'));
   document.querySelector('[data-action="match-deep"]')?.addEventListener('click', () => loadMatchDeep());
   document.querySelector('[data-action="standings"]')?.addEventListener('click', () => loadStandings());
   document.querySelector('[data-action="team"]')?.addEventListener('click', () => loadTeam());
   document.querySelector('[data-action="players"]')?.addEventListener('click', async () => { await loadRankings(); await loadPlayer(); });
-  document.querySelector('[data-action="odds"]')?.addEventListener('click', () => loadOdds());
 }
 
 function buildLocalStandings() {
@@ -573,10 +528,10 @@ function samplePlayerRankings() {
 
 function sampleAnalysis(match) {
   return {
-    prediction: { homeWinRate: match?.homeTeam === '巴西' ? '58%' : '40%', awayWinRate: '29%', sampleSize: '相似赔率' },
+    prediction: { homeWinRate: match?.homeTeam === '巴西' ? '58%' : '40%', awayWinRate: '29%', sampleSize: '相似战术' },
     intelligence: [
       { title: '有利情报', homeTeamPoints: [`${match?.homeTeam || '主队'}边路推进效率高`], awayTeamPoints: [`${match?.awayTeam || '客队'}防守反击质量稳定`] },
-      { title: '不利情报', homeTeamPoints: ['热门方让球压力明显'], awayTeamPoints: ['阵地战创造力需要验证'] }
+      { title: '不利情报', homeTeamPoints: ['热门方需要承担控球压力'], awayTeamPoints: ['阵地战创造力需要验证'] }
     ]
   };
 }

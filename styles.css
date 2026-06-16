@@ -204,7 +204,7 @@ button {
 }
 
 .time-line span,
-.odds-chip,
+.focus-chip,
 .quick-row button,
 .team-picker button {
   border: 1px solid var(--line);
@@ -219,7 +219,7 @@ button {
   font-weight: 700;
 }
 
-.odds-chip {
+.focus-chip {
   position: relative;
   z-index: 1;
   display: flex;
@@ -229,12 +229,12 @@ button {
   padding: 10px;
 }
 
-.odds-chip span {
+.focus-chip span {
   color: var(--muted);
   font-size: 12px;
 }
 
-.odds-chip b {
+.focus-chip b {
   color: var(--gold);
   font-size: 15px;
 }
@@ -334,7 +334,6 @@ button {
 
 .match-list,
 .intel-list,
-.odds-list,
 .standings,
 .ranking-list,
 .stat-bars,
@@ -403,8 +402,7 @@ button {
 .intel-list article,
 .group-table,
 .player-card,
-.profile,
-.odds-list article {
+.profile {
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, .035);
   border-radius: var(--radius);
@@ -415,7 +413,6 @@ button {
 }
 
 .metric-grid span,
-.odds-line span,
 .profile span,
 .radar-row span {
   display: block;
@@ -649,48 +646,6 @@ button {
   color: var(--green);
   font-size: 13px;
   margin-top: 3px;
-}
-
-.odds-list {
-  display: grid;
-  gap: 10px;
-}
-
-.odds-list article {
-  padding: 12px;
-}
-
-.odds-list header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 8px;
-  align-items: center;
-  margin-bottom: 9px;
-}
-
-.odds-list header span,
-.odds-list header em {
-  color: var(--subtle);
-  font-size: 10px;
-  font-style: normal;
-}
-
-.odds-list header b {
-  font-size: 13px;
-  overflow-wrap: anywhere;
-}
-
-.odds-line {
-  display: grid;
-  grid-template-columns: 86px 1fr;
-  gap: 8px;
-  padding: 8px 0;
-  border-top: 1px solid rgba(255, 255, 255, .06);
-}
-
-.odds-line b {
-  color: var(--gold);
-  font-size: 13px;
 }
 
 .matrix {

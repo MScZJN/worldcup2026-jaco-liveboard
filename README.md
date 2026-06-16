@@ -103,12 +103,11 @@ http://localhost:4177/broadcast.html?transparent=1&refresh=30000
 ## 能力映射
 
 - 今日赛程：`worldcup-schedule.js today/tomorrow/date/group/team/stage/dates/stats`
-- 赛前前瞻：`worldcup-match.js analysis/odds`
+- 赛前前瞻：`worldcup-match.js analysis/lineup/stats`
 - 战报回顾：`worldcup-match.js live/stats/lineup`
 - 积分榜：`worldcup-rankings.js standings/fifa/players/categories/knockout`
 - 球队档案：`worldcup-team.js lookup/info/schedule/lineup/history/stats`
 - 球员追踪：`worldcup-player.js info/news/stats/schedule`
-- 竞彩赔率：后端用体彩接口原生 `fetch` 实现，避免 Skill 中 `axios` 缺失导致的启动问题；无可售赛事或网络失败时回退到演示赔率。
 
 ## 关键文件
 
