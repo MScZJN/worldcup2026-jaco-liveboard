@@ -217,14 +217,29 @@ p {
 
 .top-score b {
   min-width: 0;
-  font-size: 34px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-size: clamp(24px, 1.7vw, 34px);
+  line-height: 1.08;
+  overflow: visible;
+  white-space: normal;
 }
 
 .top-score b:first-child {
   text-align: right;
+}
+
+.top-score b:first-child .team-name,
+.team-card.home .team-name {
+  justify-content: flex-end;
+}
+
+.top-score b:nth-of-type(2) .team-name,
+.team-card.away .team-name {
+  justify-content: flex-start;
+}
+
+.top-score .team-text {
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .top-score strong {
@@ -242,10 +257,30 @@ p {
   text-align: center;
 }
 
-.top-score span {
+.top-score > span {
   color: var(--muted);
   font-size: 17px;
   font-weight: 760;
+}
+
+.team-name {
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: .32em;
+}
+
+.team-flag {
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  font-size: .78em;
+  line-height: 1;
+}
+
+.team-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .next-mini {
@@ -353,10 +388,10 @@ p {
 
 .team-card b {
   font-size: clamp(44px, 3.4vw, 70px);
-  line-height: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.02;
+  overflow: visible;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .team-card.home {
@@ -526,7 +561,7 @@ p {
   grid-template-columns: 32px minmax(0, 1fr) 58px 42px;
 }
 
-.standing-row span {
+.standing-row > span {
   color: var(--green);
   font-size: 18px;
   font-weight: 900;
@@ -535,9 +570,9 @@ p {
 .standing-row b {
   min-width: 0;
   font-size: 20px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: visible;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .standing-row i {
@@ -896,9 +931,9 @@ p {
 
 .match-item {
   width: 100%;
-  min-height: 82px;
+  min-height: 96px;
   display: grid;
-  grid-template-columns: 54px minmax(0, 1fr) 86px;
+  grid-template-columns: 54px minmax(0, 1fr) 76px;
   grid-template-rows: auto auto;
   gap: 6px 10px;
   align-items: center;
@@ -946,17 +981,33 @@ p {
 
 .match-item strong {
   min-width: 0;
-  font-size: 18px;
-  line-height: 1.1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-size: 15px;
+  line-height: 1.16;
+  overflow: visible;
+  white-space: normal;
+}
+
+.match-teams {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2px;
+}
+
+.match-teams .team-name {
+  display: flex;
+  align-items: center;
+}
+
+.match-teams .team-text {
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .match-item em {
   color: var(--dim);
   font-style: normal;
-  font-size: 12px;
+  font-size: 11px;
+  line-height: 1;
 }
 
 .match-item small {

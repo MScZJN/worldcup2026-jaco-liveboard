@@ -202,6 +202,57 @@ const teamNames = {
   新西兰: { en: 'New Zealand', ar: 'نيوزيلندا' }
 };
 
+const teamFlags = {
+  巴西: '🇧🇷',
+  摩洛哥: '🇲🇦',
+  海地: '🇭🇹',
+  苏格兰: '\u{1F3F4}\u{E0067}\u{E0062}\u{E0073}\u{E0063}\u{E0074}\u{E007F}',
+  美国: '🇺🇸',
+  巴拉圭: '🇵🇾',
+  澳大利亚: '🇦🇺',
+  土耳其: '🇹🇷',
+  卡塔尔: '🇶🇦',
+  瑞士: '🇨🇭',
+  德国: '🇩🇪',
+  日本: '🇯🇵',
+  西班牙: '🇪🇸',
+  佛得角: '🇨🇻',
+  比利时: '🇧🇪',
+  埃及: '🇪🇬',
+  沙特阿拉伯: '🇸🇦',
+  乌拉圭: '🇺🇾',
+  伊朗: '🇮🇷',
+  法国: '🇫🇷',
+  塞内加尔: '🇸🇳',
+  伊拉克: '🇮🇶',
+  挪威: '🇳🇴',
+  阿根廷: '🇦🇷',
+  阿尔及利亚: '🇩🇿',
+  奥地利: '🇦🇹',
+  约旦: '🇯🇴',
+  葡萄牙: '🇵🇹',
+  刚果民主共和国: '🇨🇩',
+  英格兰: '\u{1F3F4}\u{E0067}\u{E0062}\u{E0065}\u{E006E}\u{E0067}\u{E007F}',
+  克罗地亚: '🇭🇷',
+  加纳: '🇬🇭',
+  巴拿马: '🇵🇦',
+  乌兹别克斯坦: '🇺🇿',
+  哥伦比亚: '🇨🇴',
+  捷克: '🇨🇿',
+  南非: '🇿🇦',
+  波黑: '🇧🇦',
+  加拿大: '🇨🇦',
+  墨西哥: '🇲🇽',
+  韩国: '🇰🇷',
+  荷兰: '🇳🇱',
+  科特迪瓦: '🇨🇮',
+  厄瓜多尔: '🇪🇨',
+  瑞典: '🇸🇪',
+  突尼斯: '🇹🇳',
+  库拉索: '🇨🇼',
+  新西兰: '🇳🇿'
+};
+
 const mockMatches = [
   { matchId: 'studio-live-brazil-morocco', date: '2026-06-14', time: '06:00', stage: 'C组第1轮', group: 'C', homeTeam: '巴西', awayTeam: '摩洛哥', scoreLine: '2-1', homeScore: 2, awayScore: 1, status: '进行中', statusId: '1', hot: 88 },
   { matchId: 'studio-next-haiti-scotland', date: '2026-06-14', time: '09:00', stage: 'C组第1轮', group: 'C', homeTeam: '海地', awayTeam: '苏格兰', scoreLine: '-', status: '未开赛', statusId: '0', hot: 29 },
@@ -300,6 +351,14 @@ function t() {
 
 function localTeam(name) {
   return teamNames[name]?.[state.lang] || name || '';
+}
+
+function teamFlag(name) {
+  return teamFlags[name] || '🏳';
+}
+
+function teamHtml(name, className = '') {
+  return `<span class="team-name ${className}"><span class="team-flag" aria-hidden="true">${teamFlag(name)}</span><span class="team-text">${localTeam(name)}</span></span>`;
 }
 
 function matchPhase(match) {
@@ -491,8 +550,8 @@ function filterCounts() {
 function eventText(match) {
   const phase = matchPhase(match);
   if (phase === 'live') return state.lang === 'ar' ? `هدف موريسيو 74'` : `GOAL Mauricio 74'`;
-  if (phase === 'finished') return `${t().report} ${localTeam(match.homeTeam)} ${match.scoreLine} ${localTeam(match.awayTeam)}`;
-  return `${t().preview} ${displayDateTime(match).time || '--:--'} ${localTeam(match.homeTeam)} vs ${localTeam(match.awayTeam)}`;
+  if (phase === 'finished') return `${t().report} ${teamFlag(match.homeTeam)} ${localTeam(match.homeTeam)} ${match.scoreLine} ${teamFlag(match.awayTeam)} ${localTeam(match.awayTeam)}`;
+  return `${t().preview} ${displayDateTime(match).time || '--:--'} ${teamFlag(match.homeTeam)} ${localTeam(match.homeTeam)} vs ${teamFlag(match.awayTeam)} ${localTeam(match.awayTeam)}`;
 }
 
 function oddsText(match) {
@@ -566,7 +625,7 @@ function phaseModel(match) {
 }
 
 function tickerText(focus, next) {
-  const schedule = [focus, ...next].slice(0, 5).map((match) => `${displayDateTime(match).time || matchMinute(match)} ${localTeam(match.homeTeam)} vs ${localTeam(match.awayTeam)}`).join('  ·  ');
+  const schedule = [focus, ...next].slice(0, 5).map((match) => `${displayDateTime(match).time || matchMinute(match)} ${teamFlag(match.homeTeam)} ${localTeam(match.homeTeam)} vs ${teamFlag(match.awayTeam)} ${localTeam(match.awayTeam)}`).join('  ·  ');
   return [
     `${t().tickerLabels.schedule} ${schedule}`,
     `${t().tickerLabels.highlight} ${eventText(focus)}`,
@@ -616,9 +675,9 @@ function render() {
           </div>
         </div>
         <div class="top-score">
-          <b>${localTeam(focus.homeTeam)}</b>
+          <b>${teamHtml(focus.homeTeam, 'home-name')}</b>
           <strong class="${isUpcoming ? 'is-vs' : ''}">${displayScore}</strong>
-          <b>${localTeam(focus.awayTeam)}</b>
+          <b>${teamHtml(focus.awayTeam, 'away-name')}</b>
           <span>${focusTime.date} ${matchMinute(focus)} ${copy.utc3} · ${phase.headline}</span>
         </div>
         <div class="next-mini">
@@ -651,7 +710,7 @@ function render() {
             return `
               <button class="match-item ${match.matchId === focus.matchId ? 'active' : ''} phase-${itemPhase}" data-match-id="${match.matchId}" role="option" aria-selected="${match.matchId === focus.matchId}">
                 <span class="match-time">${itemTime.time || matchMinute(match)}</span>
-                <strong>${localTeam(match.homeTeam)} <em>vs</em> ${localTeam(match.awayTeam)}</strong>
+                <strong class="match-teams">${teamHtml(match.homeTeam)}<em>vs</em>${teamHtml(match.awayTeam)}</strong>
                 <small>${itemTime.date} · ${stageLabel(match)}</small>
                 <b class="match-status">${itemPhase === 'upcoming' ? statusLabel(match) : `${h}-${a}`}</b>
               </button>
@@ -668,9 +727,9 @@ function render() {
             <span>${phase.content.label}</span>
           </div>
           <div class="scoreboard">
-            <div class="team-card home"><small>${copy.home}</small><b>${localTeam(focus.homeTeam)}</b></div>
+            <div class="team-card home"><small>${copy.home}</small><b>${teamHtml(focus.homeTeam, 'home-name')}</b></div>
             <strong class="score ${isUpcoming ? 'is-vs' : ''}">${isUpcoming ? 'VS' : `${homeScore}<em>-</em>${awayScore}`}</strong>
-            <div class="team-card away"><small>${copy.away}</small><b>${localTeam(focus.awayTeam)}</b></div>
+            <div class="team-card away"><small>${copy.away}</small><b>${teamHtml(focus.awayTeam, 'away-name')}</b></div>
           </div>
           <div class="goal-alert">${icon('ball')} <b>${eventText(focus)}</b><span>${oddsText(focus)}</span></div>
         </article>
@@ -702,7 +761,7 @@ function render() {
           ${standings.map((team, index) => `
             <div class="standing-row">
               <span>${index + 1}</span>
-              <b>${localTeam(team.teamName)}</b>
+              <b>${teamHtml(team.teamName)}</b>
               <i>${team.goals || '0/0'}</i>
               <strong>${team.points ?? 0}</strong>
             </div>
