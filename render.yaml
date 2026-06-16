@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: worldcup2026-jaco-liveboard
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    domains:
+      - worldcup2026.jiananzhu.cloud
+    envVars:
+      - key: NODE_VERSION
+        value: 22.17.0
+      - key: WORLDCUP_SKILL_DIR
+        value: /opt/render/project/src/vendor/haizei-worldcup-2026-skill

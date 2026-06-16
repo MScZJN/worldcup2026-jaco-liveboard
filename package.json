@@ -1,0 +1,14 @@
+{
+  "name": "worldcup-h5-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "description": "OBS-ready World Cup 2026 liveboard powered by haizei-worldcup-2026-skill"
+}
