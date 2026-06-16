@@ -9,6 +9,7 @@ const entries = [
   'CNAME',
   'README.md',
   'index.html',
+  'dashboard.html',
   'app.js',
   'styles.css',
   'broadcast.html',

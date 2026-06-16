@@ -14,6 +14,12 @@ npm run dev
 http://localhost:4177
 ```
 
+根路径默认展示 OBS 横屏直播间版；移动 H5 能力看板保留在：
+
+```text
+http://localhost:4177/dashboard.html
+```
+
 ## GitHub Pages 线上部署
 
 当前仓库支持 GitHub Pages 静态部署。页面在本地 Node 服务中会实时调用 `/api/run`；发布到 GitHub Pages 后会自动切换为读取 `data/snapshot.json`，该快照由 GitHub Actions 在部署时和定时任务中通过 vendored `haizei-worldcup-2026-skill` 生成。
