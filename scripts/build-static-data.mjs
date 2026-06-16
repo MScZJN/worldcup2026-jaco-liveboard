@@ -106,13 +106,27 @@ function runSkill(tool, args) {
 }
 
 const teams = JSON.parse(await readFile(join(skillDir, 'data', 'teams.json'), 'utf8'));
-const [today, tomorrow, scheduleStats, standings, players] = await Promise.all([
+const [dates, today, tomorrow, scheduleWindow, scheduleStats, standings, players] = await Promise.all([
+  runSkill('worldcup-schedule.js', ['dates']),
   runSkill('worldcup-schedule.js', ['today']),
   runSkill('worldcup-schedule.js', ['tomorrow']),
+  runSkill('worldcup-schedule.js', ['all']),
   runSkill('worldcup-schedule.js', ['stats']),
   runSkill('worldcup-rankings.js', ['standings']),
   runSkill('worldcup-rankings.js', ['players', '进球', '10'])
 ]);
+
+const dateList = dates.ok && Array.isArray(dates.data) ? dates.data : [];
+const dailySchedules = await Promise.all(dateList.map((date) => runSkill('worldcup-schedule.js', ['date', date])));
+const allSchedule = dailySchedules
+  .flatMap((result) => result.ok && Array.isArray(result.data) ? result.data : [])
+  .filter((match, index, list) => list.findIndex((item) => item.matchId === match.matchId) === index)
+  .sort((a, b) => Number(a.startTimeStamp || 0) - Number(b.startTimeStamp || 0));
+const completeSchedule = allSchedule.length
+  ? allSchedule
+  : scheduleWindow.ok && Array.isArray(scheduleWindow.data) && scheduleWindow.data.length
+    ? scheduleWindow.data
+    : sampleMatches();
 
 const snapshot = {
   generatedAt: new Date().toISOString(),
@@ -131,6 +145,8 @@ const snapshot = {
   run: {
     'schedule:today': today.ok && Array.isArray(today.data) && today.data.length ? today : { ok: true, data: sampleMatches(), fallback: true },
     'schedule:tomorrow': tomorrow.ok && Array.isArray(tomorrow.data) && tomorrow.data.length ? tomorrow : { ok: true, data: sampleMatches(), fallback: true },
+    'schedule:dates': dates.ok ? dates : { ok: true, data: dateList, fallback: true },
+    'schedule:all': { ok: true, data: completeSchedule },
     'schedule:stats': scheduleStats.ok ? scheduleStats : { ok: true, data: { total: sampleMatches().length, finished: 1, pending: 2, live: 0 } },
     'rankings:standings': standings.ok ? standings : { ok: true, data: null, fallback: true },
     'rankings:players:进球:10': players.ok ? players : { ok: true, data: null, fallback: true }

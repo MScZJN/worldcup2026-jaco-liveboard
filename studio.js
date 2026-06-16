@@ -16,6 +16,7 @@ const state = {
   odds: [],
   standings: null,
   selectedMatchId: params.get('match'),
+  filter: params.get('filter') || 'all',
   cue: 0,
   updatedAt: new Date(),
   error: ''
@@ -25,16 +26,18 @@ const i18n = {
   en: {
     htmlLang: 'en',
     dir: 'ltr',
-    brand: 'Jaco Live',
-    subtitle: 'Official text broadcast',
+    brand: 'Jaco World Cup 2026 Dashboard',
+    subtitle: 'Official match control desk',
     skill: 'Skill Live',
     liveSync: 'live data',
     mock: 'static fallback',
     refreshSync: '45s sync',
     selected: 'Selected match',
     allMatches: 'Match schedule',
-    controlHint: 'Click a fixture on the left. Use 1/2/3 to switch the discussion angle.',
+    noMatches: 'No fixtures in this status',
+    controlHint: 'UTC+3 · Click a fixture on the left. Use 1/2/3 for the discussion angle.',
     scheduleMeta: 'Full fixture control',
+    utc3: 'UTC+3',
     discussionFocus: 'Discussion focus',
     hostBoard: 'Host board',
     interaction: 'Audience interaction',
@@ -49,6 +52,12 @@ const i18n = {
     preview: 'Kickoff preview',
     odds: 'Win/Draw/Lose',
     cues: ['Highlights', 'Prediction/Odds', 'Qualification'],
+    filters: {
+      all: 'All',
+      finished: 'Finished',
+      live: 'Live',
+      upcoming: 'Not started'
+    },
     phases: {
       finished: 'Post-match review',
       live: 'Live tracking',
@@ -80,16 +89,18 @@ const i18n = {
   ar: {
     htmlLang: 'ar',
     dir: 'rtl',
-    brand: 'Jaco Live',
-    subtitle: 'البث النصي الرسمي',
+    brand: 'Jaco World Cup 2026 Dashboard',
+    subtitle: 'لوحة التحكم الرسمية للمباريات',
     skill: 'Skill Live',
     liveSync: 'بيانات مباشرة',
     mock: 'بيانات ثابتة',
     refreshSync: 'تحديث 45ث',
     selected: 'المباراة المختارة',
     allMatches: 'جدول المباريات',
-    controlHint: 'اختر مباراة من اليسار. استخدم 1/2/3 لتغيير زاوية النقاش.',
+    noMatches: 'لا توجد مباريات بهذه الحالة',
+    controlHint: 'UTC+3 · اختر مباراة من اليسار. استخدم 1/2/3 لتغيير زاوية النقاش.',
     scheduleMeta: 'تحكم كامل بالجدول',
+    utc3: 'UTC+3',
     discussionFocus: 'محور النقاش',
     hostBoard: 'لوحة المعلق',
     interaction: 'تفاعل الجمهور',
@@ -104,6 +115,12 @@ const i18n = {
     preview: 'قبل البداية',
     odds: 'فوز / تعادل / خسارة',
     cues: ['اللقطات', 'التوقعات/الاحتمالات', 'التأهل'],
+    filters: {
+      all: 'الكل',
+      finished: 'انتهت',
+      live: 'مباشر',
+      upcoming: 'لم تبدأ'
+    },
     phases: {
       finished: 'مراجعة ما بعد المباراة',
       live: 'متابعة مباشرة',
@@ -148,9 +165,40 @@ const teamNames = {
   德国: { en: 'Germany', ar: 'ألمانيا' },
   日本: { en: 'Japan', ar: 'اليابان' },
   西班牙: { en: 'Spain', ar: 'إسبانيا' },
+  佛得角: { en: 'Cape Verde', ar: 'الرأس الأخضر' },
+  比利时: { en: 'Belgium', ar: 'بلجيكا' },
+  埃及: { en: 'Egypt', ar: 'مصر' },
+  沙特阿拉伯: { en: 'Saudi Arabia', ar: 'السعودية' },
+  乌拉圭: { en: 'Uruguay', ar: 'أوروغواي' },
+  伊朗: { en: 'Iran', ar: 'إيران' },
   法国: { en: 'France', ar: 'فرنسا' },
+  塞内加尔: { en: 'Senegal', ar: 'السنغال' },
+  伊拉克: { en: 'Iraq', ar: 'العراق' },
+  挪威: { en: 'Norway', ar: 'النرويج' },
   阿根廷: { en: 'Argentina', ar: 'الأرجنتين' },
+  阿尔及利亚: { en: 'Algeria', ar: 'الجزائر' },
+  奥地利: { en: 'Austria', ar: 'النمسا' },
+  约旦: { en: 'Jordan', ar: 'الأردن' },
+  葡萄牙: { en: 'Portugal', ar: 'البرتغال' },
+  刚果民主共和国: { en: 'DR Congo', ar: 'الكونغو الديمقراطية' },
   英格兰: { en: 'England', ar: 'إنجلترا' },
+  克罗地亚: { en: 'Croatia', ar: 'كرواتيا' },
+  加纳: { en: 'Ghana', ar: 'غانا' },
+  巴拿马: { en: 'Panama', ar: 'بنما' },
+  乌兹别克斯坦: { en: 'Uzbekistan', ar: 'أوزبكستان' },
+  哥伦比亚: { en: 'Colombia', ar: 'كولومبيا' },
+  捷克: { en: 'Czechia', ar: 'التشيك' },
+  南非: { en: 'South Africa', ar: 'جنوب أفريقيا' },
+  波黑: { en: 'Bosnia and Herzegovina', ar: 'البوسنة والهرسك' },
+  加拿大: { en: 'Canada', ar: 'كندا' },
+  墨西哥: { en: 'Mexico', ar: 'المكسيك' },
+  韩国: { en: 'Korea Republic', ar: 'كوريا الجنوبية' },
+  荷兰: { en: 'Netherlands', ar: 'هولندا' },
+  科特迪瓦: { en: "Cote d'Ivoire", ar: 'كوت ديفوار' },
+  厄瓜多尔: { en: 'Ecuador', ar: 'الإكوادور' },
+  瑞典: { en: 'Sweden', ar: 'السويد' },
+  突尼斯: { en: 'Tunisia', ar: 'تونس' },
+  库拉索: { en: 'Curacao', ar: 'كوراساو' },
   新西兰: { en: 'New Zealand', ar: 'نيوزيلندا' }
 };
 
@@ -256,6 +304,7 @@ function localTeam(name) {
 
 function matchPhase(match) {
   if (match.statusId === '1' || /进行中|直播|live/i.test(match.status || '')) return 'live';
+  if (match.statusId === '0' || /未开赛|未开始|待定|pending|not started/i.test(match.status || '')) return 'upcoming';
   if (match.statusId === '2' || /已结束|完场|结束|full/i.test(match.status || '') || /\d+\s*-\s*\d+/.test(match.scoreLine || '')) return 'finished';
   return 'upcoming';
 }
@@ -277,6 +326,22 @@ function stageLabel(match) {
   return state.lang === 'ar' ? `${groupLabel(match)} · الجولة ${round}` : `${groupLabel(match)} · Round ${round}`;
 }
 
+function displayDateTime(match) {
+  if (match.startTimeStamp) {
+    const date = new Date((Number(match.startTimeStamp) + 3 * 60 * 60) * 1000);
+    return {
+      date: `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, '0')}-${String(date.getUTCDate()).padStart(2, '0')}`,
+      time: `${String(date.getUTCHours()).padStart(2, '0')}:${String(date.getUTCMinutes()).padStart(2, '0')}`
+    };
+  }
+  const [hour = '00', minute = '00'] = String(match.time || '00:00').split(':');
+  const utc3Hour = (Number(hour) + 19) % 24;
+  return {
+    date: match.date || '',
+    time: `${String(utc3Hour).padStart(2, '0')}:${minute.padStart(2, '0')}`
+  };
+}
+
 function score(match) {
   const found = String(match.scoreLine || '').match(/(\d+)\s*-\s*(\d+)/);
   if (found) return [found[1], found[2]];
@@ -288,7 +353,7 @@ function matchMinute(match) {
   const phase = matchPhase(match);
   if (phase === 'live') return "74'";
   if (phase === 'finished') return 'FT';
-  return match.time || '--:--';
+  return displayDateTime(match).time || '--:--';
 }
 
 let staticSnapshotPromise = null;
@@ -347,13 +412,15 @@ async function load() {
     }
 
     const [schedule, odds, standings] = await Promise.allSettled([
-      getJson('/api/run?tool=schedule&arg=today'),
+      getJson('/api/run?tool=schedule&arg=all'),
       getJson('/api/odds?wc=1&pool=summary'),
       getJson('/api/run?tool=rankings&arg=standings')
     ]);
 
     const liveSchedule = schedule.value?.ok ? schedule.value.data : [];
-    state.matches = Array.isArray(liveSchedule) && liveSchedule.length ? liveSchedule : mockMatches;
+    state.matches = (Array.isArray(liveSchedule) && liveSchedule.length ? liveSchedule : mockMatches)
+      .slice()
+      .sort((a, b) => Number(a.startTimeStamp || 0) - Number(b.startTimeStamp || 0));
     const oddsMatches = odds.value?.data?.matches || [];
     state.odds = oddsMatches.length ? oddsMatches : mockOdds;
     state.standings = standings.value?.ok ? standings.value.data : state.standings;
@@ -372,25 +439,41 @@ async function load() {
 }
 
 function defaultFocusMatch() {
-  return state.matches.find((match) => matchPhase(match) === 'live') ||
-    state.matches.find((match) => matchPhase(match) === 'upcoming') ||
-    state.matches[0] ||
+  const pool = filteredMatches();
+  const source = pool.length ? pool : state.matches;
+  return source.find((match) => matchPhase(match) === 'live') ||
+    source.find((match) => matchPhase(match) === 'upcoming') ||
+    source[0] ||
     mockMatches[0];
 }
 
 function focusMatch() {
-  return state.matches.find((match) => match.matchId === state.selectedMatchId) || defaultFocusMatch();
+  return filteredMatches().find((match) => match.matchId === state.selectedMatchId) ||
+    state.matches.find((match) => match.matchId === state.selectedMatchId) ||
+    defaultFocusMatch();
 }
 
 function nextMatches(focus) {
-  return state.matches.filter((match) => match.matchId !== focus.matchId).slice(0, 4);
+  return filteredMatches().filter((match) => match.matchId !== focus.matchId).slice(0, 4);
+}
+
+function filteredMatches() {
+  if (state.filter === 'all') return state.matches;
+  return state.matches.filter((match) => matchPhase(match) === state.filter);
+}
+
+function filterCounts() {
+  return ['all', 'finished', 'live', 'upcoming'].reduce((counts, filter) => {
+    counts[filter] = filter === 'all' ? state.matches.length : state.matches.filter((match) => matchPhase(match) === filter).length;
+    return counts;
+  }, {});
 }
 
 function eventText(match) {
   const phase = matchPhase(match);
   if (phase === 'live') return state.lang === 'ar' ? `هدف موريسيو 74'` : `GOAL Mauricio 74'`;
   if (phase === 'finished') return `${t().report} ${localTeam(match.homeTeam)} ${match.scoreLine} ${localTeam(match.awayTeam)}`;
-  return `${t().preview} ${match.time || '--:--'} ${localTeam(match.homeTeam)} vs ${localTeam(match.awayTeam)}`;
+  return `${t().preview} ${displayDateTime(match).time || '--:--'} ${localTeam(match.homeTeam)} vs ${localTeam(match.awayTeam)}`;
 }
 
 function oddsText(match) {
@@ -435,7 +518,7 @@ function phaseModel(match) {
   const phase = matchPhase(match);
   const content = phaseContent[state.lang][phase];
   const [homeScore, awayScore] = score(match);
-  const scoreLine = phase === 'upcoming' ? `${match.time || '--:--'}` : `${homeScore} - ${awayScore}`;
+  const scoreLine = phase === 'upcoming' ? `${displayDateTime(match).time || '--:--'}` : `${homeScore} - ${awayScore}`;
   const metrics = phase === 'finished'
     ? [
         [state.lang === 'ar' ? 'النتيجة' : 'Result', scoreLine],
@@ -449,7 +532,7 @@ function phaseModel(match) {
           [state.lang === 'ar' ? 'قراءة الاحتمالات' : 'Odds read', oddsText(match)]
         ]
       : [
-          [state.lang === 'ar' ? 'موعد البداية' : 'Kickoff', match.time || '--:--'],
+          [state.lang === 'ar' ? 'موعد البداية' : 'Kickoff', `${displayDateTime(match).time || '--:--'} ${t().utc3}`],
           [state.lang === 'ar' ? 'التوقع الرئيسي' : 'Main prediction', predictionText(match)],
           [state.lang === 'ar' ? 'قراءة الاحتمالات' : 'Odds read', oddsText(match)]
         ];
@@ -464,7 +547,7 @@ function phaseModel(match) {
 }
 
 function tickerText(focus, next) {
-  const schedule = [focus, ...next].slice(0, 5).map((match) => `${match.time || matchMinute(match)} ${localTeam(match.homeTeam)} vs ${localTeam(match.awayTeam)}`).join('  ·  ');
+  const schedule = [focus, ...next].slice(0, 5).map((match) => `${displayDateTime(match).time || matchMinute(match)} ${localTeam(match.homeTeam)} vs ${localTeam(match.awayTeam)}`).join('  ·  ');
   return [
     `${t().tickerLabels.schedule} ${schedule}`,
     `${t().tickerLabels.highlight} ${eventText(focus)}`,
@@ -491,6 +574,9 @@ function render() {
 
   const focus = focusMatch();
   const next = nextMatches(focus);
+  const counts = filterCounts();
+  const visibleMatches = filteredMatches();
+  const focusTime = displayDateTime(focus);
   const [homeScore, awayScore] = score(focus);
   const standings = groupStanding(focus);
   const phase = phaseModel(focus);
@@ -512,7 +598,7 @@ function render() {
           <b>${localTeam(focus.homeTeam)}</b>
           <strong>${homeScore} - ${awayScore}</strong>
           <b>${localTeam(focus.awayTeam)}</b>
-          <span>${matchMinute(focus)} · ${phase.headline}</span>
+          <span>${focusTime.date} ${matchMinute(focus)} ${copy.utc3} · ${phase.headline}</span>
         </div>
         <div class="next-mini">
           <span>${copy.controlHint}</span>
@@ -526,21 +612,30 @@ function render() {
       <aside class="match-rail">
         <header>
           <h2>${icon('calendar')} ${copy.allMatches}</h2>
-          <span>${copy.scheduleMeta} · ${state.matches.length}</span>
+          <span>${copy.scheduleMeta} · ${state.matches.length} · ${copy.utc3}</span>
+          <div class="filter-tabs" aria-label="${copy.allMatches}">
+            ${['all', 'finished', 'live', 'upcoming'].map((filter) => `
+              <button data-filter="${filter}" class="${state.filter === filter ? 'active' : ''}">
+                <span>${copy.filters[filter]}</span>
+                <b>${counts[filter]}</b>
+              </button>
+            `).join('')}
+          </div>
         </header>
         <div class="match-list" role="listbox" aria-label="${copy.allMatches}">
-          ${state.matches.map((match) => {
+          ${visibleMatches.length ? visibleMatches.map((match) => {
             const [h, a] = score(match);
             const itemPhase = matchPhase(match);
+            const itemTime = displayDateTime(match);
             return `
               <button class="match-item ${match.matchId === focus.matchId ? 'active' : ''} phase-${itemPhase}" data-match-id="${match.matchId}" role="option" aria-selected="${match.matchId === focus.matchId}">
-                <span class="match-time">${match.time || matchMinute(match)}</span>
+                <span class="match-time">${itemTime.time || matchMinute(match)}</span>
                 <strong>${localTeam(match.homeTeam)} <em>vs</em> ${localTeam(match.awayTeam)}</strong>
-                <small>${stageLabel(match)}</small>
+                <small>${itemTime.date} · ${stageLabel(match)}</small>
                 <b>${itemPhase === 'upcoming' ? statusLabel(match) : `${h}-${a}`}</b>
               </button>
             `;
-          }).join('')}
+          }).join('') : `<div class="empty-state">${copy.noMatches}</div>`}
         </div>
       </aside>
 
@@ -626,6 +721,20 @@ function render() {
 }
 
 function bind() {
+  document.querySelectorAll('[data-filter]').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.filter = button.dataset.filter || 'all';
+      const url = new URL(location.href);
+      url.searchParams.set('filter', state.filter);
+      if (!filteredMatches().some((match) => match.matchId === state.selectedMatchId)) {
+        state.selectedMatchId = defaultFocusMatch().matchId;
+        url.searchParams.set('match', state.selectedMatchId);
+      }
+      state.cue = 0;
+      history.replaceState(null, '', url);
+      render();
+    });
+  });
   document.querySelectorAll('[data-match-id]').forEach((button) => {
     button.addEventListener('click', () => {
       state.selectedMatchId = button.dataset.matchId;
@@ -648,7 +757,8 @@ function bind() {
 }
 
 function timeLabel(date) {
-  return `${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
+  const utc3 = new Date(date.getTime() + 3 * 60 * 60 * 1000);
+  return `${String(utc3.getUTCHours()).padStart(2, '0')}:${String(utc3.getUTCMinutes()).padStart(2, '0')} UTC+3`;
 }
 
 window.addEventListener('keydown', (event) => {
@@ -657,10 +767,12 @@ window.addEventListener('keydown', (event) => {
     render();
   }
   if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-    const current = state.matches.findIndex((match) => match.matchId === focusMatch().matchId);
+    const pool = filteredMatches();
+    if (!pool.length) return;
+    const current = pool.findIndex((match) => match.matchId === focusMatch().matchId);
     const delta = event.key === 'ArrowDown' ? 1 : -1;
-    const nextIndex = (current + delta + state.matches.length) % state.matches.length;
-    state.selectedMatchId = state.matches[nextIndex]?.matchId || state.selectedMatchId;
+    const nextIndex = (current + delta + pool.length) % pool.length;
+    state.selectedMatchId = pool[nextIndex]?.matchId || state.selectedMatchId;
     state.cue = 0;
     const url = new URL(location.href);
     url.searchParams.set('match', state.selectedMatchId);
