@@ -22,7 +22,14 @@ http://localhost:4177/dashboard.html
 
 ## GitHub Pages 线上部署
 
-当前仓库支持 GitHub Pages 静态部署。页面在本地 Node 服务中会实时调用 `/api/run`；发布到 GitHub Pages 后会自动切换为读取 `data/snapshot.json`，该快照由 GitHub Actions 在部署时和定时任务中通过 vendored `haizei-worldcup-2026-skill` 生成。
+当前仓库支持 GitHub Pages 静态部署。页面在本地 Node 服务中会实时调用 `/api/run`；发布到 GitHub Pages 后会自动切换为读取 `data/snapshot.json` 静态快照。
+
+刷新策略：
+
+- 页面端每 45 秒重新请求 `data/snapshot.json`，会拿到最近一次已发布的新快照。
+- GitHub Pages 是静态站，不能在用户打开页面时执行 Node 抓取；需要手动运行 `npm run pages:build` 并发布，或启用 GitHub Actions 定时发布。
+- GitHub Actions 定时发布的建议粒度是每 5 分钟，这是 GitHub Pages 静态站可用的自动刷新粒度；新增 workflow 需要 GitHub 授权具备 `workflow` scope。
+- 如果需要真正 45 秒服务端实时抓取，需要部署 Node 服务版本，而不是纯 GitHub Pages。
 
 Pages 构建命令：
 
