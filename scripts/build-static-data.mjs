@@ -7,6 +7,7 @@ const rootDir = fileURLToPath(new URL('../', import.meta.url));
 const skillDir = join(rootDir, 'vendor', 'haizei-worldcup-2026-skill');
 const scriptDir = join(skillDir, 'scripts');
 const outFile = join(rootDir, 'data', 'snapshot.json');
+const minFreshScheduleMatches = 10;
 
 function sampleMatches() {
   return [
@@ -86,7 +87,16 @@ function runSkill(tool, args) {
   });
 }
 
+async function readPreviousSnapshot() {
+  try {
+    return JSON.parse(await readFile(outFile, 'utf8'));
+  } catch {
+    return null;
+  }
+}
+
 const teams = JSON.parse(await readFile(join(skillDir, 'data', 'teams.json'), 'utf8'));
+const previousSnapshot = await readPreviousSnapshot();
 const [dates, today, tomorrow, scheduleWindow, scheduleStats, standings, players] = await Promise.all([
   runSkill('worldcup-schedule.js', ['dates']),
   runSkill('worldcup-schedule.js', ['today']),
@@ -108,6 +118,20 @@ const completeSchedule = allSchedule.length
   : scheduleWindow.ok && Array.isArray(scheduleWindow.data) && scheduleWindow.data.length
     ? scheduleWindow.data
     : sampleMatches();
+const previousSchedule = previousSnapshot?.run?.['schedule:all']?.data || [];
+const freshScheduleEnough = completeSchedule.length >= minFreshScheduleMatches;
+
+if (!freshScheduleEnough && previousSchedule.length >= minFreshScheduleMatches) {
+  console.warn(`Keeping previous snapshot: fetched ${completeSchedule.length} matches, previous has ${previousSchedule.length}.`);
+  await mkdir(dirname(outFile), { recursive: true });
+  await writeFile(outFile, `${JSON.stringify(previousSnapshot, null, 2)}\n`);
+  console.log(`Preserved ${outFile}`);
+  process.exit(0);
+}
+
+if (!freshScheduleEnough && process.env.CI) {
+  throw new Error(`Refusing to publish degraded static snapshot: fetched ${completeSchedule.length} matches.`);
+}
 
 const snapshot = {
   generatedAt: new Date().toISOString(),
