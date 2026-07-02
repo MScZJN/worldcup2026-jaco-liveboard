@@ -1,0 +1,2224 @@
+{
+  "generatedAt": "2026-07-02T23:30:48.246Z",
+  "meta": {
+    "ok": true,
+    "static": true,
+    "tournament": "2026年国际足联世界杯",
+    "season": 2026,
+    "totalTeams": 48,
+    "totalGroups": 12,
+    "hosts": [
+      "美国",
+      "加拿大",
+      "墨西哥"
+    ],
+    "teams": [
+      {
+        "group": "A",
+        "position": 1,
+        "teamName": "墨西哥",
+        "teamId": "9c24b86859123a6a7218b5600e65680e",
+        "pot": 1,
+        "isHost": true,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "A",
+        "position": 2,
+        "teamName": "韩国",
+        "teamId": "e350aa265bc58bf922eb6ec5d3b705f3",
+        "pot": 2,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "A",
+        "position": 3,
+        "teamName": "捷克",
+        "teamId": "bd0c6be1d4f081864fd88755b05c4f49",
+        "pot": 4,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "A",
+        "position": 4,
+        "teamName": "南非",
+        "teamId": "dc7f9fdc795728d06adc20867070e73b",
+        "pot": 3,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "B",
+        "position": 1,
+        "teamName": "加拿大",
+        "teamId": "35779c25e9dec553f154e9d6286925e6",
+        "pot": 1,
+        "isHost": true,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "B",
+        "position": 2,
+        "teamName": "波黑",
+        "teamId": "ef7a8c508595fd9083ec6e7ee93820ba",
+        "pot": 4,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "B",
+        "position": 3,
+        "teamName": "卡塔尔",
+        "teamId": "1d55f57a5cdc344f0944d2fba5e82f0a",
+        "pot": 3,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "B",
+        "position": 4,
+        "teamName": "瑞士",
+        "teamId": "1692195abf8c7835f4212113975b49a6",
+        "pot": 2,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "C",
+        "position": 1,
+        "teamName": "巴西",
+        "teamId": "b92535372efd0c6bc7df7b84b9c7b577",
+        "pot": 1,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "C",
+        "position": 2,
+        "teamName": "摩洛哥",
+        "teamId": "b16a9fdf450c58c762b49202c4d13efe",
+        "pot": 2,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "C",
+        "position": 3,
+        "teamName": "海地",
+        "teamId": "a57cdc7e5410f79bf70d8636b03a3985",
+        "pot": 4,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "C",
+        "position": 4,
+        "teamName": "苏格兰",
+        "teamId": "bd630ae14342fe2fa1b7376b8c467a36",
+        "pot": 3,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "D",
+        "position": 1,
+        "teamName": "美国",
+        "teamId": "a09c0a1b5f939e899c2c90239c3061f2",
+        "pot": 1,
+        "isHost": true,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "D",
+        "position": 2,
+        "teamName": "巴拉圭",
+        "teamId": "13aeb5d36078e7d9a8b2d8ea3c63cd84",
+        "pot": 3,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "D",
+        "position": 3,
+        "teamName": "澳大利亚",
+        "teamId": "ad002317be38a25026110feccea14ed1",
+        "pot": 2,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "D",
+        "position": 4,
+        "teamName": "土耳其",
+        "teamId": "11cf940dfd3e5766a4108da1968f8c65",
+        "pot": 4,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "E",
+        "position": 1,
+        "teamName": "德国",
+        "teamId": "d885ec68c7b46dbfd4a8f6e41d577ba0",
+        "pot": 1,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "E",
+        "position": 2,
+        "teamName": "库拉索",
+        "teamId": "f304b118f59fd0087bde4807de418c56",
+        "pot": 4,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "E",
+        "position": 3,
+        "teamName": "科特迪瓦",
+        "teamId": "122c4a5024a4a2395071b27ae3c96a9c",
+        "pot": 3,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "E",
+        "position": 4,
+        "teamName": "厄瓜多尔",
+        "teamId": "e03d262a641690d6021146f8a1960c55",
+        "pot": 2,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "F",
+        "position": 1,
+        "teamName": "荷兰",
+        "teamId": "e37f589321ffb8ced53d4fb4de96e5ff",
+        "pot": 1,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "F",
+        "position": 2,
+        "teamName": "日本",
+        "teamId": "017ebd53c335a35f3ff9c611be8cc5c8",
+        "pot": 2,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "F",
+        "position": 3,
+        "teamName": "瑞典",
+        "teamId": "b2eb99748b34be973dbd98415cb0a3c7",
+        "pot": 4,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "F",
+        "position": 4,
+        "teamName": "突尼斯",
+        "teamId": "18c8a8c7502910e966a80fb74b4274b5",
+        "pot": 3,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "G",
+        "position": 1,
+        "teamName": "比利时",
+        "teamId": "265243e3f2e8dd1261e98f372183240f",
+        "pot": 1,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "G",
+        "position": 2,
+        "teamName": "埃及",
+        "teamId": "5482e10c7389489cb9f4c912ff822c04",
+        "pot": 3,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "G",
+        "position": 3,
+        "teamName": "伊朗",
+        "teamId": "a57d0fd569253f6bfd9486dd6db9d484",
+        "pot": 2,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "G",
+        "position": 4,
+        "teamName": "新西兰",
+        "teamId": "606320b6c012a17a7a96eba0a95b8e79",
+        "pot": 4,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "H",
+        "position": 1,
+        "teamName": "西班牙",
+        "teamId": "ca0f779e8db617a828a1c886d6beb530",
+        "pot": 1,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "H",
+        "position": 2,
+        "teamName": "佛得角",
+        "teamId": "3cecc3c32bea4f6662753aaedd32cf90",
+        "pot": 4,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "H",
+        "position": 3,
+        "teamName": "沙特阿拉伯",
+        "teamId": "71193d502f1a0147c8d13f3f78eb1729",
+        "pot": 3,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "H",
+        "position": 4,
+        "teamName": "乌拉圭",
+        "teamId": "7582d690648eb69085503eb2a08b5b39",
+        "pot": 2,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "I",
+        "position": 1,
+        "teamName": "法国",
+        "teamId": "396c35d0620914f054cdb72e46a5f174",
+        "pot": 1,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "I",
+        "position": 2,
+        "teamName": "塞内加尔",
+        "teamId": "023fb7a8de59b54f288308c180e292fa",
+        "pot": 2,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "I",
+        "position": 3,
+        "teamName": "伊拉克",
+        "teamId": "e44c88e683e0aa9a3c500dc75033dad2",
+        "pot": 4,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "I",
+        "position": 4,
+        "teamName": "挪威",
+        "teamId": "71738605c250e55a12624947da9bd247",
+        "pot": 3,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "J",
+        "position": 1,
+        "teamName": "阿根廷",
+        "teamId": "3d9f26830ac65f2297cc3c1d20487154",
+        "pot": 1,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "J",
+        "position": 2,
+        "teamName": "阿尔及利亚",
+        "teamId": "36ad997d444aae1f0166dfdcb777493a",
+        "pot": 3,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "J",
+        "position": 3,
+        "teamName": "奥地利",
+        "teamId": "87d2f6f08a43085d31f09472e19edee6",
+        "pot": 2,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "J",
+        "position": 4,
+        "teamName": "约旦",
+        "teamId": "eb9a7c8d47d75b02bb4156c4f87f17a7",
+        "pot": 4,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "K",
+        "position": 1,
+        "teamName": "葡萄牙",
+        "teamId": "cd3b2deb45caa7373a08831e7de0f5ac",
+        "pot": 1,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "K",
+        "position": 2,
+        "teamName": "刚果民主共和国",
+        "teamId": "92a326ca035e2eb1a7af17e3e70ffafd",
+        "pot": 4,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "K",
+        "position": 3,
+        "teamName": "乌兹别克斯坦",
+        "teamId": "1291c7890d5108afd39df6db09c7d85a",
+        "pot": 3,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "K",
+        "position": 4,
+        "teamName": "哥伦比亚",
+        "teamId": "c1d483bf3bbaf3040980088edde8560f",
+        "pot": 2,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "L",
+        "position": 1,
+        "teamName": "英格兰",
+        "teamId": "b78be5f1faa30defec36cef442b11431",
+        "pot": 1,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "L",
+        "position": 2,
+        "teamName": "克罗地亚",
+        "teamId": "785dab5ff819d718c38cbb2a0b877a69",
+        "pot": 2,
+        "qualifiedTop32": true
+      },
+      {
+        "group": "L",
+        "position": 3,
+        "teamName": "加纳",
+        "teamId": "e00c50535a28cf7807621db0085a8382",
+        "pot": 4,
+        "qualifiedTop32": false
+      },
+      {
+        "group": "L",
+        "position": 4,
+        "teamName": "巴拿马",
+        "teamId": "90a5daeba664af01a6f9aeebe3491178",
+        "pot": 3,
+        "qualifiedTop32": false
+      }
+    ],
+    "sampleMatches": [
+      {
+        "matchId": "sample-brazil-morocco",
+        "date": "2026-06-14",
+        "time": "06:00",
+        "stage": "小组赛C组第1轮",
+        "group": "C",
+        "homeTeam": "巴西",
+        "awayTeam": "摩洛哥",
+        "status": "未开赛",
+        "hot": 51,
+        "scoreLine": "-"
+      },
+      {
+        "matchId": "sample-qatar-switzerland",
+        "date": "2026-06-14",
+        "time": "03:00",
+        "stage": "小组赛B组第1轮",
+        "group": "B",
+        "homeTeam": "卡塔尔",
+        "awayTeam": "瑞士",
+        "status": "未开赛",
+        "hot": 21,
+        "scoreLine": "-"
+      },
+      {
+        "matchId": "sample-usa-paraguay",
+        "date": "2026-06-13",
+        "time": "09:00",
+        "stage": "小组赛D组第1轮",
+        "group": "D",
+        "homeTeam": "美国",
+        "awayTeam": "巴拉圭",
+        "status": "已结束",
+        "hot": 48,
+        "scoreLine": "4-1"
+      }
+    ]
+  },
+  "run": {
+    "schedule:today": {
+      "ok": true,
+      "data": [
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDIjTDF2c0UzL0gzL0kzL0ozL0sz",
+          "oriKey": "世界杯#2026-07-02#L1vsE3/H3/I3/J3/K3",
+          "tournament": "世界杯",
+          "date": "2026-07-02",
+          "startTime": "2026-07-02 00:00:00",
+          "time": "00:00",
+          "weekday": "07-02 昨天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "英格兰",
+          "awayTeam": "刚果民主共和国",
+          "homeScore": "2",
+          "awayScore": "1",
+          "scoreLine": "2-1",
+          "status": "已结束",
+          "statusId": "2",
+          "statusText": "已结束",
+          "dataSourceText": "已结束",
+          "resultDesc": "凯恩二连击助英格兰逆转晋级",
+          "winner": "英格兰",
+          "hasLive": false,
+          "hasLiveOrFlash": false,
+          "hot": "51",
+          "startTimeStamp": "1782921600",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDIjTDF2c0UzL0gzL0kzL0ozL0sz&tab=赛况"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDIjRzF2c0EzL0UzL0gzL0kzL0oz",
+          "oriKey": "世界杯#2026-07-02#G1vsA3/E3/H3/I3/J3",
+          "tournament": "世界杯",
+          "date": "2026-07-02",
+          "startTime": "2026-07-02 04:00:00",
+          "time": "04:00",
+          "weekday": "07-02 昨天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "比利时",
+          "awayTeam": "塞内加尔",
+          "homeScore": "3",
+          "awayScore": "2",
+          "scoreLine": "3-2",
+          "status": "已结束",
+          "statusId": "2",
+          "statusText": "已结束",
+          "dataSourceText": "已结束",
+          "resultDesc": "让二追三，比利时晋级16强",
+          "winner": "比利时",
+          "hasLive": false,
+          "hasLiveOrFlash": false,
+          "hot": "21",
+          "startTimeStamp": "1782936000",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDIjRzF2c0EzL0UzL0gzL0kzL0oz&tab=赛况"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDIjRDF2c0IzL0UzL0YzL0kzL0oz",
+          "oriKey": "世界杯#2026-07-02#D1vsB3/E3/F3/I3/J3",
+          "tournament": "世界杯",
+          "date": "2026-07-02",
+          "startTime": "2026-07-02 08:00:00",
+          "time": "08:00",
+          "weekday": "07-02 昨天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "美国",
+          "awayTeam": "波黑",
+          "homeScore": "2",
+          "awayScore": "0",
+          "scoreLine": "2-0",
+          "status": "已结束",
+          "statusId": "2",
+          "statusText": "已结束",
+          "dataSourceText": "已结束",
+          "resultDesc": "10人东道主晋级，巴洛贡染红",
+          "winner": "美国",
+          "hasLive": false,
+          "hasLiveOrFlash": false,
+          "hot": "2",
+          "startTimeStamp": "1782950400",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDIjRDF2c0IzL0UzL0YzL0kzL0oz&tab=赛况"
+        }
+      ],
+      "raw": "[\n  {\n    \"matchId\": \"5LiW55WM5p2vIzIwMjYtMDctMDIjTDF2c0UzL0gzL0kzL0ozL0sz\",\n    \"oriKey\": \"世界杯#2026-07-02#L1vsE3/H3/I3/J3/K3\",\n    \"tournament\": \"世界杯\",\n    \"date\": \"2026-07-02\",\n    \"startTime\": \"2026-07-02 00:00:00\",\n    \"time\": \"00:00\",\n    \"weekday\": \"07-02 昨天\",\n    \"stage\": \"1/16决赛\",\n    \"group\": \"\",\n    \"round\": 0,\n    \"homeTeam\": \"英格兰\",\n    \"awayTeam\": \"刚果民主共和国\",\n    \"homeScore\": \"2\",\n    \"awayScore\": \"1\",\n    \"scoreLine\": \"2-1\",\n    \"status\": \"已结束\",\n    \"statusId\": \"2\",\n    \"statusText\": \"已结束\",\n    \"dataSourceText\": \"已结束\",\n    \"resultDesc\": \"凯恩二连击助英格兰逆转晋级\",\n    \"winner\": \"英格兰\",\n    \"hasLive\": false,\n    \"hasLiveOrFlash\": false,\n    \"hot\": \"51\",\n    \"startTimeStamp\": \"1782921600\",\n    \"detailUrl\": \"https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDIjTDF2c0UzL0gzL0kzL0ozL0sz&tab=赛况\"\n  },\n  {\n    \"matchId\": \"5LiW55WM5p2vIzIwMjYtMDctMDIjRzF2c0EzL0UzL0gzL0kzL0oz\",\n    \"oriKey\": \"世界杯#2026-07-02#G1vsA3/E3/H3/I3/J3\",\n    \"tournament\": \"世界杯\",\n    \"date\": \"2026-07-02\",\n    \"startTime\": \"2026-07-02 04:00:00\",\n    \"time\": \"04:00\",\n    \"weekday\": \"07-02 昨天\",\n    \"stage\": \"1/16决赛\",\n    \"group\": \"\",\n    \"round\": 0,\n    \"homeTeam\": \"比利时\",\n    \"awayTeam\": \"塞内加尔\",\n    \"homeScore\": \"3\",\n    \"awayScore\": \"2\",\n    \"scoreLine\": \"3-2\",\n    \"status\": \"已结束\",\n    \"statusId\": \"2\",\n    \"statusText\": \"已结束\",\n    \"dataSourceText\": \"已结束\",\n    \"resultDesc\": \"让二追三，比利时晋级16强\",\n    \"winner\": \"比利时\",\n    \"hasLive\": false,\n    \"hasLiveOrFlash\": false,\n    \"hot\": \"21\",\n    \"startTimeStamp\": \"1782936000\",\n    \"detailUrl\": \"https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDIjRzF2c0EzL0UzL0gzL0kzL0oz&tab=赛况\"\n  },\n  {\n    \"matchId\": \"5LiW55WM5p2vIzIwMjYtMDctMDIjRDF2c0IzL0UzL0YzL0kzL0oz\",\n    \"oriKey\": \"世界杯#2026-07-02#D1vsB3/E3/F3/I3/J3\",\n    \"tournament\": \"世界杯\",\n    \"date\": \"2026-07-02\",\n    \"startTime\": \"2026-07-02 08:00:00\",\n    \"time\": \"08:00\",\n    \"weekday\": \"07-02 昨天\",\n    \"stage\": \"1/16决赛\",\n    \"group\": \"\",\n    \"round\": 0,\n    \"homeTeam\": \"美国\",\n    \"awayTeam\": \"波黑\",\n    \"homeScore\": \"2\",\n    \"awayScore\": \"0\",\n    \"scoreLine\": \"2-0\",\n    \"status\": \"已结束\",\n    \"statusId\": \"2\",\n    \"statusText\": \"已结束\",\n    \"dataSourceText\": \"已结束\",\n    \"resultDesc\": \"10人东道主晋级，巴洛贡染红\",\n    \"winner\": \"美国\",\n    \"hasLive\": false,\n    \"hasLiveOrFlash\": false,\n    \"hot\": \"2\",\n    \"startTimeStamp\": \"1782950400\",\n    \"detailUrl\": \"https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDIjRDF2c0IzL0UzL0YzL0kzL0oz&tab=赛况\"\n  }\n]\n"
+    },
+    "schedule:tomorrow": {
+      "ok": true,
+      "data": [
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDMjSDF2c0oy",
+          "oriKey": "世界杯#2026-07-03#H1vsJ2",
+          "tournament": "世界杯",
+          "date": "2026-07-03",
+          "startTime": "2026-07-03 03:00:00",
+          "time": "03:00",
+          "weekday": "07-03 今天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "西班牙",
+          "awayTeam": "奥地利",
+          "homeScore": "3",
+          "awayScore": "0",
+          "scoreLine": "3-0",
+          "status": "已结束",
+          "statusId": "2",
+          "statusText": "已结束",
+          "dataSourceText": "已结束",
+          "resultDesc": "",
+          "winner": "西班牙",
+          "hasLive": false,
+          "hasLiveOrFlash": false,
+          "hot": "60",
+          "startTimeStamp": "1783018800",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDMjSDF2c0oy&tab=赛况"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDMjSzJ2c0wy",
+          "oriKey": "世界杯#2026-07-03#K2vsL2",
+          "tournament": "世界杯",
+          "date": "2026-07-03",
+          "startTime": "2026-07-03 07:00:00",
+          "time": "07:00",
+          "weekday": "07-03 今天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "葡萄牙",
+          "awayTeam": "克罗地亚",
+          "homeScore": "0",
+          "awayScore": "0",
+          "scoreLine": "0-0",
+          "status": "进行中",
+          "statusId": "1",
+          "statusText": "进行中",
+          "dataSourceText": "免费直播",
+          "resultDesc": "",
+          "winner": "",
+          "hasLive": true,
+          "hasLiveOrFlash": true,
+          "hot": "90",
+          "startTimeStamp": "1783033200",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDMjSzJ2c0wy&tab=聊天"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDMjQjF2c0UzL0YzL0czL0kzL0oz",
+          "oriKey": "世界杯#2026-07-03#B1vsE3/F3/G3/I3/J3",
+          "tournament": "世界杯",
+          "date": "2026-07-03",
+          "startTime": "2026-07-03 11:00:00",
+          "time": "11:00",
+          "weekday": "07-03 今天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "瑞士",
+          "awayTeam": "阿尔及利亚",
+          "homeScore": "0",
+          "awayScore": "0",
+          "scoreLine": "0-0",
+          "status": "未开赛",
+          "statusId": "0",
+          "statusText": "未开赛",
+          "dataSourceText": "免费直播",
+          "resultDesc": "",
+          "winner": "",
+          "hasLive": true,
+          "hasLiveOrFlash": true,
+          "hot": "21",
+          "startTimeStamp": "1783047600",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDMjQjF2c0UzL0YzL0czL0kzL0oz&tab=分析"
+        }
+      ],
+      "raw": "[\n  {\n    \"matchId\": \"5LiW55WM5p2vIzIwMjYtMDctMDMjSDF2c0oy\",\n    \"oriKey\": \"世界杯#2026-07-03#H1vsJ2\",\n    \"tournament\": \"世界杯\",\n    \"date\": \"2026-07-03\",\n    \"startTime\": \"2026-07-03 03:00:00\",\n    \"time\": \"03:00\",\n    \"weekday\": \"07-03 今天\",\n    \"stage\": \"1/16决赛\",\n    \"group\": \"\",\n    \"round\": 0,\n    \"homeTeam\": \"西班牙\",\n    \"awayTeam\": \"奥地利\",\n    \"homeScore\": \"3\",\n    \"awayScore\": \"0\",\n    \"scoreLine\": \"3-0\",\n    \"status\": \"已结束\",\n    \"statusId\": \"2\",\n    \"statusText\": \"已结束\",\n    \"dataSourceText\": \"已结束\",\n    \"resultDesc\": \"\",\n    \"winner\": \"西班牙\",\n    \"hasLive\": false,\n    \"hasLiveOrFlash\": false,\n    \"hot\": \"60\",\n    \"startTimeStamp\": \"1783018800\",\n    \"detailUrl\": \"https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDMjSDF2c0oy&tab=赛况\"\n  },\n  {\n    \"matchId\": \"5LiW55WM5p2vIzIwMjYtMDctMDMjSzJ2c0wy\",\n    \"oriKey\": \"世界杯#2026-07-03#K2vsL2\",\n    \"tournament\": \"世界杯\",\n    \"date\": \"2026-07-03\",\n    \"startTime\": \"2026-07-03 07:00:00\",\n    \"time\": \"07:00\",\n    \"weekday\": \"07-03 今天\",\n    \"stage\": \"1/16决赛\",\n    \"group\": \"\",\n    \"round\": 0,\n    \"homeTeam\": \"葡萄牙\",\n    \"awayTeam\": \"克罗地亚\",\n    \"homeScore\": \"0\",\n    \"awayScore\": \"0\",\n    \"scoreLine\": \"0-0\",\n    \"status\": \"进行中\",\n    \"statusId\": \"1\",\n    \"statusText\": \"进行中\",\n    \"dataSourceText\": \"免费直播\",\n    \"resultDesc\": \"\",\n    \"winner\": \"\",\n    \"hasLive\": true,\n    \"hasLiveOrFlash\": true,\n    \"hot\": \"90\",\n    \"startTimeStamp\": \"1783033200\",\n    \"detailUrl\": \"https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDMjSzJ2c0wy&tab=聊天\"\n  },\n  {\n    \"matchId\": \"5LiW55WM5p2vIzIwMjYtMDctMDMjQjF2c0UzL0YzL0czL0kzL0oz\",\n    \"oriKey\": \"世界杯#2026-07-03#B1vsE3/F3/G3/I3/J3\",\n    \"tournament\": \"世界杯\",\n    \"date\": \"2026-07-03\",\n    \"startTime\": \"2026-07-03 11:00:00\",\n    \"time\": \"11:00\",\n    \"weekday\": \"07-03 今天\",\n    \"stage\": \"1/16决赛\",\n    \"group\": \"\",\n    \"round\": 0,\n    \"homeTeam\": \"瑞士\",\n    \"awayTeam\": \"阿尔及利亚\",\n    \"homeScore\": \"0\",\n    \"awayScore\": \"0\",\n    \"scoreLine\": \"0-0\",\n    \"status\": \"未开赛\",\n    \"statusId\": \"0\",\n    \"statusText\": \"未开赛\",\n    \"dataSourceText\": \"免费直播\",\n    \"resultDesc\": \"\",\n    \"winner\": \"\",\n    \"hasLive\": true,\n    \"hasLiveOrFlash\": true,\n    \"hot\": \"21\",\n    \"startTimeStamp\": \"1783047600\",\n    \"detailUrl\": \"https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDMjQjF2c0UzL0YzL0czL0kzL0oz&tab=分析\"\n  }\n]\n"
+    },
+    "schedule:dates": {
+      "ok": true,
+      "data": [
+        "2026-07-02",
+        "2026-07-03",
+        "2026-07-04",
+        "2026-07-05",
+        "2026-07-06"
+      ],
+      "raw": "[\n  \"2026-07-02\",\n  \"2026-07-03\",\n  \"2026-07-04\",\n  \"2026-07-05\",\n  \"2026-07-06\"\n]\n"
+    },
+    "schedule:all": {
+      "ok": true,
+      "data": [
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDIjTDF2c0UzL0gzL0kzL0ozL0sz",
+          "oriKey": "世界杯#2026-07-02#L1vsE3/H3/I3/J3/K3",
+          "tournament": "世界杯",
+          "date": "2026-07-02",
+          "startTime": "2026-07-02 00:00:00",
+          "time": "00:00",
+          "weekday": "07-02 昨天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "英格兰",
+          "awayTeam": "刚果民主共和国",
+          "homeScore": "2",
+          "awayScore": "1",
+          "scoreLine": "2-1",
+          "status": "已结束",
+          "statusId": "2",
+          "statusText": "已结束",
+          "dataSourceText": "已结束",
+          "resultDesc": "凯恩二连击助英格兰逆转晋级",
+          "winner": "英格兰",
+          "hasLive": false,
+          "hasLiveOrFlash": false,
+          "hot": "51",
+          "startTimeStamp": "1782921600",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDIjTDF2c0UzL0gzL0kzL0ozL0sz&tab=赛况"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDIjRzF2c0EzL0UzL0gzL0kzL0oz",
+          "oriKey": "世界杯#2026-07-02#G1vsA3/E3/H3/I3/J3",
+          "tournament": "世界杯",
+          "date": "2026-07-02",
+          "startTime": "2026-07-02 04:00:00",
+          "time": "04:00",
+          "weekday": "07-02 昨天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "比利时",
+          "awayTeam": "塞内加尔",
+          "homeScore": "3",
+          "awayScore": "2",
+          "scoreLine": "3-2",
+          "status": "已结束",
+          "statusId": "2",
+          "statusText": "已结束",
+          "dataSourceText": "已结束",
+          "resultDesc": "让二追三，比利时晋级16强",
+          "winner": "比利时",
+          "hasLive": false,
+          "hasLiveOrFlash": false,
+          "hot": "21",
+          "startTimeStamp": "1782936000",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDIjRzF2c0EzL0UzL0gzL0kzL0oz&tab=赛况"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDIjRDF2c0IzL0UzL0YzL0kzL0oz",
+          "oriKey": "世界杯#2026-07-02#D1vsB3/E3/F3/I3/J3",
+          "tournament": "世界杯",
+          "date": "2026-07-02",
+          "startTime": "2026-07-02 08:00:00",
+          "time": "08:00",
+          "weekday": "07-02 昨天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "美国",
+          "awayTeam": "波黑",
+          "homeScore": "2",
+          "awayScore": "0",
+          "scoreLine": "2-0",
+          "status": "已结束",
+          "statusId": "2",
+          "statusText": "已结束",
+          "dataSourceText": "已结束",
+          "resultDesc": "10人东道主晋级，巴洛贡染红",
+          "winner": "美国",
+          "hasLive": false,
+          "hasLiveOrFlash": false,
+          "hot": "2",
+          "startTimeStamp": "1782950400",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDIjRDF2c0IzL0UzL0YzL0kzL0oz&tab=赛况"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDMjSDF2c0oy",
+          "oriKey": "世界杯#2026-07-03#H1vsJ2",
+          "tournament": "世界杯",
+          "date": "2026-07-03",
+          "startTime": "2026-07-03 03:00:00",
+          "time": "03:00",
+          "weekday": "07-03 今天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "西班牙",
+          "awayTeam": "奥地利",
+          "homeScore": "3",
+          "awayScore": "0",
+          "scoreLine": "3-0",
+          "status": "已结束",
+          "statusId": "2",
+          "statusText": "已结束",
+          "dataSourceText": "已结束",
+          "resultDesc": "",
+          "winner": "西班牙",
+          "hasLive": false,
+          "hasLiveOrFlash": false,
+          "hot": "60",
+          "startTimeStamp": "1783018800",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDMjSDF2c0oy&tab=赛况"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDMjSzJ2c0wy",
+          "oriKey": "世界杯#2026-07-03#K2vsL2",
+          "tournament": "世界杯",
+          "date": "2026-07-03",
+          "startTime": "2026-07-03 07:00:00",
+          "time": "07:00",
+          "weekday": "07-03 今天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "葡萄牙",
+          "awayTeam": "克罗地亚",
+          "homeScore": "0",
+          "awayScore": "0",
+          "scoreLine": "0-0",
+          "status": "进行中",
+          "statusId": "1",
+          "statusText": "进行中",
+          "dataSourceText": "免费直播",
+          "resultDesc": "",
+          "winner": "",
+          "hasLive": true,
+          "hasLiveOrFlash": true,
+          "hot": "90",
+          "startTimeStamp": "1783033200",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDMjSzJ2c0wy&tab=聊天"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDMjQjF2c0UzL0YzL0czL0kzL0oz",
+          "oriKey": "世界杯#2026-07-03#B1vsE3/F3/G3/I3/J3",
+          "tournament": "世界杯",
+          "date": "2026-07-03",
+          "startTime": "2026-07-03 11:00:00",
+          "time": "11:00",
+          "weekday": "07-03 今天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "瑞士",
+          "awayTeam": "阿尔及利亚",
+          "homeScore": "0",
+          "awayScore": "0",
+          "scoreLine": "0-0",
+          "status": "未开赛",
+          "statusId": "0",
+          "statusText": "未开赛",
+          "dataSourceText": "免费直播",
+          "resultDesc": "",
+          "winner": "",
+          "hasLive": true,
+          "hasLiveOrFlash": true,
+          "hot": "21",
+          "startTimeStamp": "1783047600",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDMjQjF2c0UzL0YzL0czL0kzL0oz&tab=分析"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDQjRDJ2c0cy",
+          "oriKey": "世界杯#2026-07-04#D2vsG2",
+          "tournament": "世界杯",
+          "date": "2026-07-04",
+          "startTime": "2026-07-04 02:00:00",
+          "time": "02:00",
+          "weekday": "07-04 明天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "澳大利亚",
+          "awayTeam": "埃及",
+          "homeScore": "0",
+          "awayScore": "0",
+          "scoreLine": "0-0",
+          "status": "未开赛",
+          "statusId": "0",
+          "statusText": "未开赛",
+          "dataSourceText": "试看直播",
+          "resultDesc": "",
+          "winner": "",
+          "hasLive": true,
+          "hasLiveOrFlash": true,
+          "hot": "2",
+          "startTimeStamp": "1783101600",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDQjRDJ2c0cy&tab=分析"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDQjSjF2c0gy",
+          "oriKey": "世界杯#2026-07-04#J1vsH2",
+          "tournament": "世界杯",
+          "date": "2026-07-04",
+          "startTime": "2026-07-04 06:00:00",
+          "time": "06:00",
+          "weekday": "07-04 明天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "阿根廷",
+          "awayTeam": "佛得角",
+          "homeScore": "0",
+          "awayScore": "0",
+          "scoreLine": "0-0",
+          "status": "未开赛",
+          "statusId": "0",
+          "statusText": "未开赛",
+          "dataSourceText": "试看直播",
+          "resultDesc": "",
+          "winner": "",
+          "hasLive": true,
+          "hasLiveOrFlash": true,
+          "hot": "51",
+          "startTimeStamp": "1783116000",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDQjSjF2c0gy&tab=分析"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDQjSzF2c0QzL0UzL0kzL0ozL0wz",
+          "oriKey": "世界杯#2026-07-04#K1vsD3/E3/I3/J3/L3",
+          "tournament": "世界杯",
+          "date": "2026-07-04",
+          "startTime": "2026-07-04 09:30:00",
+          "time": "09:30",
+          "weekday": "07-04 明天",
+          "stage": "1/16决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "哥伦比亚",
+          "awayTeam": "加纳",
+          "homeScore": "0",
+          "awayScore": "0",
+          "scoreLine": "0-0",
+          "status": "未开赛",
+          "statusId": "0",
+          "statusText": "未开赛",
+          "dataSourceText": "试看直播",
+          "resultDesc": "",
+          "winner": "",
+          "hasLive": true,
+          "hasLiveOrFlash": true,
+          "hot": "51",
+          "startTimeStamp": "1783128600",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDQjSzF2c0QzL0UzL0kzL0ozL0wz&tab=分析"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDUj56ysMeWcujEvMTblhrPotZvog5zogIV2c+esrDPlnLoxLzE25Yaz6LWb6IOc6ICF",
+          "oriKey": "世界杯#2026-07-05#第1场1/16决赛胜者vs第3场1/16决赛胜者",
+          "tournament": "世界杯",
+          "date": "2026-07-05",
+          "startTime": "2026-07-05 01:00:00",
+          "time": "01:00",
+          "weekday": "07-05 周日",
+          "stage": "1/8决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "加拿大",
+          "awayTeam": "摩洛哥",
+          "homeScore": "0",
+          "awayScore": "0",
+          "scoreLine": "0-0",
+          "status": "未开赛",
+          "statusId": "0",
+          "statusText": "未开赛",
+          "dataSourceText": "动画直播",
+          "resultDesc": "",
+          "winner": "",
+          "hasLive": true,
+          "hasLiveOrFlash": true,
+          "hot": "2",
+          "startTimeStamp": "1783184400",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDUj56ysMeWcujEvMTblhrPotZvog5zogIV2c%2BesrDPlnLoxLzE25Yaz6LWb6IOc6ICF&tab=分析"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDUj56ysMuWcujEvMTblhrPotZvog5zogIV2c+esrDXlnLoxLzE25Yaz6LWb6IOc6ICF",
+          "oriKey": "世界杯#2026-07-05#第2场1/16决赛胜者vs第5场1/16决赛胜者",
+          "tournament": "世界杯",
+          "date": "2026-07-05",
+          "startTime": "2026-07-05 05:00:00",
+          "time": "05:00",
+          "weekday": "07-05 周日",
+          "stage": "1/8决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "巴拉圭",
+          "awayTeam": "法国",
+          "homeScore": "0",
+          "awayScore": "0",
+          "scoreLine": "0-0",
+          "status": "未开赛",
+          "statusId": "0",
+          "statusText": "未开赛",
+          "dataSourceText": "动画直播",
+          "resultDesc": "",
+          "winner": "",
+          "hasLive": true,
+          "hasLiveOrFlash": true,
+          "hot": "51",
+          "startTimeStamp": "1783198800",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDUj56ysMuWcujEvMTblhrPotZvog5zogIV2c%2BesrDXlnLoxLzE25Yaz6LWb6IOc6ICF&tab=分析"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDYj56ysNOWcujEvMTblhrPotZvog5zogIV2c+esrDblnLoxLzE25Yaz6LWb6IOc6ICF",
+          "oriKey": "世界杯#2026-07-06#第4场1/16决赛胜者vs第6场1/16决赛胜者",
+          "tournament": "世界杯",
+          "date": "2026-07-06",
+          "startTime": "2026-07-06 04:00:00",
+          "time": "04:00",
+          "weekday": "07-06 周一",
+          "stage": "1/8决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "巴西",
+          "awayTeam": "挪威",
+          "homeScore": "0",
+          "awayScore": "0",
+          "scoreLine": "0-0",
+          "status": "未开赛",
+          "statusId": "0",
+          "statusText": "未开赛",
+          "dataSourceText": "动画直播",
+          "resultDesc": "",
+          "winner": "",
+          "hasLive": true,
+          "hasLiveOrFlash": true,
+          "hot": "51",
+          "startTimeStamp": "1783281600",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDYj56ysNOWcujEvMTblhrPotZvog5zogIV2c%2BesrDblnLoxLzE25Yaz6LWb6IOc6ICF&tab=分析"
+        },
+        {
+          "matchId": "5LiW55WM5p2vIzIwMjYtMDctMDYj56ysN+WcujEvMTblhrPotZvog5zogIV2c+esrDjlnLoxLzE25Yaz6LWb6IOc6ICF",
+          "oriKey": "世界杯#2026-07-06#第7场1/16决赛胜者vs第8场1/16决赛胜者",
+          "tournament": "世界杯",
+          "date": "2026-07-06",
+          "startTime": "2026-07-06 08:00:00",
+          "time": "08:00",
+          "weekday": "07-06 周一",
+          "stage": "1/8决赛",
+          "group": "",
+          "round": 0,
+          "homeTeam": "墨西哥",
+          "awayTeam": "英格兰",
+          "homeScore": "0",
+          "awayScore": "0",
+          "scoreLine": "0-0",
+          "status": "未开赛",
+          "statusId": "0",
+          "statusText": "未开赛",
+          "dataSourceText": "动画直播",
+          "resultDesc": "",
+          "winner": "",
+          "hasLive": true,
+          "hasLiveOrFlash": true,
+          "hot": "51",
+          "startTimeStamp": "1783296000",
+          "detailUrl": "https://tiyu.baidu.com/al/live/detail?matchId=5LiW55WM5p2vIzIwMjYtMDctMDYj56ysN%2BWcujEvMTblhrPotZvog5zogIV2c%2BesrDjlnLoxLzE25Yaz6LWb6IOc6ICF&tab=分析"
+        }
+      ]
+    },
+    "schedule:stats": {
+      "ok": true,
+      "data": {
+        "total": 13,
+        "finished": 4,
+        "pending": 8,
+        "live": 1,
+        "dateRange": {
+          "from": "2026-07-02",
+          "to": "2026-07-06"
+        }
+      },
+      "raw": "{\n  \"total\": 13,\n  \"finished\": 4,\n  \"pending\": 8,\n  \"live\": 1,\n  \"dateRange\": {\n    \"from\": \"2026-07-02\",\n    \"to\": \"2026-07-06\"\n  }\n}\n"
+    },
+    "rankings:standings": {
+      "ok": true,
+      "data": {
+        "title": "小组赛",
+        "type": "groupStage",
+        "rulerDesc": null,
+        "refreshTime": "10000",
+        "updateTime": "2026-07-03 07:30:14",
+        "columns": [
+          {
+            "align": "left",
+            "col": 11,
+            "name": "球队名称"
+          },
+          {
+            "align": "center",
+            "col": 3,
+            "name": "场次"
+          },
+          {
+            "align": "center",
+            "col": 5,
+            "name": "胜/平/负"
+          },
+          {
+            "align": "center",
+            "col": 4,
+            "name": "进/失"
+          },
+          {
+            "align": "center",
+            "col": 3,
+            "name": "积分"
+          }
+        ],
+        "groups": [
+          {
+            "list": [
+              {
+                "teamId": "9c24b86859123a6a7218b5600e65680e",
+                "teamName": "墨西哥",
+                "teamLogo": "https://gips0.baidu.com/it/u=3513621783,780965864&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "1",
+                "status": "晋级32强",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "3/0/0",
+                "goals": "6/0",
+                "points": "9",
+                "link": "/al/team?id=9c24b86859123a6a7218b5600e65680e&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=9c24b86859123a6a7218b5600e65680e&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=9c24b86859123a6a7218b5600e65680e&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "dc7f9fdc795728d06adc20867070e73b",
+                "teamName": "南非",
+                "teamLogo": "https://gips2.baidu.com/it/u=1871870758,2630787962&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_641",
+                "teamRank": "2",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/1/1",
+                "goals": "2/3",
+                "points": "4",
+                "link": "/al/team?id=dc7f9fdc795728d06adc20867070e73b&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=dc7f9fdc795728d06adc20867070e73b&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=dc7f9fdc795728d06adc20867070e73b&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "e350aa265bc58bf922eb6ec5d3b705f3",
+                "teamName": "韩国",
+                "teamLogo": "https://gips3.baidu.com/it/u=605950860,946410169&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f768_512",
+                "teamRank": "3",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/0/2",
+                "goals": "2/3",
+                "points": "3",
+                "link": "/al/team?id=e350aa265bc58bf922eb6ec5d3b705f3&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=e350aa265bc58bf922eb6ec5d3b705f3&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=e350aa265bc58bf922eb6ec5d3b705f3&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "bd0c6be1d4f081864fd88755b05c4f49",
+                "teamName": "捷克",
+                "teamLogo": "https://gips3.baidu.com/it/u=2347456389,963830118&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f250_167",
+                "teamRank": "4",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "0/1/2",
+                "goals": "2/6",
+                "points": "1",
+                "link": "/al/team?id=bd0c6be1d4f081864fd88755b05c4f49&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=bd0c6be1d4f081864fd88755b05c4f49&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=bd0c6be1d4f081864fd88755b05c4f49&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              }
+            ]
+          },
+          {
+            "list": [
+              {
+                "teamId": "1692195abf8c7835f4212113975b49a6",
+                "teamName": "瑞士",
+                "teamLogo": "https://gips0.baidu.com/it/u=2000814313,3030023231&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "1",
+                "status": "晋级32强",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "2/1/0",
+                "goals": "7/3",
+                "points": "7",
+                "link": "/al/team?id=1692195abf8c7835f4212113975b49a6&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=1692195abf8c7835f4212113975b49a6&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=1692195abf8c7835f4212113975b49a6&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "35779c25e9dec553f154e9d6286925e6",
+                "teamName": "加拿大",
+                "teamLogo": "https://gips0.baidu.com/it/u=3884888979,3662831454&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "2",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/1/1",
+                "goals": "8/3",
+                "points": "4",
+                "link": "/al/team?id=35779c25e9dec553f154e9d6286925e6&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=35779c25e9dec553f154e9d6286925e6&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=35779c25e9dec553f154e9d6286925e6&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "ef7a8c508595fd9083ec6e7ee93820ba",
+                "teamName": "波黑",
+                "teamLogo": "https://gips0.baidu.com/it/u=3830983373,3705682793&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "3",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/1/1",
+                "goals": "5/6",
+                "points": "4",
+                "link": "/al/team?id=ef7a8c508595fd9083ec6e7ee93820ba&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=ef7a8c508595fd9083ec6e7ee93820ba&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=ef7a8c508595fd9083ec6e7ee93820ba&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "1d55f57a5cdc344f0944d2fba5e82f0a",
+                "teamName": "卡塔尔",
+                "teamLogo": "https://gips0.baidu.com/it/u=3059663808,1376137081&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "4",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "0/1/2",
+                "goals": "2/10",
+                "points": "1",
+                "link": "/al/team?id=1d55f57a5cdc344f0944d2fba5e82f0a&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=1d55f57a5cdc344f0944d2fba5e82f0a&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=1d55f57a5cdc344f0944d2fba5e82f0a&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              }
+            ]
+          },
+          {
+            "list": [
+              {
+                "teamId": "b92535372efd0c6bc7df7b84b9c7b577",
+                "teamName": "巴西",
+                "teamLogo": "https://gips3.baidu.com/it/u=355604936,887753579&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_672",
+                "teamRank": "1",
+                "status": "晋级32强",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "2/1/0",
+                "goals": "7/1",
+                "points": "7",
+                "link": "/al/team?id=b92535372efd0c6bc7df7b84b9c7b577&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=b92535372efd0c6bc7df7b84b9c7b577&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=b92535372efd0c6bc7df7b84b9c7b577&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "b16a9fdf450c58c762b49202c4d13efe",
+                "teamName": "摩洛哥",
+                "teamLogo": "https://gips1.baidu.com/it/u=307857087,1341230857&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "2",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "2/1/0",
+                "goals": "6/3",
+                "points": "7",
+                "link": "/al/team?id=b16a9fdf450c58c762b49202c4d13efe&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=b16a9fdf450c58c762b49202c4d13efe&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=b16a9fdf450c58c762b49202c4d13efe&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "bd630ae14342fe2fa1b7376b8c467a36",
+                "teamName": "苏格兰",
+                "teamLogo": "https://gips2.baidu.com/it/u=1420506569,2365976840&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_577",
+                "teamRank": "3",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/0/2",
+                "goals": "1/4",
+                "points": "3",
+                "link": "/al/team?id=bd630ae14342fe2fa1b7376b8c467a36&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=bd630ae14342fe2fa1b7376b8c467a36&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=bd630ae14342fe2fa1b7376b8c467a36&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "a57cdc7e5410f79bf70d8636b03a3985",
+                "teamName": "海地",
+                "teamLogo": "https://gips0.baidu.com/it/u=3022133310,4147072328&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_576",
+                "teamRank": "4",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "0/0/3",
+                "goals": "2/8",
+                "points": "0",
+                "link": "/al/team?id=a57cdc7e5410f79bf70d8636b03a3985&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=a57cdc7e5410f79bf70d8636b03a3985&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=a57cdc7e5410f79bf70d8636b03a3985&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              }
+            ]
+          },
+          {
+            "list": [
+              {
+                "teamId": "a09c0a1b5f939e899c2c90239c3061f2",
+                "teamName": "美国",
+                "teamLogo": "https://gips3.baidu.com/it/u=1781592653,3525276581&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "1",
+                "status": "晋级32强",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "2/0/1",
+                "goals": "8/4",
+                "points": "6",
+                "link": "/al/team?id=a09c0a1b5f939e899c2c90239c3061f2&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=a09c0a1b5f939e899c2c90239c3061f2&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=a09c0a1b5f939e899c2c90239c3061f2&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "ad002317be38a25026110feccea14ed1",
+                "teamName": "澳大利亚",
+                "teamLogo": "https://gips1.baidu.com/it/u=881279696,563558583&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "2",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/1/1",
+                "goals": "2/2",
+                "points": "4",
+                "link": "/al/team?id=ad002317be38a25026110feccea14ed1&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=ad002317be38a25026110feccea14ed1&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=ad002317be38a25026110feccea14ed1&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "13aeb5d36078e7d9a8b2d8ea3c63cd84",
+                "teamName": "巴拉圭",
+                "teamLogo": "https://gips3.baidu.com/it/u=3760688783,1707410407&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f800_480",
+                "teamRank": "3",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/1/1",
+                "goals": "2/4",
+                "points": "4",
+                "link": "/al/team?id=13aeb5d36078e7d9a8b2d8ea3c63cd84&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=13aeb5d36078e7d9a8b2d8ea3c63cd84&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=13aeb5d36078e7d9a8b2d8ea3c63cd84&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "11cf940dfd3e5766a4108da1968f8c65",
+                "teamName": "土耳其",
+                "teamLogo": "https://gips1.baidu.com/it/u=2016570423,1611718430&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "4",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/0/2",
+                "goals": "3/5",
+                "points": "3",
+                "link": "/al/team?id=11cf940dfd3e5766a4108da1968f8c65&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=11cf940dfd3e5766a4108da1968f8c65&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=11cf940dfd3e5766a4108da1968f8c65&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              }
+            ]
+          },
+          {
+            "list": [
+              {
+                "teamId": "d885ec68c7b46dbfd4a8f6e41d577ba0",
+                "teamName": "德国",
+                "teamLogo": "https://gips0.baidu.com/it/u=3385173656,3729238093&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "1",
+                "status": "晋级32强",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "2/0/1",
+                "goals": "10/4",
+                "points": "6",
+                "link": "/al/team?id=d885ec68c7b46dbfd4a8f6e41d577ba0&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=d885ec68c7b46dbfd4a8f6e41d577ba0&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=d885ec68c7b46dbfd4a8f6e41d577ba0&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "122c4a5024a4a2395071b27ae3c96a9c",
+                "teamName": "科特迪瓦",
+                "teamLogo": "https://gips3.baidu.com/it/u=1808223794,1513368769&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f250_167",
+                "teamRank": "2",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "2/0/1",
+                "goals": "4/2",
+                "points": "6",
+                "link": "/al/team?id=122c4a5024a4a2395071b27ae3c96a9c&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=122c4a5024a4a2395071b27ae3c96a9c&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=122c4a5024a4a2395071b27ae3c96a9c&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "e03d262a641690d6021146f8a1960c55",
+                "teamName": "厄瓜多尔",
+                "teamLogo": "https://gips0.baidu.com/it/u=3201164360,1349725635&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f1440_960",
+                "teamRank": "3",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/1/1",
+                "goals": "2/2",
+                "points": "4",
+                "link": "/al/team?id=e03d262a641690d6021146f8a1960c55&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=e03d262a641690d6021146f8a1960c55&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=e03d262a641690d6021146f8a1960c55&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "f304b118f59fd0087bde4807de418c56",
+                "teamName": "库拉索",
+                "teamLogo": "https://gips2.baidu.com/it/u=679323160,945026181&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "4",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "0/1/2",
+                "goals": "1/9",
+                "points": "1",
+                "link": "/al/team?id=f304b118f59fd0087bde4807de418c56&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=f304b118f59fd0087bde4807de418c56&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=f304b118f59fd0087bde4807de418c56&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              }
+            ]
+          },
+          {
+            "list": [
+              {
+                "teamId": "e37f589321ffb8ced53d4fb4de96e5ff",
+                "teamName": "荷兰",
+                "teamLogo": "https://gips3.baidu.com/it/u=2119182311,3807665715&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "1",
+                "status": "晋级32强",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "2/1/0",
+                "goals": "10/4",
+                "points": "7",
+                "link": "/al/team?id=e37f589321ffb8ced53d4fb4de96e5ff&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=e37f589321ffb8ced53d4fb4de96e5ff&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=e37f589321ffb8ced53d4fb4de96e5ff&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "017ebd53c335a35f3ff9c611be8cc5c8",
+                "teamName": "日本",
+                "teamLogo": "https://gips3.baidu.com/it/u=4137355855,3402199761&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f1000_667",
+                "teamRank": "2",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/2/0",
+                "goals": "7/3",
+                "points": "5",
+                "link": "/al/team?id=017ebd53c335a35f3ff9c611be8cc5c8&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=017ebd53c335a35f3ff9c611be8cc5c8&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=017ebd53c335a35f3ff9c611be8cc5c8&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "b2eb99748b34be973dbd98415cb0a3c7",
+                "teamName": "瑞典",
+                "teamLogo": "https://gips1.baidu.com/it/u=682750643,731361458&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f250_157",
+                "teamRank": "3",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/1/1",
+                "goals": "7/7",
+                "points": "4",
+                "link": "/al/team?id=b2eb99748b34be973dbd98415cb0a3c7&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=b2eb99748b34be973dbd98415cb0a3c7&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=b2eb99748b34be973dbd98415cb0a3c7&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "18c8a8c7502910e966a80fb74b4274b5",
+                "teamName": "突尼斯",
+                "teamLogo": "https://gips1.baidu.com/it/u=1345869971,3631117184&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f250_167",
+                "teamRank": "4",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "0/0/3",
+                "goals": "2/12",
+                "points": "0",
+                "link": "/al/team?id=18c8a8c7502910e966a80fb74b4274b5&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=18c8a8c7502910e966a80fb74b4274b5&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=18c8a8c7502910e966a80fb74b4274b5&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              }
+            ]
+          },
+          {
+            "list": [
+              {
+                "teamId": "265243e3f2e8dd1261e98f372183240f",
+                "teamName": "比利时",
+                "teamLogo": "https://gips2.baidu.com/it/u=221920988,830115528&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f330_220",
+                "teamRank": "1",
+                "status": "晋级32强",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/2/0",
+                "goals": "6/2",
+                "points": "5",
+                "link": "/al/team?id=265243e3f2e8dd1261e98f372183240f&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=265243e3f2e8dd1261e98f372183240f&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=265243e3f2e8dd1261e98f372183240f&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "5482e10c7389489cb9f4c912ff822c04",
+                "teamName": "埃及",
+                "teamLogo": "https://gips2.baidu.com/it/u=1428867663,3798869747&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f250_167",
+                "teamRank": "2",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/2/0",
+                "goals": "5/3",
+                "points": "5",
+                "link": "/al/team?id=5482e10c7389489cb9f4c912ff822c04&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=5482e10c7389489cb9f4c912ff822c04&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=5482e10c7389489cb9f4c912ff822c04&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "a57d0fd569253f6bfd9486dd6db9d484",
+                "teamName": "伊朗",
+                "teamLogo": "https://gips0.baidu.com/it/u=753662895,4140935039&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "3",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "0/3/0",
+                "goals": "3/3",
+                "points": "3",
+                "link": "/al/team?id=a57d0fd569253f6bfd9486dd6db9d484&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=a57d0fd569253f6bfd9486dd6db9d484&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=a57d0fd569253f6bfd9486dd6db9d484&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "606320b6c012a17a7a96eba0a95b8e79",
+                "teamName": "新西兰",
+                "teamLogo": "https://gips3.baidu.com/it/u=2587017666,4252778874&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "4",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "0/1/2",
+                "goals": "4/10",
+                "points": "1",
+                "link": "/al/team?id=606320b6c012a17a7a96eba0a95b8e79&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=606320b6c012a17a7a96eba0a95b8e79&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=606320b6c012a17a7a96eba0a95b8e79&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              }
+            ]
+          },
+          {
+            "list": [
+              {
+                "teamId": "ca0f779e8db617a828a1c886d6beb530",
+                "teamName": "西班牙",
+                "teamLogo": "https://gips3.baidu.com/it/u=736617024,2651977279&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "1",
+                "status": "晋级32强",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "2/1/0",
+                "goals": "5/0",
+                "points": "7",
+                "link": "/al/team?id=ca0f779e8db617a828a1c886d6beb530&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=ca0f779e8db617a828a1c886d6beb530&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=ca0f779e8db617a828a1c886d6beb530&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "3cecc3c32bea4f6662753aaedd32cf90",
+                "teamName": "佛得角",
+                "teamLogo": "https://gips2.baidu.com/it/u=31201770,586471821&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "2",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "0/3/0",
+                "goals": "2/2",
+                "points": "3",
+                "link": "/al/team?id=3cecc3c32bea4f6662753aaedd32cf90&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=3cecc3c32bea4f6662753aaedd32cf90&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=3cecc3c32bea4f6662753aaedd32cf90&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "7582d690648eb69085503eb2a08b5b39",
+                "teamName": "乌拉圭",
+                "teamLogo": "https://gips1.baidu.com/it/u=812322409,583765920&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "3",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "0/2/1",
+                "goals": "3/4",
+                "points": "2",
+                "link": "/al/team?id=7582d690648eb69085503eb2a08b5b39&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=7582d690648eb69085503eb2a08b5b39&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=7582d690648eb69085503eb2a08b5b39&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "71193d502f1a0147c8d13f3f78eb1729",
+                "teamName": "沙特阿拉伯",
+                "teamLogo": "https://gips1.baidu.com/it/u=190709705,802629465&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "4",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "0/2/1",
+                "goals": "1/5",
+                "points": "2",
+                "link": "/al/team?id=71193d502f1a0147c8d13f3f78eb1729&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=71193d502f1a0147c8d13f3f78eb1729&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=71193d502f1a0147c8d13f3f78eb1729&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              }
+            ]
+          },
+          {
+            "list": [
+              {
+                "teamId": "396c35d0620914f054cdb72e46a5f174",
+                "teamName": "法国",
+                "teamLogo": "https://gips1.baidu.com/it/u=4219907651,3493380724&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f900_600",
+                "teamRank": "1",
+                "status": "晋级32强",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "3/0/0",
+                "goals": "10/2",
+                "points": "9",
+                "link": "/al/team?id=396c35d0620914f054cdb72e46a5f174&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=396c35d0620914f054cdb72e46a5f174&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=396c35d0620914f054cdb72e46a5f174&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "71738605c250e55a12624947da9bd247",
+                "teamName": "挪威",
+                "teamLogo": "https://gips3.baidu.com/it/u=2181445520,380601708&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f297_216",
+                "teamRank": "2",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "2/0/1",
+                "goals": "8/7",
+                "points": "6",
+                "link": "/al/team?id=71738605c250e55a12624947da9bd247&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=71738605c250e55a12624947da9bd247&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=71738605c250e55a12624947da9bd247&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "023fb7a8de59b54f288308c180e292fa",
+                "teamName": "塞内加尔",
+                "teamLogo": "https://gips3.baidu.com/it/u=2958280367,58297920&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "3",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/0/2",
+                "goals": "8/6",
+                "points": "3",
+                "link": "/al/team?id=023fb7a8de59b54f288308c180e292fa&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=023fb7a8de59b54f288308c180e292fa&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=023fb7a8de59b54f288308c180e292fa&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "e44c88e683e0aa9a3c500dc75033dad2",
+                "teamName": "伊拉克",
+                "teamLogo": "https://gips2.baidu.com/it/u=2054611559,1157324030&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_638",
+                "teamRank": "4",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "0/0/3",
+                "goals": "1/12",
+                "points": "0",
+                "link": "/al/team?id=e44c88e683e0aa9a3c500dc75033dad2&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=e44c88e683e0aa9a3c500dc75033dad2&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=e44c88e683e0aa9a3c500dc75033dad2&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              }
+            ]
+          },
+          {
+            "list": [
+              {
+                "teamId": "3d9f26830ac65f2297cc3c1d20487154",
+                "teamName": "阿根廷",
+                "teamLogo": "https://gips0.baidu.com/it/u=4113397992,1815373732&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "1",
+                "status": "晋级32强",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "3/0/0",
+                "goals": "8/1",
+                "points": "9",
+                "link": "/al/team?id=3d9f26830ac65f2297cc3c1d20487154&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=3d9f26830ac65f2297cc3c1d20487154&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=3d9f26830ac65f2297cc3c1d20487154&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "87d2f6f08a43085d31f09472e19edee6",
+                "teamName": "奥地利",
+                "teamLogo": "https://gips3.baidu.com/it/u=382238338,199982098&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_642",
+                "teamRank": "2",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/1/1",
+                "goals": "6/6",
+                "points": "4",
+                "link": "/al/team?id=87d2f6f08a43085d31f09472e19edee6&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=87d2f6f08a43085d31f09472e19edee6&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=87d2f6f08a43085d31f09472e19edee6&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "36ad997d444aae1f0166dfdcb777493a",
+                "teamName": "阿尔及利亚",
+                "teamLogo": "https://gips2.baidu.com/it/u=2012997553,63486358&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f250_167",
+                "teamRank": "3",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/1/1",
+                "goals": "5/7",
+                "points": "4",
+                "link": "/al/team?id=36ad997d444aae1f0166dfdcb777493a&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=36ad997d444aae1f0166dfdcb777493a&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=36ad997d444aae1f0166dfdcb777493a&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "eb9a7c8d47d75b02bb4156c4f87f17a7",
+                "teamName": "约旦",
+                "teamLogo": "https://gips1.baidu.com/it/u=316212214,1375467802&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "4",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "0/0/3",
+                "goals": "3/8",
+                "points": "0",
+                "link": "/al/team?id=eb9a7c8d47d75b02bb4156c4f87f17a7&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=eb9a7c8d47d75b02bb4156c4f87f17a7&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=eb9a7c8d47d75b02bb4156c4f87f17a7&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              }
+            ]
+          },
+          {
+            "list": [
+              {
+                "teamId": "c1d483bf3bbaf3040980088edde8560f",
+                "teamName": "哥伦比亚",
+                "teamLogo": "https://gips2.baidu.com/it/u=2473030750,1303890097&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_637",
+                "teamRank": "1",
+                "status": "晋级32强",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "2/1/0",
+                "goals": "4/1",
+                "points": "7",
+                "link": "/al/team?id=c1d483bf3bbaf3040980088edde8560f&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=c1d483bf3bbaf3040980088edde8560f&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=c1d483bf3bbaf3040980088edde8560f&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "cd3b2deb45caa7373a08831e7de0f5ac",
+                "teamName": "葡萄牙",
+                "teamLogo": "https://gips0.baidu.com/it/u=4013679695,544786619&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f900_600",
+                "teamRank": "2",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/2/0",
+                "goals": "6/1",
+                "points": "5",
+                "link": "/al/team?id=cd3b2deb45caa7373a08831e7de0f5ac&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=cd3b2deb45caa7373a08831e7de0f5ac&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=cd3b2deb45caa7373a08831e7de0f5ac&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "92a326ca035e2eb1a7af17e3e70ffafd",
+                "teamName": "刚果民主共和国",
+                "teamLogo": "https://gips1.baidu.com/it/u=2877569789,3862138018&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_641",
+                "teamRank": "3",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/1/1",
+                "goals": "4/3",
+                "points": "4",
+                "link": "/al/team?id=92a326ca035e2eb1a7af17e3e70ffafd&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=92a326ca035e2eb1a7af17e3e70ffafd&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=92a326ca035e2eb1a7af17e3e70ffafd&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "1291c7890d5108afd39df6db09c7d85a",
+                "teamName": "乌兹别克斯坦",
+                "teamLogo": "https://gips1.baidu.com/it/u=2431519932,4043854434&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "4",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "0/0/3",
+                "goals": "2/11",
+                "points": "0",
+                "link": "/al/team?id=1291c7890d5108afd39df6db09c7d85a&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=1291c7890d5108afd39df6db09c7d85a&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=1291c7890d5108afd39df6db09c7d85a&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              }
+            ]
+          },
+          {
+            "list": [
+              {
+                "teamId": "b78be5f1faa30defec36cef442b11431",
+                "teamName": "英格兰",
+                "teamLogo": "https://gips3.baidu.com/it/u=1732514233,74342686&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f800_480",
+                "teamRank": "1",
+                "status": "晋级32强",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "2/1/0",
+                "goals": "6/2",
+                "points": "7",
+                "link": "/al/team?id=b78be5f1faa30defec36cef442b11431&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=b78be5f1faa30defec36cef442b11431&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=b78be5f1faa30defec36cef442b11431&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "785dab5ff819d718c38cbb2a0b877a69",
+                "teamName": "克罗地亚",
+                "teamLogo": "https://gips0.baidu.com/it/u=653577520,931309583&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640",
+                "teamRank": "2",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "2/0/1",
+                "goals": "5/5",
+                "points": "6",
+                "link": "/al/team?id=785dab5ff819d718c38cbb2a0b877a69&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=785dab5ff819d718c38cbb2a0b877a69&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=785dab5ff819d718c38cbb2a0b877a69&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "e00c50535a28cf7807621db0085a8382",
+                "teamName": "加纳",
+                "teamLogo": "https://gips3.baidu.com/it/u=3250937723,1647931843&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f536_357",
+                "teamRank": "3",
+                "bgColor": "#456de6",
+                "isQualified": true,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "1/1/1",
+                "goals": "2/2",
+                "points": "4",
+                "link": "/al/team?id=e00c50535a28cf7807621db0085a8382&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=e00c50535a28cf7807621db0085a8382&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=e00c50535a28cf7807621db0085a8382&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              },
+              {
+                "teamId": "90a5daeba664af01a6f9aeebe3491178",
+                "teamName": "巴拿马",
+                "teamLogo": "https://gips2.baidu.com/it/u=2155601987,2886013313&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_641",
+                "teamRank": "4",
+                "isQualified": false,
+                "isRelegated": false,
+                "played": "3",
+                "winDrawLoss": "0/0/3",
+                "goals": "0/4",
+                "points": "0",
+                "link": "/al/team?id=90a5daeba664af01a6f9aeebe3491178&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B",
+                "naTabInfo": {
+                  "loadUrl": "https://tiyu.baidu.com/al/team?id=90a5daeba664af01a6f9aeebe3491178&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na",
+                  "shareUrl": "https://tiyu.baidu.com/al/team?id=90a5daeba664af01a6f9aeebe3491178&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B",
+                  "tabId": 32,
+                  "title": "数据"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "raw": "{\n  \"title\": \"小组赛\",\n  \"type\": \"groupStage\",\n  \"rulerDesc\": null,\n  \"refreshTime\": \"10000\",\n  \"updateTime\": \"2026-07-03 07:30:14\",\n  \"columns\": [\n    {\n      \"align\": \"left\",\n      \"col\": 11,\n      \"name\": \"球队名称\"\n    },\n    {\n      \"align\": \"center\",\n      \"col\": 3,\n      \"name\": \"场次\"\n    },\n    {\n      \"align\": \"center\",\n      \"col\": 5,\n      \"name\": \"胜/平/负\"\n    },\n    {\n      \"align\": \"center\",\n      \"col\": 4,\n      \"name\": \"进/失\"\n    },\n    {\n      \"align\": \"center\",\n      \"col\": 3,\n      \"name\": \"积分\"\n    }\n  ],\n  \"groups\": [\n    {\n      \"list\": [\n        {\n          \"teamId\": \"9c24b86859123a6a7218b5600e65680e\",\n          \"teamName\": \"墨西哥\",\n          \"teamLogo\": \"https://gips0.baidu.com/it/u=3513621783,780965864&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"1\",\n          \"status\": \"晋级32强\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"3/0/0\",\n          \"goals\": \"6/0\",\n          \"points\": \"9\",\n          \"link\": \"/al/team?id=9c24b86859123a6a7218b5600e65680e&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=9c24b86859123a6a7218b5600e65680e&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=9c24b86859123a6a7218b5600e65680e&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"dc7f9fdc795728d06adc20867070e73b\",\n          \"teamName\": \"南非\",\n          \"teamLogo\": \"https://gips2.baidu.com/it/u=1871870758,2630787962&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_641\",\n          \"teamRank\": \"2\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/1/1\",\n          \"goals\": \"2/3\",\n          \"points\": \"4\",\n          \"link\": \"/al/team?id=dc7f9fdc795728d06adc20867070e73b&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=dc7f9fdc795728d06adc20867070e73b&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=dc7f9fdc795728d06adc20867070e73b&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"e350aa265bc58bf922eb6ec5d3b705f3\",\n          \"teamName\": \"韩国\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=605950860,946410169&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f768_512\",\n          \"teamRank\": \"3\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/0/2\",\n          \"goals\": \"2/3\",\n          \"points\": \"3\",\n          \"link\": \"/al/team?id=e350aa265bc58bf922eb6ec5d3b705f3&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=e350aa265bc58bf922eb6ec5d3b705f3&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=e350aa265bc58bf922eb6ec5d3b705f3&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"bd0c6be1d4f081864fd88755b05c4f49\",\n          \"teamName\": \"捷克\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=2347456389,963830118&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f250_167\",\n          \"teamRank\": \"4\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"0/1/2\",\n          \"goals\": \"2/6\",\n          \"points\": \"1\",\n          \"link\": \"/al/team?id=bd0c6be1d4f081864fd88755b05c4f49&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=bd0c6be1d4f081864fd88755b05c4f49&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=bd0c6be1d4f081864fd88755b05c4f49&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        }\n      ]\n    },\n    {\n      \"list\": [\n        {\n          \"teamId\": \"1692195abf8c7835f4212113975b49a6\",\n          \"teamName\": \"瑞士\",\n          \"teamLogo\": \"https://gips0.baidu.com/it/u=2000814313,3030023231&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"1\",\n          \"status\": \"晋级32强\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"2/1/0\",\n          \"goals\": \"7/3\",\n          \"points\": \"7\",\n          \"link\": \"/al/team?id=1692195abf8c7835f4212113975b49a6&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=1692195abf8c7835f4212113975b49a6&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=1692195abf8c7835f4212113975b49a6&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"35779c25e9dec553f154e9d6286925e6\",\n          \"teamName\": \"加拿大\",\n          \"teamLogo\": \"https://gips0.baidu.com/it/u=3884888979,3662831454&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"2\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/1/1\",\n          \"goals\": \"8/3\",\n          \"points\": \"4\",\n          \"link\": \"/al/team?id=35779c25e9dec553f154e9d6286925e6&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=35779c25e9dec553f154e9d6286925e6&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=35779c25e9dec553f154e9d6286925e6&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"ef7a8c508595fd9083ec6e7ee93820ba\",\n          \"teamName\": \"波黑\",\n          \"teamLogo\": \"https://gips0.baidu.com/it/u=3830983373,3705682793&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"3\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/1/1\",\n          \"goals\": \"5/6\",\n          \"points\": \"4\",\n          \"link\": \"/al/team?id=ef7a8c508595fd9083ec6e7ee93820ba&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=ef7a8c508595fd9083ec6e7ee93820ba&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=ef7a8c508595fd9083ec6e7ee93820ba&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"1d55f57a5cdc344f0944d2fba5e82f0a\",\n          \"teamName\": \"卡塔尔\",\n          \"teamLogo\": \"https://gips0.baidu.com/it/u=3059663808,1376137081&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"4\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"0/1/2\",\n          \"goals\": \"2/10\",\n          \"points\": \"1\",\n          \"link\": \"/al/team?id=1d55f57a5cdc344f0944d2fba5e82f0a&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=1d55f57a5cdc344f0944d2fba5e82f0a&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=1d55f57a5cdc344f0944d2fba5e82f0a&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        }\n      ]\n    },\n    {\n      \"list\": [\n        {\n          \"teamId\": \"b92535372efd0c6bc7df7b84b9c7b577\",\n          \"teamName\": \"巴西\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=355604936,887753579&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_672\",\n          \"teamRank\": \"1\",\n          \"status\": \"晋级32强\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"2/1/0\",\n          \"goals\": \"7/1\",\n          \"points\": \"7\",\n          \"link\": \"/al/team?id=b92535372efd0c6bc7df7b84b9c7b577&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=b92535372efd0c6bc7df7b84b9c7b577&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=b92535372efd0c6bc7df7b84b9c7b577&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"b16a9fdf450c58c762b49202c4d13efe\",\n          \"teamName\": \"摩洛哥\",\n          \"teamLogo\": \"https://gips1.baidu.com/it/u=307857087,1341230857&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"2\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"2/1/0\",\n          \"goals\": \"6/3\",\n          \"points\": \"7\",\n          \"link\": \"/al/team?id=b16a9fdf450c58c762b49202c4d13efe&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=b16a9fdf450c58c762b49202c4d13efe&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=b16a9fdf450c58c762b49202c4d13efe&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"bd630ae14342fe2fa1b7376b8c467a36\",\n          \"teamName\": \"苏格兰\",\n          \"teamLogo\": \"https://gips2.baidu.com/it/u=1420506569,2365976840&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_577\",\n          \"teamRank\": \"3\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/0/2\",\n          \"goals\": \"1/4\",\n          \"points\": \"3\",\n          \"link\": \"/al/team?id=bd630ae14342fe2fa1b7376b8c467a36&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=bd630ae14342fe2fa1b7376b8c467a36&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=bd630ae14342fe2fa1b7376b8c467a36&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"a57cdc7e5410f79bf70d8636b03a3985\",\n          \"teamName\": \"海地\",\n          \"teamLogo\": \"https://gips0.baidu.com/it/u=3022133310,4147072328&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_576\",\n          \"teamRank\": \"4\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"0/0/3\",\n          \"goals\": \"2/8\",\n          \"points\": \"0\",\n          \"link\": \"/al/team?id=a57cdc7e5410f79bf70d8636b03a3985&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=a57cdc7e5410f79bf70d8636b03a3985&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=a57cdc7e5410f79bf70d8636b03a3985&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        }\n      ]\n    },\n    {\n      \"list\": [\n        {\n          \"teamId\": \"a09c0a1b5f939e899c2c90239c3061f2\",\n          \"teamName\": \"美国\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=1781592653,3525276581&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"1\",\n          \"status\": \"晋级32强\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"2/0/1\",\n          \"goals\": \"8/4\",\n          \"points\": \"6\",\n          \"link\": \"/al/team?id=a09c0a1b5f939e899c2c90239c3061f2&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=a09c0a1b5f939e899c2c90239c3061f2&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=a09c0a1b5f939e899c2c90239c3061f2&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"ad002317be38a25026110feccea14ed1\",\n          \"teamName\": \"澳大利亚\",\n          \"teamLogo\": \"https://gips1.baidu.com/it/u=881279696,563558583&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"2\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/1/1\",\n          \"goals\": \"2/2\",\n          \"points\": \"4\",\n          \"link\": \"/al/team?id=ad002317be38a25026110feccea14ed1&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=ad002317be38a25026110feccea14ed1&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=ad002317be38a25026110feccea14ed1&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"13aeb5d36078e7d9a8b2d8ea3c63cd84\",\n          \"teamName\": \"巴拉圭\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=3760688783,1707410407&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f800_480\",\n          \"teamRank\": \"3\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/1/1\",\n          \"goals\": \"2/4\",\n          \"points\": \"4\",\n          \"link\": \"/al/team?id=13aeb5d36078e7d9a8b2d8ea3c63cd84&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=13aeb5d36078e7d9a8b2d8ea3c63cd84&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=13aeb5d36078e7d9a8b2d8ea3c63cd84&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"11cf940dfd3e5766a4108da1968f8c65\",\n          \"teamName\": \"土耳其\",\n          \"teamLogo\": \"https://gips1.baidu.com/it/u=2016570423,1611718430&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"4\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/0/2\",\n          \"goals\": \"3/5\",\n          \"points\": \"3\",\n          \"link\": \"/al/team?id=11cf940dfd3e5766a4108da1968f8c65&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=11cf940dfd3e5766a4108da1968f8c65&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=11cf940dfd3e5766a4108da1968f8c65&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        }\n      ]\n    },\n    {\n      \"list\": [\n        {\n          \"teamId\": \"d885ec68c7b46dbfd4a8f6e41d577ba0\",\n          \"teamName\": \"德国\",\n          \"teamLogo\": \"https://gips0.baidu.com/it/u=3385173656,3729238093&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"1\",\n          \"status\": \"晋级32强\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"2/0/1\",\n          \"goals\": \"10/4\",\n          \"points\": \"6\",\n          \"link\": \"/al/team?id=d885ec68c7b46dbfd4a8f6e41d577ba0&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=d885ec68c7b46dbfd4a8f6e41d577ba0&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=d885ec68c7b46dbfd4a8f6e41d577ba0&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"122c4a5024a4a2395071b27ae3c96a9c\",\n          \"teamName\": \"科特迪瓦\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=1808223794,1513368769&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f250_167\",\n          \"teamRank\": \"2\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"2/0/1\",\n          \"goals\": \"4/2\",\n          \"points\": \"6\",\n          \"link\": \"/al/team?id=122c4a5024a4a2395071b27ae3c96a9c&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=122c4a5024a4a2395071b27ae3c96a9c&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=122c4a5024a4a2395071b27ae3c96a9c&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"e03d262a641690d6021146f8a1960c55\",\n          \"teamName\": \"厄瓜多尔\",\n          \"teamLogo\": \"https://gips0.baidu.com/it/u=3201164360,1349725635&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f1440_960\",\n          \"teamRank\": \"3\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/1/1\",\n          \"goals\": \"2/2\",\n          \"points\": \"4\",\n          \"link\": \"/al/team?id=e03d262a641690d6021146f8a1960c55&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=e03d262a641690d6021146f8a1960c55&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=e03d262a641690d6021146f8a1960c55&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"f304b118f59fd0087bde4807de418c56\",\n          \"teamName\": \"库拉索\",\n          \"teamLogo\": \"https://gips2.baidu.com/it/u=679323160,945026181&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"4\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"0/1/2\",\n          \"goals\": \"1/9\",\n          \"points\": \"1\",\n          \"link\": \"/al/team?id=f304b118f59fd0087bde4807de418c56&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=f304b118f59fd0087bde4807de418c56&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=f304b118f59fd0087bde4807de418c56&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        }\n      ]\n    },\n    {\n      \"list\": [\n        {\n          \"teamId\": \"e37f589321ffb8ced53d4fb4de96e5ff\",\n          \"teamName\": \"荷兰\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=2119182311,3807665715&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"1\",\n          \"status\": \"晋级32强\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"2/1/0\",\n          \"goals\": \"10/4\",\n          \"points\": \"7\",\n          \"link\": \"/al/team?id=e37f589321ffb8ced53d4fb4de96e5ff&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=e37f589321ffb8ced53d4fb4de96e5ff&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=e37f589321ffb8ced53d4fb4de96e5ff&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"017ebd53c335a35f3ff9c611be8cc5c8\",\n          \"teamName\": \"日本\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=4137355855,3402199761&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f1000_667\",\n          \"teamRank\": \"2\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/2/0\",\n          \"goals\": \"7/3\",\n          \"points\": \"5\",\n          \"link\": \"/al/team?id=017ebd53c335a35f3ff9c611be8cc5c8&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=017ebd53c335a35f3ff9c611be8cc5c8&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=017ebd53c335a35f3ff9c611be8cc5c8&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"b2eb99748b34be973dbd98415cb0a3c7\",\n          \"teamName\": \"瑞典\",\n          \"teamLogo\": \"https://gips1.baidu.com/it/u=682750643,731361458&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f250_157\",\n          \"teamRank\": \"3\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/1/1\",\n          \"goals\": \"7/7\",\n          \"points\": \"4\",\n          \"link\": \"/al/team?id=b2eb99748b34be973dbd98415cb0a3c7&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=b2eb99748b34be973dbd98415cb0a3c7&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=b2eb99748b34be973dbd98415cb0a3c7&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"18c8a8c7502910e966a80fb74b4274b5\",\n          \"teamName\": \"突尼斯\",\n          \"teamLogo\": \"https://gips1.baidu.com/it/u=1345869971,3631117184&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f250_167\",\n          \"teamRank\": \"4\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"0/0/3\",\n          \"goals\": \"2/12\",\n          \"points\": \"0\",\n          \"link\": \"/al/team?id=18c8a8c7502910e966a80fb74b4274b5&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=18c8a8c7502910e966a80fb74b4274b5&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=18c8a8c7502910e966a80fb74b4274b5&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        }\n      ]\n    },\n    {\n      \"list\": [\n        {\n          \"teamId\": \"265243e3f2e8dd1261e98f372183240f\",\n          \"teamName\": \"比利时\",\n          \"teamLogo\": \"https://gips2.baidu.com/it/u=221920988,830115528&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f330_220\",\n          \"teamRank\": \"1\",\n          \"status\": \"晋级32强\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/2/0\",\n          \"goals\": \"6/2\",\n          \"points\": \"5\",\n          \"link\": \"/al/team?id=265243e3f2e8dd1261e98f372183240f&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=265243e3f2e8dd1261e98f372183240f&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=265243e3f2e8dd1261e98f372183240f&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"5482e10c7389489cb9f4c912ff822c04\",\n          \"teamName\": \"埃及\",\n          \"teamLogo\": \"https://gips2.baidu.com/it/u=1428867663,3798869747&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f250_167\",\n          \"teamRank\": \"2\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/2/0\",\n          \"goals\": \"5/3\",\n          \"points\": \"5\",\n          \"link\": \"/al/team?id=5482e10c7389489cb9f4c912ff822c04&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=5482e10c7389489cb9f4c912ff822c04&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=5482e10c7389489cb9f4c912ff822c04&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"a57d0fd569253f6bfd9486dd6db9d484\",\n          \"teamName\": \"伊朗\",\n          \"teamLogo\": \"https://gips0.baidu.com/it/u=753662895,4140935039&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"3\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"0/3/0\",\n          \"goals\": \"3/3\",\n          \"points\": \"3\",\n          \"link\": \"/al/team?id=a57d0fd569253f6bfd9486dd6db9d484&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=a57d0fd569253f6bfd9486dd6db9d484&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=a57d0fd569253f6bfd9486dd6db9d484&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"606320b6c012a17a7a96eba0a95b8e79\",\n          \"teamName\": \"新西兰\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=2587017666,4252778874&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"4\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"0/1/2\",\n          \"goals\": \"4/10\",\n          \"points\": \"1\",\n          \"link\": \"/al/team?id=606320b6c012a17a7a96eba0a95b8e79&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=606320b6c012a17a7a96eba0a95b8e79&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=606320b6c012a17a7a96eba0a95b8e79&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        }\n      ]\n    },\n    {\n      \"list\": [\n        {\n          \"teamId\": \"ca0f779e8db617a828a1c886d6beb530\",\n          \"teamName\": \"西班牙\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=736617024,2651977279&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"1\",\n          \"status\": \"晋级32强\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"2/1/0\",\n          \"goals\": \"5/0\",\n          \"points\": \"7\",\n          \"link\": \"/al/team?id=ca0f779e8db617a828a1c886d6beb530&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=ca0f779e8db617a828a1c886d6beb530&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=ca0f779e8db617a828a1c886d6beb530&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"3cecc3c32bea4f6662753aaedd32cf90\",\n          \"teamName\": \"佛得角\",\n          \"teamLogo\": \"https://gips2.baidu.com/it/u=31201770,586471821&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"2\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"0/3/0\",\n          \"goals\": \"2/2\",\n          \"points\": \"3\",\n          \"link\": \"/al/team?id=3cecc3c32bea4f6662753aaedd32cf90&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=3cecc3c32bea4f6662753aaedd32cf90&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=3cecc3c32bea4f6662753aaedd32cf90&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"7582d690648eb69085503eb2a08b5b39\",\n          \"teamName\": \"乌拉圭\",\n          \"teamLogo\": \"https://gips1.baidu.com/it/u=812322409,583765920&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"3\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"0/2/1\",\n          \"goals\": \"3/4\",\n          \"points\": \"2\",\n          \"link\": \"/al/team?id=7582d690648eb69085503eb2a08b5b39&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=7582d690648eb69085503eb2a08b5b39&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=7582d690648eb69085503eb2a08b5b39&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"71193d502f1a0147c8d13f3f78eb1729\",\n          \"teamName\": \"沙特阿拉伯\",\n          \"teamLogo\": \"https://gips1.baidu.com/it/u=190709705,802629465&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"4\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"0/2/1\",\n          \"goals\": \"1/5\",\n          \"points\": \"2\",\n          \"link\": \"/al/team?id=71193d502f1a0147c8d13f3f78eb1729&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=71193d502f1a0147c8d13f3f78eb1729&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=71193d502f1a0147c8d13f3f78eb1729&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        }\n      ]\n    },\n    {\n      \"list\": [\n        {\n          \"teamId\": \"396c35d0620914f054cdb72e46a5f174\",\n          \"teamName\": \"法国\",\n          \"teamLogo\": \"https://gips1.baidu.com/it/u=4219907651,3493380724&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f900_600\",\n          \"teamRank\": \"1\",\n          \"status\": \"晋级32强\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"3/0/0\",\n          \"goals\": \"10/2\",\n          \"points\": \"9\",\n          \"link\": \"/al/team?id=396c35d0620914f054cdb72e46a5f174&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=396c35d0620914f054cdb72e46a5f174&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=396c35d0620914f054cdb72e46a5f174&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"71738605c250e55a12624947da9bd247\",\n          \"teamName\": \"挪威\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=2181445520,380601708&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f297_216\",\n          \"teamRank\": \"2\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"2/0/1\",\n          \"goals\": \"8/7\",\n          \"points\": \"6\",\n          \"link\": \"/al/team?id=71738605c250e55a12624947da9bd247&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=71738605c250e55a12624947da9bd247&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=71738605c250e55a12624947da9bd247&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"023fb7a8de59b54f288308c180e292fa\",\n          \"teamName\": \"塞内加尔\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=2958280367,58297920&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"3\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/0/2\",\n          \"goals\": \"8/6\",\n          \"points\": \"3\",\n          \"link\": \"/al/team?id=023fb7a8de59b54f288308c180e292fa&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=023fb7a8de59b54f288308c180e292fa&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=023fb7a8de59b54f288308c180e292fa&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"e44c88e683e0aa9a3c500dc75033dad2\",\n          \"teamName\": \"伊拉克\",\n          \"teamLogo\": \"https://gips2.baidu.com/it/u=2054611559,1157324030&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_638\",\n          \"teamRank\": \"4\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"0/0/3\",\n          \"goals\": \"1/12\",\n          \"points\": \"0\",\n          \"link\": \"/al/team?id=e44c88e683e0aa9a3c500dc75033dad2&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=e44c88e683e0aa9a3c500dc75033dad2&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=e44c88e683e0aa9a3c500dc75033dad2&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        }\n      ]\n    },\n    {\n      \"list\": [\n        {\n          \"teamId\": \"3d9f26830ac65f2297cc3c1d20487154\",\n          \"teamName\": \"阿根廷\",\n          \"teamLogo\": \"https://gips0.baidu.com/it/u=4113397992,1815373732&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"1\",\n          \"status\": \"晋级32强\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"3/0/0\",\n          \"goals\": \"8/1\",\n          \"points\": \"9\",\n          \"link\": \"/al/team?id=3d9f26830ac65f2297cc3c1d20487154&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=3d9f26830ac65f2297cc3c1d20487154&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=3d9f26830ac65f2297cc3c1d20487154&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"87d2f6f08a43085d31f09472e19edee6\",\n          \"teamName\": \"奥地利\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=382238338,199982098&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_642\",\n          \"teamRank\": \"2\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/1/1\",\n          \"goals\": \"6/6\",\n          \"points\": \"4\",\n          \"link\": \"/al/team?id=87d2f6f08a43085d31f09472e19edee6&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=87d2f6f08a43085d31f09472e19edee6&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=87d2f6f08a43085d31f09472e19edee6&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"36ad997d444aae1f0166dfdcb777493a\",\n          \"teamName\": \"阿尔及利亚\",\n          \"teamLogo\": \"https://gips2.baidu.com/it/u=2012997553,63486358&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f250_167\",\n          \"teamRank\": \"3\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/1/1\",\n          \"goals\": \"5/7\",\n          \"points\": \"4\",\n          \"link\": \"/al/team?id=36ad997d444aae1f0166dfdcb777493a&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=36ad997d444aae1f0166dfdcb777493a&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=36ad997d444aae1f0166dfdcb777493a&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"eb9a7c8d47d75b02bb4156c4f87f17a7\",\n          \"teamName\": \"约旦\",\n          \"teamLogo\": \"https://gips1.baidu.com/it/u=316212214,1375467802&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"4\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"0/0/3\",\n          \"goals\": \"3/8\",\n          \"points\": \"0\",\n          \"link\": \"/al/team?id=eb9a7c8d47d75b02bb4156c4f87f17a7&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=eb9a7c8d47d75b02bb4156c4f87f17a7&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=eb9a7c8d47d75b02bb4156c4f87f17a7&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        }\n      ]\n    },\n    {\n      \"list\": [\n        {\n          \"teamId\": \"c1d483bf3bbaf3040980088edde8560f\",\n          \"teamName\": \"哥伦比亚\",\n          \"teamLogo\": \"https://gips2.baidu.com/it/u=2473030750,1303890097&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_637\",\n          \"teamRank\": \"1\",\n          \"status\": \"晋级32强\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"2/1/0\",\n          \"goals\": \"4/1\",\n          \"points\": \"7\",\n          \"link\": \"/al/team?id=c1d483bf3bbaf3040980088edde8560f&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=c1d483bf3bbaf3040980088edde8560f&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=c1d483bf3bbaf3040980088edde8560f&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"cd3b2deb45caa7373a08831e7de0f5ac\",\n          \"teamName\": \"葡萄牙\",\n          \"teamLogo\": \"https://gips0.baidu.com/it/u=4013679695,544786619&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f900_600\",\n          \"teamRank\": \"2\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/2/0\",\n          \"goals\": \"6/1\",\n          \"points\": \"5\",\n          \"link\": \"/al/team?id=cd3b2deb45caa7373a08831e7de0f5ac&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=cd3b2deb45caa7373a08831e7de0f5ac&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=cd3b2deb45caa7373a08831e7de0f5ac&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"92a326ca035e2eb1a7af17e3e70ffafd\",\n          \"teamName\": \"刚果民主共和国\",\n          \"teamLogo\": \"https://gips1.baidu.com/it/u=2877569789,3862138018&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_641\",\n          \"teamRank\": \"3\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/1/1\",\n          \"goals\": \"4/3\",\n          \"points\": \"4\",\n          \"link\": \"/al/team?id=92a326ca035e2eb1a7af17e3e70ffafd&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=92a326ca035e2eb1a7af17e3e70ffafd&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=92a326ca035e2eb1a7af17e3e70ffafd&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"1291c7890d5108afd39df6db09c7d85a\",\n          \"teamName\": \"乌兹别克斯坦\",\n          \"teamLogo\": \"https://gips1.baidu.com/it/u=2431519932,4043854434&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"4\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"0/0/3\",\n          \"goals\": \"2/11\",\n          \"points\": \"0\",\n          \"link\": \"/al/team?id=1291c7890d5108afd39df6db09c7d85a&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=1291c7890d5108afd39df6db09c7d85a&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=1291c7890d5108afd39df6db09c7d85a&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        }\n      ]\n    },\n    {\n      \"list\": [\n        {\n          \"teamId\": \"b78be5f1faa30defec36cef442b11431\",\n          \"teamName\": \"英格兰\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=1732514233,74342686&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f800_480\",\n          \"teamRank\": \"1\",\n          \"status\": \"晋级32强\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"2/1/0\",\n          \"goals\": \"6/2\",\n          \"points\": \"7\",\n          \"link\": \"/al/team?id=b78be5f1faa30defec36cef442b11431&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=b78be5f1faa30defec36cef442b11431&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=b78be5f1faa30defec36cef442b11431&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"785dab5ff819d718c38cbb2a0b877a69\",\n          \"teamName\": \"克罗地亚\",\n          \"teamLogo\": \"https://gips0.baidu.com/it/u=653577520,931309583&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_640\",\n          \"teamRank\": \"2\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"2/0/1\",\n          \"goals\": \"5/5\",\n          \"points\": \"6\",\n          \"link\": \"/al/team?id=785dab5ff819d718c38cbb2a0b877a69&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=785dab5ff819d718c38cbb2a0b877a69&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=785dab5ff819d718c38cbb2a0b877a69&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"e00c50535a28cf7807621db0085a8382\",\n          \"teamName\": \"加纳\",\n          \"teamLogo\": \"https://gips3.baidu.com/it/u=3250937723,1647931843&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f536_357\",\n          \"teamRank\": \"3\",\n          \"bgColor\": \"#456de6\",\n          \"isQualified\": true,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"1/1/1\",\n          \"goals\": \"2/2\",\n          \"points\": \"4\",\n          \"link\": \"/al/team?id=e00c50535a28cf7807621db0085a8382&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=e00c50535a28cf7807621db0085a8382&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=e00c50535a28cf7807621db0085a8382&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        },\n        {\n          \"teamId\": \"90a5daeba664af01a6f9aeebe3491178\",\n          \"teamName\": \"巴拿马\",\n          \"teamLogo\": \"https://gips2.baidu.com/it/u=2155601987,2886013313&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f960_641\",\n          \"teamRank\": \"4\",\n          \"isQualified\": false,\n          \"isRelegated\": false,\n          \"played\": \"3\",\n          \"winDrawLoss\": \"0/0/3\",\n          \"goals\": \"0/4\",\n          \"points\": \"0\",\n          \"link\": \"/al/team?id=90a5daeba664af01a6f9aeebe3491178&tab=%E6%95%B0%E6%8D%AE&season=2026&scope=%E5%B0%8F%E7%BB%84%E8%B5%9B\",\n          \"naTabInfo\": {\n            \"loadUrl\": \"https://tiyu.baidu.com/al/team?id=90a5daeba664af01a6f9aeebe3491178&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B&from=baidu_shoubai_na\",\n            \"shareUrl\": \"https://tiyu.baidu.com/al/team?id=90a5daeba664af01a6f9aeebe3491178&tab=%25E6%2595%25B0%25E6%258D%25AE&season=2026&scope=%25E5%25B0%258F%25E7%25BB%2584%25E8%25B5%259B\",\n            \"tabId\": 32,\n            \"title\": \"数据\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
+    },
+    "rankings:players:进球:10": {
+      "ok": true,
+      "data": {
+        "tabName": "进球",
+        "tabId": 10,
+        "statsName": "射⼿榜",
+        "availableTabs": [
+          "进球",
+          "助攻",
+          "点球",
+          "射⻔",
+          "射正",
+          "过人",
+          "过人成功",
+          "任意球",
+          "任意球得分",
+          "击中门框",
+          "快攻",
+          "快攻射门",
+          "快攻进球",
+          "丢失球权",
+          "解围",
+          "有效阻挡",
+          "拦截",
+          "抢断",
+          "1对1拼抢",
+          "1对1拼抢成功",
+          "拳击球",
+          "守门员出击",
+          "守门员出击成功",
+          "高空出击",
+          "传球",
+          "传球成功",
+          "关键传球",
+          "传中球",
+          "传中球成功",
+          "长传",
+          "成功长传",
+          "传球被断",
+          "红牌",
+          "⻩牌",
+          "犯规",
+          "被侵犯",
+          "越位"
+        ],
+        "note": "API 当前仅返回射手榜数据，其它分类待赛事进行后丰富",
+        "players": [
+          {
+            "rank": 1,
+            "playerId": "7ff59abb69b1d25a1e0b080b87a7476c",
+            "playerName": "基利安·姆巴佩",
+            "team": "法国",
+            "position": "前锋",
+            "score": "6",
+            "penaltyValue": "0",
+            "logo": "http://t12.baidu.com/it/u=1230797161,621041069&fm=58&app=10&f=PNG?w=244&h=244&s=6F208247D234019E762244A90300D016",
+            "link": "/al/player?id=7ff59abb69b1d25a1e0b080b87a7476c&tab=%E5%8A%A8%E6%80%81"
+          },
+          {
+            "rank": 2,
+            "playerId": "b8bbc7175d88b2c9365f528ed56cdb6e",
+            "playerName": "利昂内尔·梅西",
+            "team": "阿根廷",
+            "position": "前锋",
+            "score": "6",
+            "penaltyValue": "0",
+            "logo": "http://t12.baidu.com/it/u=2296333821,2322600951&fm=58&app=10&f=PNG?w=245&h=245&s=6BE08B47C032159C80AC64B903005016",
+            "link": "/al/player?id=b8bbc7175d88b2c9365f528ed56cdb6e&tab=%E5%8A%A8%E6%80%81"
+          },
+          {
+            "rank": 3,
+            "playerId": "ccfc34675583a1c0f0bbf741325247ae",
+            "playerName": "埃尔林·哈兰德",
+            "team": "挪威",
+            "position": "前锋",
+            "score": "5",
+            "penaltyValue": "0",
+            "logo": "http://t11.baidu.com/it/u=839377809,3342428174&fm=58&app=10&f=PNG?w=237&h=237&s=2B808A4D84A1151D88A66CFA0300C016",
+            "link": "/al/player?id=ccfc34675583a1c0f0bbf741325247ae&tab=%E5%8A%A8%E6%80%81"
+          },
+          {
+            "rank": 4,
+            "playerId": "a95b1405cc5295132f00dc41ed7994fb",
+            "playerName": "哈里·凯恩",
+            "team": "英格兰",
+            "position": "前锋",
+            "score": "5",
+            "penaltyValue": "1",
+            "logo": "http://t11.baidu.com/it/u=2076232048,1773661666&fm=58&app=10&f=PNG?w=370&h=394&s=2B00824F82A0011D098E24F90300D015",
+            "link": "/al/player?id=a95b1405cc5295132f00dc41ed7994fb&tab=%E5%8A%A8%E6%80%81"
+          },
+          {
+            "rank": 5,
+            "playerId": "f3526a655ef293272d130f979ab7c0d4",
+            "playerName": "奥斯曼·登贝莱",
+            "team": "法国",
+            "position": "前锋",
+            "score": "4",
+            "penaltyValue": "0",
+            "logo": "http://t10.baidu.com/it/u=3982824960,2902300355&fm=58&app=10&f=PNG?w=250&h=250&s=2D54CB4E8E03155FC9A044B803001012",
+            "link": "/al/player?id=f3526a655ef293272d130f979ab7c0d4&tab=%E5%8A%A8%E6%80%81"
+          },
+          {
+            "rank": 6,
+            "playerId": "4bbcd30f4e7b9a7e5889e569acdce88e",
+            "playerName": "米克尔·奥亚萨瓦尔",
+            "team": "西班牙",
+            "position": "前锋",
+            "score": "4",
+            "penaltyValue": "0",
+            "logo": "http://t12.baidu.com/it/u=448905856,705288709&fm=58&app=10&f=PNG?w=236&h=236&s=6FA88B47ACA3149C2A8834E903005012",
+            "link": "/al/player?id=4bbcd30f4e7b9a7e5889e569acdce88e&tab=%E5%8A%A8%E6%80%81"
+          },
+          {
+            "rank": 7,
+            "playerId": "56fbd7d74e15165531b2bf7a3b067f08",
+            "playerName": "维尼修斯",
+            "team": "巴西",
+            "position": "前锋",
+            "score": "4",
+            "penaltyValue": "0",
+            "logo": "http://t10.baidu.com/it/u=23667013,409240083&fm=58&app=10&f=PNG?w=232&h=232&s=65744B6ECE001057905064B903008012",
+            "link": "/al/player?id=56fbd7d74e15165531b2bf7a3b067f08&tab=%E5%8A%A8%E6%80%81"
+          },
+          {
+            "rank": 8,
+            "playerId": "1b32b1909a326f3e40792d4607ebc463",
+            "playerName": "伊斯梅拉·萨尔",
+            "team": "塞内加尔",
+            "position": "中场",
+            "score": "4",
+            "penaltyValue": "0",
+            "logo": "http://t12.baidu.com/it/u=4014560127,1223183524&fm=58&app=10&f=PNG?w=248&h=248&s=A5D18B6EC6B0907D4AE064990300C092",
+            "link": "/al/player?id=1b32b1909a326f3e40792d4607ebc463&tab=%E5%8A%A8%E6%80%81"
+          },
+          {
+            "rank": 9,
+            "playerId": "07149329ef87ee46cf11be23d9a64381",
+            "playerName": "德尼茨·翁达夫",
+            "team": "德国",
+            "position": "前锋",
+            "score": "3",
+            "penaltyValue": "0",
+            "logo": "http://t11.baidu.com/it/u=890662088,629120585&fm=58&app=10&f=PNG?w=325&h=325&s=69E08347C6200D1548BC55A30300D011",
+            "link": "/al/player?id=07149329ef87ee46cf11be23d9a64381&tab=%E5%8A%A8%E6%80%81"
+          },
+          {
+            "rank": 10,
+            "playerId": "05213bc4092d4b7849924a194ab21dba",
+            "playerName": "约翰·曼赞比",
+            "team": "瑞士",
+            "position": "中场",
+            "score": "3",
+            "penaltyValue": "0",
+            "logo": "http://t10.baidu.com/it/u=1939669282,1006685231&fm=58&app=10&f=PNG?w=235&h=235&s=2D448B4ECC50905D03C464B803008091",
+            "link": "/al/player?id=05213bc4092d4b7849924a194ab21dba&tab=%E5%8A%A8%E6%80%81"
+          }
+        ]
+      },
+      "raw": "{\n  \"tabName\": \"进球\",\n  \"tabId\": 10,\n  \"statsName\": \"射⼿榜\",\n  \"availableTabs\": [\n    \"进球\",\n    \"助攻\",\n    \"点球\",\n    \"射⻔\",\n    \"射正\",\n    \"过人\",\n    \"过人成功\",\n    \"任意球\",\n    \"任意球得分\",\n    \"击中门框\",\n    \"快攻\",\n    \"快攻射门\",\n    \"快攻进球\",\n    \"丢失球权\",\n    \"解围\",\n    \"有效阻挡\",\n    \"拦截\",\n    \"抢断\",\n    \"1对1拼抢\",\n    \"1对1拼抢成功\",\n    \"拳击球\",\n    \"守门员出击\",\n    \"守门员出击成功\",\n    \"高空出击\",\n    \"传球\",\n    \"传球成功\",\n    \"关键传球\",\n    \"传中球\",\n    \"传中球成功\",\n    \"长传\",\n    \"成功长传\",\n    \"传球被断\",\n    \"红牌\",\n    \"⻩牌\",\n    \"犯规\",\n    \"被侵犯\",\n    \"越位\"\n  ],\n  \"note\": \"API 当前仅返回射手榜数据，其它分类待赛事进行后丰富\",\n  \"players\": [\n    {\n      \"rank\": 1,\n      \"playerId\": \"7ff59abb69b1d25a1e0b080b87a7476c\",\n      \"playerName\": \"基利安·姆巴佩\",\n      \"team\": \"法国\",\n      \"position\": \"前锋\",\n      \"score\": \"6\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"http://t12.baidu.com/it/u=1230797161,621041069&fm=58&app=10&f=PNG?w=244&h=244&s=6F208247D234019E762244A90300D016\",\n      \"link\": \"/al/player?id=7ff59abb69b1d25a1e0b080b87a7476c&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 2,\n      \"playerId\": \"b8bbc7175d88b2c9365f528ed56cdb6e\",\n      \"playerName\": \"利昂内尔·梅西\",\n      \"team\": \"阿根廷\",\n      \"position\": \"前锋\",\n      \"score\": \"6\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"http://t12.baidu.com/it/u=2296333821,2322600951&fm=58&app=10&f=PNG?w=245&h=245&s=6BE08B47C032159C80AC64B903005016\",\n      \"link\": \"/al/player?id=b8bbc7175d88b2c9365f528ed56cdb6e&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 3,\n      \"playerId\": \"ccfc34675583a1c0f0bbf741325247ae\",\n      \"playerName\": \"埃尔林·哈兰德\",\n      \"team\": \"挪威\",\n      \"position\": \"前锋\",\n      \"score\": \"5\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"http://t11.baidu.com/it/u=839377809,3342428174&fm=58&app=10&f=PNG?w=237&h=237&s=2B808A4D84A1151D88A66CFA0300C016\",\n      \"link\": \"/al/player?id=ccfc34675583a1c0f0bbf741325247ae&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 4,\n      \"playerId\": \"a95b1405cc5295132f00dc41ed7994fb\",\n      \"playerName\": \"哈里·凯恩\",\n      \"team\": \"英格兰\",\n      \"position\": \"前锋\",\n      \"score\": \"5\",\n      \"penaltyValue\": \"1\",\n      \"logo\": \"http://t11.baidu.com/it/u=2076232048,1773661666&fm=58&app=10&f=PNG?w=370&h=394&s=2B00824F82A0011D098E24F90300D015\",\n      \"link\": \"/al/player?id=a95b1405cc5295132f00dc41ed7994fb&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 5,\n      \"playerId\": \"f3526a655ef293272d130f979ab7c0d4\",\n      \"playerName\": \"奥斯曼·登贝莱\",\n      \"team\": \"法国\",\n      \"position\": \"前锋\",\n      \"score\": \"4\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"http://t10.baidu.com/it/u=3982824960,2902300355&fm=58&app=10&f=PNG?w=250&h=250&s=2D54CB4E8E03155FC9A044B803001012\",\n      \"link\": \"/al/player?id=f3526a655ef293272d130f979ab7c0d4&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 6,\n      \"playerId\": \"4bbcd30f4e7b9a7e5889e569acdce88e\",\n      \"playerName\": \"米克尔·奥亚萨瓦尔\",\n      \"team\": \"西班牙\",\n      \"position\": \"前锋\",\n      \"score\": \"4\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"http://t12.baidu.com/it/u=448905856,705288709&fm=58&app=10&f=PNG?w=236&h=236&s=6FA88B47ACA3149C2A8834E903005012\",\n      \"link\": \"/al/player?id=4bbcd30f4e7b9a7e5889e569acdce88e&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 7,\n      \"playerId\": \"56fbd7d74e15165531b2bf7a3b067f08\",\n      \"playerName\": \"维尼修斯\",\n      \"team\": \"巴西\",\n      \"position\": \"前锋\",\n      \"score\": \"4\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"http://t10.baidu.com/it/u=23667013,409240083&fm=58&app=10&f=PNG?w=232&h=232&s=65744B6ECE001057905064B903008012\",\n      \"link\": \"/al/player?id=56fbd7d74e15165531b2bf7a3b067f08&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 8,\n      \"playerId\": \"1b32b1909a326f3e40792d4607ebc463\",\n      \"playerName\": \"伊斯梅拉·萨尔\",\n      \"team\": \"塞内加尔\",\n      \"position\": \"中场\",\n      \"score\": \"4\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"http://t12.baidu.com/it/u=4014560127,1223183524&fm=58&app=10&f=PNG?w=248&h=248&s=A5D18B6EC6B0907D4AE064990300C092\",\n      \"link\": \"/al/player?id=1b32b1909a326f3e40792d4607ebc463&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 9,\n      \"playerId\": \"07149329ef87ee46cf11be23d9a64381\",\n      \"playerName\": \"德尼茨·翁达夫\",\n      \"team\": \"德国\",\n      \"position\": \"前锋\",\n      \"score\": \"3\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"http://t11.baidu.com/it/u=890662088,629120585&fm=58&app=10&f=PNG?w=325&h=325&s=69E08347C6200D1548BC55A30300D011\",\n      \"link\": \"/al/player?id=07149329ef87ee46cf11be23d9a64381&tab=%E5%8A%A8%E6%80%81\"\n    },\n    {\n      \"rank\": 10,\n      \"playerId\": \"05213bc4092d4b7849924a194ab21dba\",\n      \"playerName\": \"约翰·曼赞比\",\n      \"team\": \"瑞士\",\n      \"position\": \"中场\",\n      \"score\": \"3\",\n      \"penaltyValue\": \"0\",\n      \"logo\": \"http://t10.baidu.com/it/u=1939669282,1006685231&fm=58&app=10&f=PNG?w=235&h=235&s=2D448B4ECC50905D03C464B803008091\",\n      \"link\": \"/al/player?id=05213bc4092d4b7849924a194ab21dba&tab=%E5%8A%A8%E6%80%81\"\n    }\n  ]\n}\n"
+    }
+  }
+}
